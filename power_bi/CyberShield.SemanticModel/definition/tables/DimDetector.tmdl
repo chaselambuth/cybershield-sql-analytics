@@ -1,0 +1,101 @@
+table DimDetector
+	lineageTag: 72445bad-5024-57aa-bc40-f9ac4037a42a
+
+	column detector_id
+		dataType: string
+		isHidden
+		lineageTag: 294777ca-5d0f-5014-a083-0eb7537c6de9
+		summarizeBy: none
+		sourceColumn: detector_id
+
+	column display_name
+		dataType: string
+		lineageTag: 7bfde604-c2b0-5a19-a5d7-ada9531382f3
+		summarizeBy: none
+		sourceColumn: display_name
+
+	column family
+		dataType: string
+		lineageTag: c403306f-e389-56a8-8378-0d9baf99d2d8
+		summarizeBy: none
+		sourceColumn: family
+
+	column default_comparison
+		dataType: boolean
+		lineageTag: 57d2e664-31ff-5fb9-95bf-8fc2ff571f48
+		summarizeBy: none
+		sourceColumn: default_comparison
+
+	column decision_provider
+		dataType: string
+		lineageTag: 7510dbf0-87e0-5ff4-91e7-186d8eb9d334
+		summarizeBy: none
+		sourceColumn: decision_provider
+
+	column quality_provider
+		dataType: string
+		lineageTag: 6ff1dd28-571d-5dfe-a1ab-5f8a9b4c4310
+		summarizeBy: none
+		sourceColumn: quality_provider
+
+	column latency_provider
+		dataType: string
+		lineageTag: 86261e0a-fab0-537b-857f-d359e94705b2
+		summarizeBy: none
+		sourceColumn: latency_provider
+
+	column native_score_dtype
+		dataType: string
+		lineageTag: 5b2a34a8-1551-557d-8478-442f83f623f7
+		summarizeBy: none
+		sourceColumn: native_score_dtype
+
+	column score_semantics
+		dataType: string
+		lineageTag: 09ad86dc-8868-560b-842a-f4d7c6f8c3e8
+		summarizeBy: none
+		sourceColumn: score_semantics
+
+	column reproduced
+		dataType: boolean
+		lineageTag: bda9c06c-3ada-5885-88f7-f6f680a8651d
+		summarizeBy: none
+		sourceColumn: reproduced
+
+	column distinct_scores
+		dataType: int64
+		lineageTag: d22b2927-eb80-5322-b58e-e072162307bf
+		summarizeBy: none
+		sourceColumn: distinct_scores
+
+	column largest_tie_count
+		dataType: int64
+		lineageTag: cbac8cea-a1b9-5594-91bb-692b99e210cc
+		summarizeBy: none
+		sourceColumn: largest_tie_count
+
+	column largest_tie_share
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 24227067-a76e-5fc5-bc02-bf79242b2315
+		summarizeBy: none
+		sourceColumn: largest_tie_share
+
+	column high_tie_concentration
+		dataType: boolean
+		lineageTag: 7338db9d-c3de-578f-adba-79eac716a549
+		summarizeBy: none
+		sourceColumn: high_tie_concentration
+
+	column caveat
+		dataType: string
+		lineageTag: 2e06619e-db41-5b21-84a3-66acb6365bba
+		summarizeBy: none
+		sourceColumn: caveat
+
+	partition DimDetector = m
+		mode: import
+		source = LoadBundleTable("DimDetector")
+
+	annotation PBI_ResultType = Table
+

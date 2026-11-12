@@ -1,0 +1,4 @@
+{
+  "API_KEY": "replace-with-your-own-key",
+  "OPENAI_API_BASE": "https://api.openai.com/v1"
+}

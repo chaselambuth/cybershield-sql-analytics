@@ -1,0 +1,5 @@
+split,windows,positive_windows,positive_sources,unknown_windows,positive_fraction
+train,3493,6,1,0,0.0017177211565989122
+calibration,1245,3,1,0,0.0024096385542168677
+development,3413,6,1,0,0.0017579841781423966
+unscored,3247,0,0,0,0.0

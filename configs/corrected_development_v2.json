@@ -1,0 +1,124 @@
+{
+  "protocol_version": "corrected-development-v2",
+  "status": "development_validation_only",
+  "source_release": "CIC-IDS2017-CNS2022-corrected",
+  "members": [
+    "monday.csv",
+    "tuesday.csv",
+    "wednesday.csv",
+    "thursday.csv"
+  ],
+  "excluded_members": [
+    "friday.csv"
+  ],
+  "prior_access": [
+    "Original and corrected Tuesday have already been inspected and benchmarked/audited.",
+    "Corrected Friday header and first record were previewed during acquisition in October 2026.",
+    "Published capture/label documentation has been reviewed. No pristine or sealed final test is claimed."
+  ],
+  "timestamp_policy": "corrected_explicit_utc_microseconds_no_repair",
+  "duration_unit": "microseconds",
+  "attempted_policy": "unknown_exclude_entire_window",
+  "window_minutes": 5,
+  "window_origin": "2000-01-01 00:00:00",
+  "features": [
+    "flow_count",
+    "unique_ports",
+    "unique_destinations",
+    "service_flows",
+    "packets",
+    "bytes",
+    "mean_duration_us"
+  ],
+  "roles": {
+    "train": [
+      "2017-07-03T00:00:00Z",
+      "2017-07-05T00:00:00Z"
+    ],
+    "calibration": [
+      "2017-07-05T01:05:00Z",
+      "2017-07-05T12:30:00Z"
+    ],
+    "validation": [
+      "2017-07-05T13:35:00Z",
+      "2017-07-07T00:00:00Z"
+    ]
+  },
+  "embargo_minutes": 65,
+  "boundary_policy": "entire_window_and_all_constituent_flow_starts_inside_role",
+  "episode_policy": "utc_day_source_attack_family; attempted labels linked to base family; no arbitrary gap segmentation",
+  "dependency_block": "utc_day_source; shared actors across days remain a limitation",
+  "episode_uncertainty": "Conservative annotated campaign proxies, not verified independent attacks. Any family group crossing roles blocks evaluation; no confidence intervals from window resampling.",
+  "false_positive_target": 0.01,
+  "sensitivity_targets": [
+    0.001,
+    0.005,
+    0.02
+  ],
+  "rule_reference_quantile": 0.99,
+  "score_precision": "model native response -> exact float64 promotion before calibration/comparison; CSV 17 significant digits with round-trip parsing",
+  "seed": 1729,
+  "models": [
+    "Logistic regression",
+    "Linear SVM",
+    "Random forest",
+    "Extra trees",
+    "Histogram boosting",
+    "XGBoost",
+    "LightGBM",
+    "CatBoost"
+  ],
+  "controls": [
+    "sql_combined",
+    "always_benign"
+  ],
+  "model_configuration": "reuse cybershield.research.candidates; bound to source hash in design registration",
+  "timing": {
+    "fit_repeats": 3,
+    "warmup_calls": 5,
+    "single_repeats": 60,
+    "batch_repeats": 25,
+    "batch_sizes": [
+      1,
+      32,
+      256
+    ],
+    "include_full_validation_batch": true,
+    "threads": 1
+  },
+  "support_gates": {
+    "train_positive_episode_groups": 2,
+    "validation_positive_episode_groups": 2,
+    "validation_positive_days": 2,
+    "validation_positive_dependency_blocks": 2,
+    "benign_calibration_windows": 100
+  },
+  "uncertainty": "Raw counts and paired decisions only; independent support is not established by this gate.",
+  "selection": "Report all methods and prespecified budgets. No automatic winner or final-test selection; primary tradeoff is missed positives, false alerts, and warm pipeline P95.",
+  "mlp": {
+    "enabled": false,
+    "reason": "Deferred until independently reviewed episode identities and sufficient independent positive training/validation support exist."
+  },
+  "final_test_enabled": false,
+  "allowed_analyses": [
+    "support by role/day/source/family/episode",
+    "matched confusion counts at registered budgets",
+    "paired caught/missed overlap",
+    "three repeated CPU fits",
+    "warm pipeline and estimator-only timing",
+    "source overlap and temporal embargo audit",
+    "descriptive Pareto comparison"
+  ],
+  "attribution": {
+    "corrected_release": "https://intrusion-detection.distrinet-research.be/CNS2022/",
+    "label_policy": "https://intrusion-detection.distrinet-research.be/CNS2022/Dataset_Download.html",
+    "clock_and_annotations": "https://intrusion-detection.distrinet-research.be/CNS2022/CICIDS2017.html",
+    "terms": "Locally supplied archive; citation required; no raw redistribution or external upload. No independent provider checksum attestation."
+  },
+  "design_revision": {
+    "predecessor": "corrected-development-v1",
+    "reason": "Source-only v1 support audit found 60 known-benign calibration windows, below the registered minimum of 100. Extend calibration by 30 minutes before fitting/scoring any new model; preserve 65-minute embargo. No new model-quality result has been inspected.",
+    "predecessor_support": "reports/changes/2026-11-08/source_support_v1/support_gate.json",
+    "unchanged": "seven features, candidates, target policy, 1% budget, minimum support, timings, and final-test prohibition"
+  }
+}

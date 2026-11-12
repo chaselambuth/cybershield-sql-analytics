@@ -1,0 +1,5 @@
+role,all_active_windows,known_label_windows,unknown_excluded_windows,positive_windows,benign_windows,positive_episode_proxy_groups,positive_days,positive_dependency_blocks,positive_sources
+train,2911,2906,5,24,2882,2,1,1,1
+calibration,60,60,0,0,60,0,0,0,0
+validation,2603,2569,34,21,2548,7,2,4,3
+unscored,212,207,5,0,207,0,0,0,0

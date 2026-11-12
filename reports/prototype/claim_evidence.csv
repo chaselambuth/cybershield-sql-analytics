@@ -1,0 +1,19 @@
+claim,value,numerator,denominator,population,source_artifact,experiment_id,status,synthetic
+accepted_flows,445892.0,445892,445909,selected source file,data_quality.json,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+quarantined_flows,17.0,17,445909,selected source file,data_quality.json,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+rule_volume_development_recall,0.6666666666666666,4,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+rule_volume_development_false_positives,34.0,34,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+rule_ports_development_recall,0.0,0,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+rule_ports_development_false_positives,30.0,30,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+rule_services_development_recall,0.8333333333333334,5,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+rule_services_development_false_positives,31.0,31,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+sql_combined_development_recall,0.8333333333333334,5,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+sql_combined_development_false_positives,21.0,21,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+logistic_regression_development_recall,0.8333333333333334,5,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+logistic_regression_development_false_positives,64.0,64,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+flow_count_baseline_development_recall,0.6666666666666666,4,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+flow_count_baseline_development_false_positives,34.0,34,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+random_baseline_development_recall,0.0,0,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+random_baseline_development_false_positives,28.0,28,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+always_benign_development_recall,0.0,0,6,known-label development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False
+always_benign_development_false_positives,0.0,0,3407,benign development windows,metrics.csv,4b812462-e408-4a6c-9c2f-f5c9f02a3494,development_only,False

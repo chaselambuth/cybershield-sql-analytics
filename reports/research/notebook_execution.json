@@ -1,0 +1,24 @@
+{
+  "kind": "cybershield_notebooks_v1",
+  "review_date": "2026-11-12",
+  "notebooks": [
+    {
+      "source": "notebooks/01_data_audit_and_source_selection.ipynb",
+      "execution": "Clean execution on November 12, 2026"
+    },
+    {
+      "source": "notebooks/02_model_quality_latency.ipynb",
+      "execution": "Previously recorded executed snapshot; not rerun"
+    },
+    {
+      "source": "notebooks/03_sql_feature_ablation_and_alert_budgets.ipynb",
+      "execution": "Previously recorded executed snapshot; not rerun"
+    }
+  ],
+  "files": {
+    "notebooks/01_data_audit_and_source_selection.ipynb": "3b799befdc5a744a267718ce4a66343c53dc6cc3ff1bcab57241982f1dd70588",
+    "notebooks/02_model_quality_latency.ipynb": "ca01ccd4aac73f82463ec7be73b42a49ee4bf755ac127aac612a56cb4b1b2ad8",
+    "notebooks/03_sql_feature_ablation_and_alert_budgets.ipynb": "4295169375944df0608d45e9c1f8fe9da88ff518dcbeb934332458ec6c97a61c"
+  },
+  "documentation_revision": "November 12: descriptions consolidated under Part headings; code-cell labels and interpretations preserved."
+}

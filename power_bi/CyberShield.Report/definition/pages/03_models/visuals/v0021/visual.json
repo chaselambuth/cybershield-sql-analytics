@@ -1,0 +1,251 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v0021",
+  "position": {
+    "x": 24,
+    "y": 380,
+    "z": 21,
+    "height": 235,
+    "width": 1392,
+    "tabOrder": 21
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDetector"
+                    }
+                  },
+                  "Property": "display_name"
+                }
+              },
+              "queryRef": "DimDetector.display_name",
+              "nativeQueryRef": "display_name",
+              "displayName": "Detector"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEvaluation"
+                    }
+                  },
+                  "Property": "Caught of total"
+                }
+              },
+              "queryRef": "FactEvaluation.Caught of total",
+              "nativeQueryRef": "Caught of total",
+              "displayName": "Caught of total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEvaluation"
+                    }
+                  },
+                  "Property": "False positive windows"
+                }
+              },
+              "queryRef": "FactEvaluation.False positive windows",
+              "nativeQueryRef": "False positive windows",
+              "displayName": "False positive windows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEvaluation"
+                    }
+                  },
+                  "Property": "Recall rate"
+                }
+              },
+              "queryRef": "FactEvaluation.Recall rate",
+              "nativeQueryRef": "Recall rate",
+              "displayName": "Recall rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEvaluation"
+                    }
+                  },
+                  "Property": "Precision rate"
+                }
+              },
+              "queryRef": "FactEvaluation.Precision rate",
+              "nativeQueryRef": "Precision rate",
+              "displayName": "Precision rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEvaluation"
+                    }
+                  },
+                  "Property": "Average precision"
+                }
+              },
+              "queryRef": "FactEvaluation.Average precision",
+              "nativeQueryRef": "Average precision",
+              "displayName": "Average precision"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEvaluation"
+                    }
+                  },
+                  "Property": "Fit median ms"
+                }
+              },
+              "queryRef": "FactEvaluation.Fit median ms",
+              "nativeQueryRef": "Fit median ms",
+              "displayName": "Fit median ms"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLatency"
+                    }
+                  },
+                  "Property": "Measured calls"
+                }
+              },
+              "queryRef": "FactLatency.Measured calls",
+              "nativeQueryRef": "Measured calls",
+              "displayName": "Measured calls"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "180D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DimDetector.display_name"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detection support and fixed-cohort quality · precision needs support'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#182A3A'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

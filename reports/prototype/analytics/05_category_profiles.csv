@@ -1,0 +1,3 @@
+label,flows,sources,median_duration_us,total_bytes
+BENIGN,199068,4475,31575.0,8234276888
+FTP-Patator,7938,1,4044135.0,1221967

@@ -1,0 +1,2161 @@
+method,scope,batch_size,repeat,call_ms
+Linear SVM,pipeline,1,0,1.33
+CatBoost,pipeline,1,0,2.2496
+Random forest,pipeline,1,0,26.3345
+XGBoost,pipeline,1,0,1.6721
+Extra trees,pipeline,1,0,25.4046
+Histogram boosting,pipeline,1,0,5.4949
+Logistic regression,pipeline,1,0,1.4432
+LightGBM,pipeline,1,0,1.7306
+Histogram boosting,pipeline,1,1,4.9252
+Linear SVM,pipeline,1,1,1.0532
+Extra trees,pipeline,1,1,25.4763
+LightGBM,pipeline,1,1,1.7562
+Logistic regression,pipeline,1,1,1.1149
+CatBoost,pipeline,1,1,1.8281
+Random forest,pipeline,1,1,23.683
+XGBoost,pipeline,1,1,1.5126
+Linear SVM,pipeline,1,2,1.1022
+CatBoost,pipeline,1,2,1.2363
+LightGBM,pipeline,1,2,1.9489
+Histogram boosting,pipeline,1,2,4.3255
+Random forest,pipeline,1,2,25.762
+Logistic regression,pipeline,1,2,1.2835
+Extra trees,pipeline,1,2,26.4726
+XGBoost,pipeline,1,2,1.914
+CatBoost,pipeline,1,3,1.8355
+Linear SVM,pipeline,1,3,1.3282
+LightGBM,pipeline,1,3,1.6646
+XGBoost,pipeline,1,3,1.3193
+Histogram boosting,pipeline,1,3,5.1627
+Logistic regression,pipeline,1,3,1.096
+Random forest,pipeline,1,3,26.9016
+Extra trees,pipeline,1,3,24.1266
+CatBoost,pipeline,1,4,1.7228
+Linear SVM,pipeline,1,4,1.4716
+Histogram boosting,pipeline,1,4,4.6411
+Random forest,pipeline,1,4,30.4568
+XGBoost,pipeline,1,4,1.6719
+Logistic regression,pipeline,1,4,1.1202
+LightGBM,pipeline,1,4,2.0033
+Extra trees,pipeline,1,4,28.1952
+Histogram boosting,pipeline,1,5,5.869
+XGBoost,pipeline,1,5,2.0622
+LightGBM,pipeline,1,5,2.1039
+Linear SVM,pipeline,1,5,1.3161
+Logistic regression,pipeline,1,5,1.1763
+Extra trees,pipeline,1,5,29.857
+CatBoost,pipeline,1,5,1.7667
+Random forest,pipeline,1,5,27.2995
+CatBoost,pipeline,1,6,1.1264
+XGBoost,pipeline,1,6,2.1008
+Logistic regression,pipeline,1,6,1.1607
+LightGBM,pipeline,1,6,1.5981
+Extra trees,pipeline,1,6,27.3303
+Histogram boosting,pipeline,1,6,4.8526
+Random forest,pipeline,1,6,26.1726
+Linear SVM,pipeline,1,6,1.3687
+XGBoost,pipeline,1,7,1.4531
+Histogram boosting,pipeline,1,7,4.9958
+LightGBM,pipeline,1,7,1.567
+Extra trees,pipeline,1,7,27.0363
+CatBoost,pipeline,1,7,2.0739
+Random forest,pipeline,1,7,24.8842
+Logistic regression,pipeline,1,7,1.3779
+Linear SVM,pipeline,1,7,0.9947
+Histogram boosting,pipeline,1,8,4.4983
+XGBoost,pipeline,1,8,1.3971
+Linear SVM,pipeline,1,8,1.0953
+CatBoost,pipeline,1,8,1.7763
+Extra trees,pipeline,1,8,25.194
+LightGBM,pipeline,1,8,1.7323
+Logistic regression,pipeline,1,8,1.1294
+Random forest,pipeline,1,8,26.1904
+Extra trees,pipeline,1,9,25.6476
+Random forest,pipeline,1,9,27.0338
+LightGBM,pipeline,1,9,2.0016
+Logistic regression,pipeline,1,9,1.5306
+Histogram boosting,pipeline,1,9,5.3778
+CatBoost,pipeline,1,9,2.3479
+Linear SVM,pipeline,1,9,1.5271
+XGBoost,pipeline,1,9,1.689
+LightGBM,pipeline,1,10,1.866
+Extra trees,pipeline,1,10,28.8159
+CatBoost,pipeline,1,10,2.0492
+Logistic regression,pipeline,1,10,1.7627
+Linear SVM,pipeline,1,10,1.3381
+Random forest,pipeline,1,10,29.7679
+XGBoost,pipeline,1,10,2.1969
+Histogram boosting,pipeline,1,10,5.1085
+Linear SVM,pipeline,1,11,1.4955
+Logistic regression,pipeline,1,11,1.1576
+LightGBM,pipeline,1,11,1.8484
+XGBoost,pipeline,1,11,1.5239
+Random forest,pipeline,1,11,29.7702
+CatBoost,pipeline,1,11,2.4176
+Histogram boosting,pipeline,1,11,5.2764
+Extra trees,pipeline,1,11,29.2177
+Extra trees,pipeline,1,12,27.8175
+XGBoost,pipeline,1,12,2.1488
+Logistic regression,pipeline,1,12,1.3517
+LightGBM,pipeline,1,12,1.526
+Histogram boosting,pipeline,1,12,4.8768
+Random forest,pipeline,1,12,28.1982
+Linear SVM,pipeline,1,12,1.2797
+CatBoost,pipeline,1,12,2.1883
+XGBoost,pipeline,1,13,1.1717
+Random forest,pipeline,1,13,19.4387
+Extra trees,pipeline,1,13,24.9084
+Linear SVM,pipeline,1,13,1.3723
+CatBoost,pipeline,1,13,1.4011
+Logistic regression,pipeline,1,13,1.3669
+LightGBM,pipeline,1,13,1.25
+Histogram boosting,pipeline,1,13,3.8452
+Logistic regression,pipeline,1,14,1.3781
+Histogram boosting,pipeline,1,14,5.594
+Extra trees,pipeline,1,14,21.0134
+LightGBM,pipeline,1,14,1.4178
+XGBoost,pipeline,1,14,1.0214
+CatBoost,pipeline,1,14,2.1881
+Random forest,pipeline,1,14,21.332
+Linear SVM,pipeline,1,14,1.3909
+XGBoost,pipeline,1,15,0.9266
+Logistic regression,pipeline,1,15,1.534
+Histogram boosting,pipeline,1,15,5.5704
+Linear SVM,pipeline,1,15,1.1713
+LightGBM,pipeline,1,15,1.5385
+CatBoost,pipeline,1,15,1.8799
+Extra trees,pipeline,1,15,26.6963
+Random forest,pipeline,1,15,26.3214
+Extra trees,pipeline,1,16,30.0554
+Logistic regression,pipeline,1,16,2.0391
+Linear SVM,pipeline,1,16,1.2977
+Histogram boosting,pipeline,1,16,5.8832
+XGBoost,pipeline,1,16,2.4025
+Random forest,pipeline,1,16,31.3017
+CatBoost,pipeline,1,16,2.0953
+LightGBM,pipeline,1,16,1.7296
+XGBoost,pipeline,1,17,1.499
+Logistic regression,pipeline,1,17,1.1696
+Linear SVM,pipeline,1,17,1.1899
+Histogram boosting,pipeline,1,17,4.6395
+CatBoost,pipeline,1,17,1.7572
+LightGBM,pipeline,1,17,1.4785
+Random forest,pipeline,1,17,27.3075
+Extra trees,pipeline,1,17,26.4851
+LightGBM,pipeline,1,18,1.735
+Random forest,pipeline,1,18,27.4987
+Logistic regression,pipeline,1,18,1.7659
+CatBoost,pipeline,1,18,1.9524
+XGBoost,pipeline,1,18,1.7532
+Histogram boosting,pipeline,1,18,5.2457
+Linear SVM,pipeline,1,18,1.7032
+Extra trees,pipeline,1,18,27.6999
+LightGBM,pipeline,1,19,1.8019
+Extra trees,pipeline,1,19,24.9101
+Histogram boosting,pipeline,1,19,4.668
+Linear SVM,pipeline,1,19,1.1603
+CatBoost,pipeline,1,19,1.7544
+XGBoost,pipeline,1,19,1.5405
+Random forest,pipeline,1,19,24.3898
+Logistic regression,pipeline,1,19,1.3237
+Extra trees,pipeline,1,20,24.6623
+Linear SVM,pipeline,1,20,1.4937
+Histogram boosting,pipeline,1,20,4.5368
+XGBoost,pipeline,1,20,1.488
+Random forest,pipeline,1,20,25.8957
+CatBoost,pipeline,1,20,2.1399
+LightGBM,pipeline,1,20,1.7279
+Logistic regression,pipeline,1,20,1.0642
+Histogram boosting,pipeline,1,21,4.4957
+CatBoost,pipeline,1,21,1.7879
+Linear SVM,pipeline,1,21,1.4116
+Extra trees,pipeline,1,21,26.6548
+Logistic regression,pipeline,1,21,1.2014
+Random forest,pipeline,1,21,28.8002
+XGBoost,pipeline,1,21,2.0202
+LightGBM,pipeline,1,21,1.7162
+Extra trees,pipeline,1,22,25.6847
+LightGBM,pipeline,1,22,1.9566
+Logistic regression,pipeline,1,22,1.4271
+Histogram boosting,pipeline,1,22,5.4219
+Linear SVM,pipeline,1,22,1.6675
+XGBoost,pipeline,1,22,1.9802
+CatBoost,pipeline,1,22,2.0949
+Random forest,pipeline,1,22,26.5824
+CatBoost,pipeline,1,23,2.4473
+Random forest,pipeline,1,23,27.2178
+Linear SVM,pipeline,1,23,1.7698
+Logistic regression,pipeline,1,23,1.3223
+Histogram boosting,pipeline,1,23,4.8492
+XGBoost,pipeline,1,23,1.699
+Extra trees,pipeline,1,23,26.2722
+LightGBM,pipeline,1,23,1.8725
+Histogram boosting,pipeline,1,24,4.5227
+Logistic regression,pipeline,1,24,1.0804
+Linear SVM,pipeline,1,24,1.9301
+XGBoost,pipeline,1,24,1.7018
+Random forest,pipeline,1,24,25.5056
+LightGBM,pipeline,1,24,1.7123
+Extra trees,pipeline,1,24,25.313
+CatBoost,pipeline,1,24,2.142
+Extra trees,pipeline,1,25,26.7113
+LightGBM,pipeline,1,25,1.7569
+CatBoost,pipeline,1,25,2.0904
+XGBoost,pipeline,1,25,1.4875
+Random forest,pipeline,1,25,26.5675
+Logistic regression,pipeline,1,25,1.2638
+Histogram boosting,pipeline,1,25,4.6265
+Linear SVM,pipeline,1,25,1.0347
+Logistic regression,pipeline,1,26,0.9156
+CatBoost,pipeline,1,26,1.5988
+Linear SVM,pipeline,1,26,1.5823
+XGBoost,pipeline,1,26,1.5317
+Histogram boosting,pipeline,1,26,4.8385
+Random forest,pipeline,1,26,26.8666
+LightGBM,pipeline,1,26,1.8465
+Extra trees,pipeline,1,26,26.3171
+Linear SVM,pipeline,1,27,1.2659
+Random forest,pipeline,1,27,23.9523
+LightGBM,pipeline,1,27,1.7296
+Logistic regression,pipeline,1,27,1.0834
+Histogram boosting,pipeline,1,27,5.0457
+CatBoost,pipeline,1,27,2.0772
+Extra trees,pipeline,1,27,26.984
+XGBoost,pipeline,1,27,1.8585
+XGBoost,pipeline,1,28,1.1992
+CatBoost,pipeline,1,28,2.1623
+Linear SVM,pipeline,1,28,1.3437
+Histogram boosting,pipeline,1,28,4.7014
+Extra trees,pipeline,1,28,26.1083
+Logistic regression,pipeline,1,28,1.186
+Random forest,pipeline,1,28,26.5518
+LightGBM,pipeline,1,28,1.7004
+Logistic regression,pipeline,1,29,1.0314
+Histogram boosting,pipeline,1,29,4.3994
+LightGBM,pipeline,1,29,1.6429
+CatBoost,pipeline,1,29,1.6155
+Extra trees,pipeline,1,29,28.5063
+XGBoost,pipeline,1,29,1.8747
+Linear SVM,pipeline,1,29,1.1119
+Random forest,pipeline,1,29,22.6093
+LightGBM,pipeline,1,30,1.6447
+Extra trees,pipeline,1,30,23.8649
+Histogram boosting,pipeline,1,30,3.9421
+Linear SVM,pipeline,1,30,0.6422
+Random forest,pipeline,1,30,19.0209
+CatBoost,pipeline,1,30,1.5063
+XGBoost,pipeline,1,30,1.4763
+Logistic regression,pipeline,1,30,1.0327
+CatBoost,pipeline,1,31,1.9627
+Logistic regression,pipeline,1,31,0.9304
+Random forest,pipeline,1,31,21.8193
+LightGBM,pipeline,1,31,1.4201
+XGBoost,pipeline,1,31,1.2646
+Extra trees,pipeline,1,31,22.0742
+Linear SVM,pipeline,1,31,1.0992
+Histogram boosting,pipeline,1,31,3.5135
+Logistic regression,pipeline,1,32,1.4845
+LightGBM,pipeline,1,32,1.2539
+Extra trees,pipeline,1,32,24.6921
+Random forest,pipeline,1,32,25.3879
+Histogram boosting,pipeline,1,32,4.8887
+Linear SVM,pipeline,1,32,1.5208
+CatBoost,pipeline,1,32,1.8694
+XGBoost,pipeline,1,32,1.4689
+CatBoost,pipeline,1,33,1.9663
+Histogram boosting,pipeline,1,33,4.6505
+LightGBM,pipeline,1,33,1.5885
+Linear SVM,pipeline,1,33,1.02
+Extra trees,pipeline,1,33,22.8297
+XGBoost,pipeline,1,33,1.3306
+Logistic regression,pipeline,1,33,0.9358
+Random forest,pipeline,1,33,21.793
+Extra trees,pipeline,1,34,20.4916
+CatBoost,pipeline,1,34,1.5358
+Logistic regression,pipeline,1,34,0.9212
+Random forest,pipeline,1,34,22.3646
+XGBoost,pipeline,1,34,0.8097
+LightGBM,pipeline,1,34,0.8915
+Histogram boosting,pipeline,1,34,3.7053
+Linear SVM,pipeline,1,34,0.8968
+CatBoost,pipeline,1,35,1.9141
+Logistic regression,pipeline,1,35,1.0086
+XGBoost,pipeline,1,35,1.0826
+Random forest,pipeline,1,35,22.5466
+LightGBM,pipeline,1,35,1.3633
+Extra trees,pipeline,1,35,22.5666
+Histogram boosting,pipeline,1,35,4.0084
+Linear SVM,pipeline,1,35,0.9103
+Random forest,pipeline,1,36,19.3576
+LightGBM,pipeline,1,36,1.5394
+CatBoost,pipeline,1,36,1.5587
+XGBoost,pipeline,1,36,1.163
+Extra trees,pipeline,1,36,22.0473
+Linear SVM,pipeline,1,36,1.0325
+Logistic regression,pipeline,1,36,0.8367
+Histogram boosting,pipeline,1,36,4.0902
+Random forest,pipeline,1,37,21.7474
+Logistic regression,pipeline,1,37,0.8171
+LightGBM,pipeline,1,37,0.9238
+XGBoost,pipeline,1,37,1.4554
+Histogram boosting,pipeline,1,37,3.9046
+CatBoost,pipeline,1,37,1.4387
+Extra trees,pipeline,1,37,22.1087
+Linear SVM,pipeline,1,37,0.8466
+LightGBM,pipeline,1,38,0.9504
+Histogram boosting,pipeline,1,38,2.8759
+Linear SVM,pipeline,1,38,0.8554
+Random forest,pipeline,1,38,22.3641
+Logistic regression,pipeline,1,38,1.2224
+Extra trees,pipeline,1,38,22.116
+XGBoost,pipeline,1,38,1.4361
+CatBoost,pipeline,1,38,1.698
+CatBoost,pipeline,1,39,1.9227
+Linear SVM,pipeline,1,39,1.2485
+XGBoost,pipeline,1,39,1.0554
+Logistic regression,pipeline,1,39,1.0572
+Histogram boosting,pipeline,1,39,3.6285
+LightGBM,pipeline,1,39,1.2781
+Extra trees,pipeline,1,39,22.3463
+Random forest,pipeline,1,39,22.6319
+LightGBM,pipeline,1,40,1.3442
+Logistic regression,pipeline,1,40,0.9049
+XGBoost,pipeline,1,40,1.1438
+Extra trees,pipeline,1,40,21.4941
+Random forest,pipeline,1,40,21.0284
+CatBoost,pipeline,1,40,1.0706
+Linear SVM,pipeline,1,40,0.6871
+Histogram boosting,pipeline,1,40,4.1731
+XGBoost,pipeline,1,41,1.0472
+Logistic regression,pipeline,1,41,0.8511
+Random forest,pipeline,1,41,21.9952
+Histogram boosting,pipeline,1,41,4.0339
+Linear SVM,pipeline,1,41,0.7647
+LightGBM,pipeline,1,41,0.9191
+Extra trees,pipeline,1,41,18.184
+CatBoost,pipeline,1,41,1.3384
+XGBoost,pipeline,1,42,1.0925
+Linear SVM,pipeline,1,42,0.8935
+LightGBM,pipeline,1,42,1.3004
+Logistic regression,pipeline,1,42,0.8485
+Extra trees,pipeline,1,42,22.3419
+CatBoost,pipeline,1,42,2.4085
+Random forest,pipeline,1,42,22.3934
+Histogram boosting,pipeline,1,42,3.9801
+XGBoost,pipeline,1,43,1.0663
+Histogram boosting,pipeline,1,43,4.5161
+LightGBM,pipeline,1,43,1.2935
+Logistic regression,pipeline,1,43,0.8849
+CatBoost,pipeline,1,43,1.525
+Random forest,pipeline,1,43,21.8895
+Extra trees,pipeline,1,43,21.817
+Linear SVM,pipeline,1,43,1.0239
+XGBoost,pipeline,1,44,1.1147
+Random forest,pipeline,1,44,21.8026
+Linear SVM,pipeline,1,44,0.9778
+Extra trees,pipeline,1,44,21.1694
+Histogram boosting,pipeline,1,44,3.9481
+LightGBM,pipeline,1,44,1.4424
+CatBoost,pipeline,1,44,2.1347
+Logistic regression,pipeline,1,44,0.9087
+Linear SVM,pipeline,1,45,0.8453
+CatBoost,pipeline,1,45,1.5406
+XGBoost,pipeline,1,45,1.6357
+Histogram boosting,pipeline,1,45,3.71
+Extra trees,pipeline,1,45,21.5022
+Logistic regression,pipeline,1,45,1.9993
+Random forest,pipeline,1,45,20.7416
+LightGBM,pipeline,1,45,1.7337
+CatBoost,pipeline,1,46,2.038
+Histogram boosting,pipeline,1,46,4.2573
+Random forest,pipeline,1,46,22.9916
+LightGBM,pipeline,1,46,1.6653
+Logistic regression,pipeline,1,46,0.9466
+Extra trees,pipeline,1,46,24.0083
+XGBoost,pipeline,1,46,1.5355
+Linear SVM,pipeline,1,46,1.0639
+CatBoost,pipeline,1,47,1.3328
+Extra trees,pipeline,1,47,22.6277
+LightGBM,pipeline,1,47,1.0654
+Random forest,pipeline,1,47,21.1011
+Logistic regression,pipeline,1,47,1.3134
+XGBoost,pipeline,1,47,1.2136
+Histogram boosting,pipeline,1,47,4.0325
+Linear SVM,pipeline,1,47,0.863
+Random forest,pipeline,1,48,21.2437
+Extra trees,pipeline,1,48,20.4953
+LightGBM,pipeline,1,48,0.9337
+XGBoost,pipeline,1,48,1.0499
+Linear SVM,pipeline,1,48,0.9054
+Histogram boosting,pipeline,1,48,4.0889
+CatBoost,pipeline,1,48,1.4295
+Logistic regression,pipeline,1,48,1.0125
+CatBoost,pipeline,1,49,1.2358
+Histogram boosting,pipeline,1,49,3.8036
+XGBoost,pipeline,1,49,1.1626
+Random forest,pipeline,1,49,22.1934
+Logistic regression,pipeline,1,49,1.103
+Linear SVM,pipeline,1,49,1.0166
+LightGBM,pipeline,1,49,1.0254
+Extra trees,pipeline,1,49,20.2278
+XGBoost,pipeline,1,50,1.4046
+Extra trees,pipeline,1,50,20.3253
+Linear SVM,pipeline,1,50,0.9367
+LightGBM,pipeline,1,50,1.4595
+Random forest,pipeline,1,50,23.3897
+Logistic regression,pipeline,1,50,1.1046
+Histogram boosting,pipeline,1,50,4.7161
+CatBoost,pipeline,1,50,1.5905
+Logistic regression,pipeline,1,51,1.2201
+CatBoost,pipeline,1,51,1.8721
+Histogram boosting,pipeline,1,51,5.4223
+XGBoost,pipeline,1,51,1.8072
+LightGBM,pipeline,1,51,1.6446
+Random forest,pipeline,1,51,25.708
+Linear SVM,pipeline,1,51,1.4024
+Extra trees,pipeline,1,51,22.8894
+Logistic regression,pipeline,1,52,1.0837
+Linear SVM,pipeline,1,52,0.8714
+Extra trees,pipeline,1,52,20.1883
+LightGBM,pipeline,1,52,1.8139
+CatBoost,pipeline,1,52,1.2739
+XGBoost,pipeline,1,52,1.7547
+Random forest,pipeline,1,52,23.266
+Histogram boosting,pipeline,1,52,4.3188
+CatBoost,pipeline,1,53,1.5936
+LightGBM,pipeline,1,53,1.5152
+XGBoost,pipeline,1,53,1.1446
+Logistic regression,pipeline,1,53,1.3691
+Linear SVM,pipeline,1,53,0.9132
+Extra trees,pipeline,1,53,24.8412
+Random forest,pipeline,1,53,21.7625
+Histogram boosting,pipeline,1,53,4.2919
+LightGBM,pipeline,1,54,1.2193
+CatBoost,pipeline,1,54,1.6831
+XGBoost,pipeline,1,54,1.4161
+Histogram boosting,pipeline,1,54,4.0504
+Extra trees,pipeline,1,54,21.9617
+Random forest,pipeline,1,54,24.798
+Linear SVM,pipeline,1,54,0.8889
+Logistic regression,pipeline,1,54,0.601
+LightGBM,pipeline,1,55,0.8827
+XGBoost,pipeline,1,55,0.9112
+Logistic regression,pipeline,1,55,0.9903
+Histogram boosting,pipeline,1,55,3.2419
+Linear SVM,pipeline,1,55,0.5891
+Extra trees,pipeline,1,55,24.2111
+CatBoost,pipeline,1,55,2.5063
+Random forest,pipeline,1,55,22.9966
+CatBoost,pipeline,1,56,1.6821
+Histogram boosting,pipeline,1,56,3.8647
+Logistic regression,pipeline,1,56,0.8653
+Extra trees,pipeline,1,56,21.5225
+XGBoost,pipeline,1,56,1.291
+Random forest,pipeline,1,56,21.8045
+LightGBM,pipeline,1,56,1.3428
+Linear SVM,pipeline,1,56,0.9122
+Linear SVM,pipeline,1,57,1.3502
+Logistic regression,pipeline,1,57,0.8138
+XGBoost,pipeline,1,57,1.1977
+Extra trees,pipeline,1,57,20.6004
+Histogram boosting,pipeline,1,57,3.8252
+Random forest,pipeline,1,57,20.2749
+LightGBM,pipeline,1,57,1.4521
+CatBoost,pipeline,1,57,2.0111
+LightGBM,pipeline,1,58,1.4422
+Logistic regression,pipeline,1,58,0.8675
+Linear SVM,pipeline,1,58,0.9873
+Histogram boosting,pipeline,1,58,3.8024
+Random forest,pipeline,1,58,21.6407
+CatBoost,pipeline,1,58,1.4475
+Extra trees,pipeline,1,58,21.3711
+XGBoost,pipeline,1,58,0.7763
+Linear SVM,pipeline,1,59,0.9601
+Extra trees,pipeline,1,59,21.171
+Random forest,pipeline,1,59,21.7294
+XGBoost,pipeline,1,59,1.0871
+Histogram boosting,pipeline,1,59,4.265
+LightGBM,pipeline,1,59,1.3442
+CatBoost,pipeline,1,59,1.3494
+Logistic regression,pipeline,1,59,0.8937
+Random forest,model_only,1,0,22.5572
+XGBoost,model_only,1,0,1.3307
+LightGBM,model_only,1,0,1.1555
+Linear SVM,model_only,1,0,0.2768
+Logistic regression,model_only,1,0,0.2813
+Histogram boosting,model_only,1,0,4.4944
+CatBoost,model_only,1,0,1.6419
+Extra trees,model_only,1,0,24.8178
+XGBoost,model_only,1,1,0.9526
+Histogram boosting,model_only,1,1,4.234
+Random forest,model_only,1,1,23.1776
+LightGBM,model_only,1,1,1.4713
+Logistic regression,model_only,1,1,0.3844
+Linear SVM,model_only,1,1,0.1968
+Extra trees,model_only,1,1,21.5504
+CatBoost,model_only,1,1,1.087
+XGBoost,model_only,1,2,1.1501
+Histogram boosting,model_only,1,2,3.8028
+Logistic regression,model_only,1,2,0.307
+Linear SVM,model_only,1,2,0.1952
+Random forest,model_only,1,2,21.7978
+CatBoost,model_only,1,2,0.9374
+Extra trees,model_only,1,2,20.7154
+LightGBM,model_only,1,2,1.1401
+Extra trees,model_only,1,3,21.289
+LightGBM,model_only,1,3,1.37
+XGBoost,model_only,1,3,0.7094
+Logistic regression,model_only,1,3,0.3255
+Random forest,model_only,1,3,21.9324
+CatBoost,model_only,1,3,1.0726
+Linear SVM,model_only,1,3,0.3154
+Histogram boosting,model_only,1,3,3.5501
+Extra trees,model_only,1,4,21.7609
+XGBoost,model_only,1,4,1.0919
+Logistic regression,model_only,1,4,0.358
+CatBoost,model_only,1,4,0.9564
+LightGBM,model_only,1,4,0.9203
+Linear SVM,model_only,1,4,0.2581
+Random forest,model_only,1,4,19.1165
+Histogram boosting,model_only,1,4,3.8817
+LightGBM,model_only,1,5,1.0297
+CatBoost,model_only,1,5,1.5999
+Histogram boosting,model_only,1,5,3.426
+Random forest,model_only,1,5,25.369
+Extra trees,model_only,1,5,21.1264
+Logistic regression,model_only,1,5,0.3995
+XGBoost,model_only,1,5,0.855
+Linear SVM,model_only,1,5,0.2201
+LightGBM,model_only,1,6,0.9055
+CatBoost,model_only,1,6,1.1846
+XGBoost,model_only,1,6,0.7538
+Extra trees,model_only,1,6,21.4019
+Random forest,model_only,1,6,20.5113
+Linear SVM,model_only,1,6,0.2285
+Logistic regression,model_only,1,6,0.275
+Histogram boosting,model_only,1,6,3.396
+Histogram boosting,model_only,1,7,3.4106
+Random forest,model_only,1,7,21.2722
+Extra trees,model_only,1,7,20.5533
+LightGBM,model_only,1,7,1.0592
+XGBoost,model_only,1,7,0.7963
+Logistic regression,model_only,1,7,0.2901
+Linear SVM,model_only,1,7,0.1948
+CatBoost,model_only,1,7,1.2943
+Random forest,model_only,1,8,21.5709
+CatBoost,model_only,1,8,1.7821
+Histogram boosting,model_only,1,8,3.5344
+Logistic regression,model_only,1,8,0.2951
+XGBoost,model_only,1,8,0.7491
+LightGBM,model_only,1,8,0.8322
+Linear SVM,model_only,1,8,0.2121
+Extra trees,model_only,1,8,24.2635
+LightGBM,model_only,1,9,1.5945
+Linear SVM,model_only,1,9,0.3121
+XGBoost,model_only,1,9,0.9039
+Random forest,model_only,1,9,27.2429
+Logistic regression,model_only,1,9,0.4297
+Histogram boosting,model_only,1,9,4.0894
+Extra trees,model_only,1,9,22.6539
+CatBoost,model_only,1,9,0.5593
+Linear SVM,model_only,1,10,1.3208
+Logistic regression,model_only,1,10,0.2994
+Random forest,model_only,1,10,21.7869
+LightGBM,model_only,1,10,0.9616
+CatBoost,model_only,1,10,1.366
+Histogram boosting,model_only,1,10,3.3608
+XGBoost,model_only,1,10,0.8164
+Extra trees,model_only,1,10,21.6449
+XGBoost,model_only,1,11,0.8417
+Random forest,model_only,1,11,18.1243
+Extra trees,model_only,1,11,21.4227
+Histogram boosting,model_only,1,11,3.6013
+CatBoost,model_only,1,11,1.6077
+Logistic regression,model_only,1,11,0.3572
+LightGBM,model_only,1,11,0.8697
+Linear SVM,model_only,1,11,0.2037
+LightGBM,model_only,1,12,0.8359
+Linear SVM,model_only,1,12,0.2194
+Logistic regression,model_only,1,12,0.2382
+Extra trees,model_only,1,12,20.604
+XGBoost,model_only,1,12,0.9923
+CatBoost,model_only,1,12,1.1357
+Random forest,model_only,1,12,21.7098
+Histogram boosting,model_only,1,12,3.3746
+XGBoost,model_only,1,13,0.6909
+Linear SVM,model_only,1,13,0.3727
+LightGBM,model_only,1,13,0.8512
+Histogram boosting,model_only,1,13,3.1338
+Logistic regression,model_only,1,13,0.1851
+CatBoost,model_only,1,13,1.5609
+Random forest,model_only,1,13,21.1627
+Extra trees,model_only,1,13,21.6695
+XGBoost,model_only,1,14,0.7049
+Random forest,model_only,1,14,20.9709
+Logistic regression,model_only,1,14,0.2177
+Histogram boosting,model_only,1,14,3.433
+Linear SVM,model_only,1,14,0.2292
+CatBoost,model_only,1,14,1.2721
+Extra trees,model_only,1,14,20.9616
+LightGBM,model_only,1,14,0.971
+Random forest,model_only,1,15,20.1673
+Extra trees,model_only,1,15,19.995
+LightGBM,model_only,1,15,1.0001
+Histogram boosting,model_only,1,15,4.0603
+XGBoost,model_only,1,15,0.8845
+CatBoost,model_only,1,15,1.071
+Linear SVM,model_only,1,15,0.306
+Logistic regression,model_only,1,15,0.2892
+Linear SVM,model_only,1,16,0.5708
+Extra trees,model_only,1,16,23.0404
+XGBoost,model_only,1,16,0.7977
+LightGBM,model_only,1,16,0.8595
+Histogram boosting,model_only,1,16,3.4617
+Logistic regression,model_only,1,16,0.4275
+Random forest,model_only,1,16,22.2162
+CatBoost,model_only,1,16,1.2868
+Logistic regression,model_only,1,17,0.3648
+CatBoost,model_only,1,17,1.448
+Extra trees,model_only,1,17,22.8637
+Random forest,model_only,1,17,21.4298
+XGBoost,model_only,1,17,0.7639
+Histogram boosting,model_only,1,17,3.3512
+Linear SVM,model_only,1,17,0.3659
+LightGBM,model_only,1,17,0.8606
+CatBoost,model_only,1,18,1.4169
+XGBoost,model_only,1,18,0.7773
+Linear SVM,model_only,1,18,0.2622
+Extra trees,model_only,1,18,18.7501
+LightGBM,model_only,1,18,1.0728
+Histogram boosting,model_only,1,18,3.3729
+Logistic regression,model_only,1,18,0.2845
+Random forest,model_only,1,18,21.4908
+Linear SVM,model_only,1,19,0.261
+XGBoost,model_only,1,19,1.194
+Logistic regression,model_only,1,19,0.2921
+LightGBM,model_only,1,19,0.895
+Extra trees,model_only,1,19,21.7209
+Histogram boosting,model_only,1,19,3.7133
+Random forest,model_only,1,19,19.7619
+CatBoost,model_only,1,19,0.9975
+Logistic regression,model_only,1,20,0.3285
+Extra trees,model_only,1,20,25.4651
+Linear SVM,model_only,1,20,0.313
+CatBoost,model_only,1,20,1.4277
+XGBoost,model_only,1,20,0.9593
+LightGBM,model_only,1,20,1.1068
+Histogram boosting,model_only,1,20,4.1677
+Random forest,model_only,1,20,23.6304
+Linear SVM,model_only,1,21,0.2868
+Extra trees,model_only,1,21,23.0508
+Random forest,model_only,1,21,21.0983
+Histogram boosting,model_only,1,21,3.4703
+XGBoost,model_only,1,21,0.8676
+Logistic regression,model_only,1,21,0.5824
+LightGBM,model_only,1,21,0.917
+CatBoost,model_only,1,21,1.1401
+Linear SVM,model_only,1,22,0.2288
+Logistic regression,model_only,1,22,0.2455
+LightGBM,model_only,1,22,0.7398
+Histogram boosting,model_only,1,22,3.844
+CatBoost,model_only,1,22,1.4029
+Random forest,model_only,1,22,21.42
+Extra trees,model_only,1,22,22.2481
+XGBoost,model_only,1,22,0.957
+Histogram boosting,model_only,1,23,3.8142
+Random forest,model_only,1,23,20.8943
+CatBoost,model_only,1,23,1.2204
+LightGBM,model_only,1,23,1.0918
+Linear SVM,model_only,1,23,0.253
+XGBoost,model_only,1,23,0.8468
+Extra trees,model_only,1,23,21.3007
+Logistic regression,model_only,1,23,0.345
+Histogram boosting,model_only,1,24,3.528
+Extra trees,model_only,1,24,21.3255
+LightGBM,model_only,1,24,1.2122
+Linear SVM,model_only,1,24,0.3031
+Random forest,model_only,1,24,20.4028
+Logistic regression,model_only,1,24,0.3291
+XGBoost,model_only,1,24,0.9893
+CatBoost,model_only,1,24,0.9954
+XGBoost,model_only,1,25,0.7677
+Logistic regression,model_only,1,25,0.301
+Linear SVM,model_only,1,25,0.1928
+CatBoost,model_only,1,25,0.8783
+Extra trees,model_only,1,25,20.9351
+Histogram boosting,model_only,1,25,3.4939
+LightGBM,model_only,1,25,0.91
+Random forest,model_only,1,25,18.6039
+Extra trees,model_only,1,26,19.8752
+Logistic regression,model_only,1,26,0.284
+LightGBM,model_only,1,26,0.8295
+XGBoost,model_only,1,26,0.6631
+Linear SVM,model_only,1,26,0.2147
+CatBoost,model_only,1,26,1.2546
+Random forest,model_only,1,26,20.9945
+Histogram boosting,model_only,1,26,3.6568
+Linear SVM,model_only,1,27,0.2304
+LightGBM,model_only,1,27,1.1877
+Logistic regression,model_only,1,27,0.2953
+Extra trees,model_only,1,27,22.4391
+CatBoost,model_only,1,27,1.3308
+Histogram boosting,model_only,1,27,3.6182
+Random forest,model_only,1,27,20.7155
+XGBoost,model_only,1,27,0.8905
+CatBoost,model_only,1,28,1.0607
+Extra trees,model_only,1,28,22.2859
+Histogram boosting,model_only,1,28,3.5461
+XGBoost,model_only,1,28,0.701
+Logistic regression,model_only,1,28,0.3034
+Linear SVM,model_only,1,28,0.1922
+LightGBM,model_only,1,28,0.8929
+Random forest,model_only,1,28,20.7469
+Linear SVM,model_only,1,29,0.2532
+Extra trees,model_only,1,29,21.6173
+Random forest,model_only,1,29,21.8966
+Histogram boosting,model_only,1,29,4.1121
+Logistic regression,model_only,1,29,0.3417
+XGBoost,model_only,1,29,0.7273
+LightGBM,model_only,1,29,0.9447
+CatBoost,model_only,1,29,0.7546
+Logistic regression,model_only,1,30,0.3167
+LightGBM,model_only,1,30,0.8445
+XGBoost,model_only,1,30,0.6816
+Histogram boosting,model_only,1,30,3.9482
+Random forest,model_only,1,30,23.0526
+Linear SVM,model_only,1,30,0.2538
+CatBoost,model_only,1,30,1.425
+Extra trees,model_only,1,30,21.8474
+Linear SVM,model_only,1,31,0.2546
+XGBoost,model_only,1,31,1.2144
+Random forest,model_only,1,31,23.0249
+Logistic regression,model_only,1,31,0.3168
+CatBoost,model_only,1,31,1.2612
+Histogram boosting,model_only,1,31,3.4249
+LightGBM,model_only,1,31,0.8341
+Extra trees,model_only,1,31,21.8041
+CatBoost,model_only,1,32,1.448
+XGBoost,model_only,1,32,0.9109
+Random forest,model_only,1,32,21.1596
+Logistic regression,model_only,1,32,0.3295
+Linear SVM,model_only,1,32,0.1985
+LightGBM,model_only,1,32,0.9236
+Extra trees,model_only,1,32,25.1404
+Histogram boosting,model_only,1,32,3.6016
+Extra trees,model_only,1,33,27.6631
+Logistic regression,model_only,1,33,0.356
+Random forest,model_only,1,33,21.8214
+Linear SVM,model_only,1,33,0.2621
+XGBoost,model_only,1,33,0.9036
+CatBoost,model_only,1,33,1.2138
+LightGBM,model_only,1,33,1.0737
+Histogram boosting,model_only,1,33,3.3684
+Logistic regression,model_only,1,34,0.3614
+Random forest,model_only,1,34,21.9217
+LightGBM,model_only,1,34,1.3019
+Extra trees,model_only,1,34,25.1574
+XGBoost,model_only,1,34,0.7641
+Histogram boosting,model_only,1,34,4.3478
+CatBoost,model_only,1,34,1.2299
+Linear SVM,model_only,1,34,0.2924
+Histogram boosting,model_only,1,35,3.9594
+CatBoost,model_only,1,35,1.2385
+XGBoost,model_only,1,35,0.7652
+Extra trees,model_only,1,35,22.0918
+Random forest,model_only,1,35,23.2968
+LightGBM,model_only,1,35,0.9738
+Logistic regression,model_only,1,35,0.3248
+Linear SVM,model_only,1,35,0.2273
+LightGBM,model_only,1,36,0.8128
+Histogram boosting,model_only,1,36,4.0516
+Extra trees,model_only,1,36,21.961
+XGBoost,model_only,1,36,0.8509
+Random forest,model_only,1,36,22.4553
+Linear SVM,model_only,1,36,0.2571
+CatBoost,model_only,1,36,1.044
+Logistic regression,model_only,1,36,0.2879
+LightGBM,model_only,1,37,0.8684
+Extra trees,model_only,1,37,18.685
+XGBoost,model_only,1,37,0.4906
+Logistic regression,model_only,1,37,0.282
+Random forest,model_only,1,37,18.8628
+Linear SVM,model_only,1,37,0.7462
+CatBoost,model_only,1,37,1.7454
+Histogram boosting,model_only,1,37,3.5764
+Random forest,model_only,1,38,19.8562
+Linear SVM,model_only,1,38,0.2409
+Histogram boosting,model_only,1,38,3.5159
+XGBoost,model_only,1,38,0.8037
+LightGBM,model_only,1,38,1.0616
+Logistic regression,model_only,1,38,0.3173
+Extra trees,model_only,1,38,20.1922
+CatBoost,model_only,1,38,1.5433
+Extra trees,model_only,1,39,20.419
+Random forest,model_only,1,39,23.3751
+LightGBM,model_only,1,39,1.1712
+CatBoost,model_only,1,39,0.8557
+XGBoost,model_only,1,39,0.9675
+Logistic regression,model_only,1,39,0.4172
+Histogram boosting,model_only,1,39,4.6371
+Linear SVM,model_only,1,39,0.2489
+CatBoost,model_only,1,40,1.624
+Logistic regression,model_only,1,40,0.4372
+XGBoost,model_only,1,40,0.9654
+Extra trees,model_only,1,40,25.6006
+LightGBM,model_only,1,40,1.0733
+Histogram boosting,model_only,1,40,4.015
+Random forest,model_only,1,40,21.9916
+Linear SVM,model_only,1,40,0.2319
+Linear SVM,model_only,1,41,0.1941
+LightGBM,model_only,1,41,0.947
+Logistic regression,model_only,1,41,0.2842
+XGBoost,model_only,1,41,0.7067
+Histogram boosting,model_only,1,41,3.5614
+Random forest,model_only,1,41,20.3069
+Extra trees,model_only,1,41,21.3015
+CatBoost,model_only,1,41,1.2367
+Logistic regression,model_only,1,42,0.3127
+Extra trees,model_only,1,42,22.6806
+CatBoost,model_only,1,42,1.071
+Linear SVM,model_only,1,42,0.401
+LightGBM,model_only,1,42,0.8393
+Histogram boosting,model_only,1,42,3.333
+XGBoost,model_only,1,42,0.7059
+Random forest,model_only,1,42,22.5059
+CatBoost,model_only,1,43,1.4507
+Logistic regression,model_only,1,43,0.3325
+Histogram boosting,model_only,1,43,3.2934
+Extra trees,model_only,1,43,20.2574
+LightGBM,model_only,1,43,0.9057
+Random forest,model_only,1,43,20.2158
+Linear SVM,model_only,1,43,0.2476
+XGBoost,model_only,1,43,0.7827
+Histogram boosting,model_only,1,44,3.3237
+LightGBM,model_only,1,44,0.9647
+Random forest,model_only,1,44,20.3244
+Logistic regression,model_only,1,44,0.2129
+Extra trees,model_only,1,44,20.162
+CatBoost,model_only,1,44,1.3707
+XGBoost,model_only,1,44,0.6958
+Linear SVM,model_only,1,44,0.1908
+Linear SVM,model_only,1,45,0.1299
+XGBoost,model_only,1,45,0.3638
+LightGBM,model_only,1,45,0.6525
+Random forest,model_only,1,45,20.8106
+Histogram boosting,model_only,1,45,3.5394
+Extra trees,model_only,1,45,21.9391
+CatBoost,model_only,1,45,1.516
+Logistic regression,model_only,1,45,0.3416
+XGBoost,model_only,1,46,0.7713
+CatBoost,model_only,1,46,1.1494
+Histogram boosting,model_only,1,46,3.6893
+Linear SVM,model_only,1,46,0.2201
+Logistic regression,model_only,1,46,0.2426
+Random forest,model_only,1,46,22.1488
+Extra trees,model_only,1,46,21.2839
+LightGBM,model_only,1,46,0.8807
+Extra trees,model_only,1,47,21.8035
+Random forest,model_only,1,47,19.8475
+CatBoost,model_only,1,47,0.9644
+Linear SVM,model_only,1,47,0.2763
+LightGBM,model_only,1,47,0.8673
+Histogram boosting,model_only,1,47,3.6903
+XGBoost,model_only,1,47,1.2989
+Logistic regression,model_only,1,47,0.3232
+CatBoost,model_only,1,48,1.6491
+Linear SVM,model_only,1,48,0.2784
+LightGBM,model_only,1,48,1.1243
+Logistic regression,model_only,1,48,0.2848
+Histogram boosting,model_only,1,48,4.0479
+Random forest,model_only,1,48,20.8704
+Extra trees,model_only,1,48,21.9834
+XGBoost,model_only,1,48,0.7701
+Linear SVM,model_only,1,49,0.396
+LightGBM,model_only,1,49,1.4252
+XGBoost,model_only,1,49,0.711
+CatBoost,model_only,1,49,1.022
+Random forest,model_only,1,49,23.2711
+Logistic regression,model_only,1,49,0.3342
+Histogram boosting,model_only,1,49,3.5996
+Extra trees,model_only,1,49,25.3685
+Logistic regression,model_only,1,50,0.4655
+LightGBM,model_only,1,50,1.3762
+XGBoost,model_only,1,50,1.0716
+Histogram boosting,model_only,1,50,4.5874
+Extra trees,model_only,1,50,28.556
+Linear SVM,model_only,1,50,0.4831
+CatBoost,model_only,1,50,2.2308
+Random forest,model_only,1,50,27.4057
+Random forest,model_only,1,51,22.7836
+CatBoost,model_only,1,51,0.4994
+Extra trees,model_only,1,51,21.941
+XGBoost,model_only,1,51,0.8164
+Histogram boosting,model_only,1,51,3.593
+Logistic regression,model_only,1,51,0.2915
+LightGBM,model_only,1,51,1.1551
+Linear SVM,model_only,1,51,0.2121
+CatBoost,model_only,1,52,1.1154
+Extra trees,model_only,1,52,21.7239
+Linear SVM,model_only,1,52,0.2529
+Histogram boosting,model_only,1,52,3.477
+Random forest,model_only,1,52,19.9725
+LightGBM,model_only,1,52,1.0185
+XGBoost,model_only,1,52,0.7039
+Logistic regression,model_only,1,52,0.3227
+Random forest,model_only,1,53,21.026
+Extra trees,model_only,1,53,21.7677
+XGBoost,model_only,1,53,0.6785
+CatBoost,model_only,1,53,1.4792
+LightGBM,model_only,1,53,1.0336
+Histogram boosting,model_only,1,53,3.7828
+Linear SVM,model_only,1,53,0.2722
+Logistic regression,model_only,1,53,0.2563
+CatBoost,model_only,1,54,1.213
+Random forest,model_only,1,54,22.7732
+Logistic regression,model_only,1,54,0.3361
+Linear SVM,model_only,1,54,0.1983
+Extra trees,model_only,1,54,21.7092
+LightGBM,model_only,1,54,0.9417
+XGBoost,model_only,1,54,0.9148
+Histogram boosting,model_only,1,54,3.3889
+Random forest,model_only,1,55,21.5722
+CatBoost,model_only,1,55,1.6255
+Logistic regression,model_only,1,55,0.3514
+Histogram boosting,model_only,1,55,3.557
+XGBoost,model_only,1,55,1.0492
+Linear SVM,model_only,1,55,0.2816
+LightGBM,model_only,1,55,0.8485
+Extra trees,model_only,1,55,23.594
+XGBoost,model_only,1,56,0.8552
+Extra trees,model_only,1,56,22.8122
+Logistic regression,model_only,1,56,0.5147
+Histogram boosting,model_only,1,56,3.9706
+CatBoost,model_only,1,56,1.5408
+Linear SVM,model_only,1,56,0.3054
+LightGBM,model_only,1,56,1.0217
+Random forest,model_only,1,56,20.1693
+LightGBM,model_only,1,57,0.9058
+Extra trees,model_only,1,57,21.5644
+XGBoost,model_only,1,57,0.8628
+Random forest,model_only,1,57,17.3005
+CatBoost,model_only,1,57,0.9721
+Logistic regression,model_only,1,57,0.3596
+Linear SVM,model_only,1,57,0.337
+Histogram boosting,model_only,1,57,2.5777
+Random forest,model_only,1,58,20.5219
+CatBoost,model_only,1,58,1.3095
+Extra trees,model_only,1,58,21.4456
+Logistic regression,model_only,1,58,0.417
+LightGBM,model_only,1,58,1.0151
+Linear SVM,model_only,1,58,0.4102
+XGBoost,model_only,1,58,0.6591
+Histogram boosting,model_only,1,58,2.4846
+Histogram boosting,model_only,1,59,3.0847
+LightGBM,model_only,1,59,0.9259
+XGBoost,model_only,1,59,1.2595
+Random forest,model_only,1,59,16.9473
+Linear SVM,model_only,1,59,0.4471
+Logistic regression,model_only,1,59,0.388
+CatBoost,model_only,1,59,0.9937
+Extra trees,model_only,1,59,22.1688
+Histogram boosting,pipeline,32,0,3.8033
+XGBoost,pipeline,32,0,0.9624
+Linear SVM,pipeline,32,0,0.6417
+LightGBM,pipeline,32,0,1.3725
+CatBoost,pipeline,32,0,2.9703
+Random forest,pipeline,32,0,21.9819
+Extra trees,pipeline,32,0,21.369
+Logistic regression,pipeline,32,0,0.9277
+CatBoost,pipeline,32,1,3.1464
+Random forest,pipeline,32,1,22.0249
+Histogram boosting,pipeline,32,1,3.5076
+XGBoost,pipeline,32,1,1.1714
+Extra trees,pipeline,32,1,22.4812
+Logistic regression,pipeline,32,1,1.0587
+LightGBM,pipeline,32,1,1.4798
+Linear SVM,pipeline,32,1,0.9533
+Linear SVM,pipeline,32,2,0.8342
+Histogram boosting,pipeline,32,2,3.7468
+Logistic regression,pipeline,32,2,0.8523
+XGBoost,pipeline,32,2,1.1102
+Random forest,pipeline,32,2,22.1812
+Extra trees,pipeline,32,2,21.6414
+LightGBM,pipeline,32,2,1.5152
+CatBoost,pipeline,32,2,2.6375
+Extra trees,pipeline,32,3,21.9599
+Histogram boosting,pipeline,32,3,3.7324
+CatBoost,pipeline,32,3,2.7779
+Random forest,pipeline,32,3,22.5089
+LightGBM,pipeline,32,3,1.7151
+Linear SVM,pipeline,32,3,0.9395
+Logistic regression,pipeline,32,3,0.8294
+XGBoost,pipeline,32,3,1.2486
+CatBoost,pipeline,32,4,2.5607
+Logistic regression,pipeline,32,4,0.9643
+XGBoost,pipeline,32,4,1.3685
+Extra trees,pipeline,32,4,23.1189
+LightGBM,pipeline,32,4,1.551
+Histogram boosting,pipeline,32,4,3.6677
+Linear SVM,pipeline,32,4,1.3819
+Random forest,pipeline,32,4,22.1257
+CatBoost,pipeline,32,5,2.6434
+LightGBM,pipeline,32,5,1.6022
+Extra trees,pipeline,32,5,21.1113
+XGBoost,pipeline,32,5,1.1017
+Random forest,pipeline,32,5,21.6422
+Linear SVM,pipeline,32,5,1.0093
+Histogram boosting,pipeline,32,5,3.5209
+Logistic regression,pipeline,32,5,1.3614
+Histogram boosting,pipeline,32,6,3.6819
+XGBoost,pipeline,32,6,1.3188
+Extra trees,pipeline,32,6,21.5799
+Random forest,pipeline,32,6,21.1325
+Linear SVM,pipeline,32,6,0.972
+LightGBM,pipeline,32,6,1.5296
+Logistic regression,pipeline,32,6,0.9847
+CatBoost,pipeline,32,6,2.5459
+Random forest,pipeline,32,7,21.4766
+Histogram boosting,pipeline,32,7,3.9352
+CatBoost,pipeline,32,7,3.1306
+Extra trees,pipeline,32,7,21.2581
+Linear SVM,pipeline,32,7,1.0483
+Logistic regression,pipeline,32,7,1.006
+LightGBM,pipeline,32,7,1.4729
+XGBoost,pipeline,32,7,1.3315
+Linear SVM,pipeline,32,8,0.8793
+Logistic regression,pipeline,32,8,0.9434
+Random forest,pipeline,32,8,22.4789
+CatBoost,pipeline,32,8,2.4953
+Histogram boosting,pipeline,32,8,3.8189
+LightGBM,pipeline,32,8,1.5268
+XGBoost,pipeline,32,8,1.2316
+Extra trees,pipeline,32,8,22.4787
+LightGBM,pipeline,32,9,1.5609
+XGBoost,pipeline,32,9,1.3021
+Linear SVM,pipeline,32,9,0.9219
+Histogram boosting,pipeline,32,9,3.4977
+Logistic regression,pipeline,32,9,0.8725
+CatBoost,pipeline,32,9,2.2657
+Extra trees,pipeline,32,9,22.3028
+Random forest,pipeline,32,9,22.2134
+CatBoost,pipeline,32,10,2.8093
+Random forest,pipeline,32,10,24.3189
+LightGBM,pipeline,32,10,1.7575
+Histogram boosting,pipeline,32,10,4.0363
+Extra trees,pipeline,32,10,23.3359
+XGBoost,pipeline,32,10,1.3051
+Linear SVM,pipeline,32,10,1.1332
+Logistic regression,pipeline,32,10,0.8553
+LightGBM,pipeline,32,11,1.4613
+CatBoost,pipeline,32,11,2.3524
+XGBoost,pipeline,32,11,1.3577
+Linear SVM,pipeline,32,11,0.9179
+Random forest,pipeline,32,11,22.0606
+Histogram boosting,pipeline,32,11,3.7041
+Extra trees,pipeline,32,11,25.4976
+Logistic regression,pipeline,32,11,1.1844
+Extra trees,pipeline,32,12,26.4849
+Random forest,pipeline,32,12,27.6746
+Logistic regression,pipeline,32,12,1.3549
+LightGBM,pipeline,32,12,2.3444
+Linear SVM,pipeline,32,12,1.7495
+CatBoost,pipeline,32,12,3.8601
+XGBoost,pipeline,32,12,2.2576
+Histogram boosting,pipeline,32,12,5.0732
+LightGBM,pipeline,32,13,2.4389
+Linear SVM,pipeline,32,13,1.3055
+Extra trees,pipeline,32,13,24.4067
+Random forest,pipeline,32,13,22.789
+XGBoost,pipeline,32,13,1.356
+Histogram boosting,pipeline,32,13,3.685
+Logistic regression,pipeline,32,13,0.8917
+CatBoost,pipeline,32,13,2.7903
+Random forest,pipeline,32,14,21.3804
+LightGBM,pipeline,32,14,1.1978
+Logistic regression,pipeline,32,14,0.6399
+Extra trees,pipeline,32,14,20.2157
+Histogram boosting,pipeline,32,14,3.8781
+Linear SVM,pipeline,32,14,0.9142
+XGBoost,pipeline,32,14,1.3143
+CatBoost,pipeline,32,14,2.8176
+XGBoost,pipeline,32,15,1.1242
+LightGBM,pipeline,32,15,1.5913
+Random forest,pipeline,32,15,20.0742
+Linear SVM,pipeline,32,15,1.0138
+Extra trees,pipeline,32,15,21.011
+CatBoost,pipeline,32,15,2.6177
+Histogram boosting,pipeline,32,15,3.998
+Logistic regression,pipeline,32,15,0.9642
+Random forest,pipeline,32,16,22.6092
+CatBoost,pipeline,32,16,2.5768
+Extra trees,pipeline,32,16,23.5866
+Linear SVM,pipeline,32,16,1.0728
+Histogram boosting,pipeline,32,16,3.6585
+Logistic regression,pipeline,32,16,0.8448
+XGBoost,pipeline,32,16,1.3691
+LightGBM,pipeline,32,16,1.9212
+Histogram boosting,pipeline,32,17,3.6948
+Logistic regression,pipeline,32,17,0.9213
+LightGBM,pipeline,32,17,1.5729
+Linear SVM,pipeline,32,17,0.9023
+Random forest,pipeline,32,17,21.5312
+Extra trees,pipeline,32,17,21.1297
+CatBoost,pipeline,32,17,2.6678
+XGBoost,pipeline,32,17,1.3426
+Random forest,pipeline,32,18,23.5732
+Histogram boosting,pipeline,32,18,4.1495
+CatBoost,pipeline,32,18,2.4063
+Extra trees,pipeline,32,18,26.2911
+LightGBM,pipeline,32,18,2.0175
+Logistic regression,pipeline,32,18,1.068
+Linear SVM,pipeline,32,18,0.9879
+XGBoost,pipeline,32,18,1.4572
+Extra trees,pipeline,32,19,24.168
+Random forest,pipeline,32,19,21.8469
+LightGBM,pipeline,32,19,1.7331
+Logistic regression,pipeline,32,19,0.9181
+Linear SVM,pipeline,32,19,0.8645
+Histogram boosting,pipeline,32,19,3.7923
+XGBoost,pipeline,32,19,1.1726
+CatBoost,pipeline,32,19,2.4966
+Random forest,pipeline,32,20,21.5463
+XGBoost,pipeline,32,20,1.2757
+Linear SVM,pipeline,32,20,0.9317
+LightGBM,pipeline,32,20,1.547
+Extra trees,pipeline,32,20,22.3311
+Histogram boosting,pipeline,32,20,3.5612
+CatBoost,pipeline,32,20,2.9024
+Logistic regression,pipeline,32,20,0.9903
+CatBoost,pipeline,32,21,2.212
+Linear SVM,pipeline,32,21,1.4943
+Histogram boosting,pipeline,32,21,4.1875
+LightGBM,pipeline,32,21,1.8928
+XGBoost,pipeline,32,21,1.2463
+Random forest,pipeline,32,21,22.1409
+Logistic regression,pipeline,32,21,0.9291
+Extra trees,pipeline,32,21,20.915
+Random forest,pipeline,32,22,19.4508
+XGBoost,pipeline,32,22,1.2465
+CatBoost,pipeline,32,22,3.0585
+LightGBM,pipeline,32,22,1.5712
+Extra trees,pipeline,32,22,23.1902
+Histogram boosting,pipeline,32,22,3.8018
+Logistic regression,pipeline,32,22,0.9241
+Linear SVM,pipeline,32,22,0.8844
+Extra trees,pipeline,32,23,21.8021
+CatBoost,pipeline,32,23,2.6042
+Histogram boosting,pipeline,32,23,3.1015
+Linear SVM,pipeline,32,23,0.6223
+XGBoost,pipeline,32,23,0.8004
+Logistic regression,pipeline,32,23,0.8356
+Random forest,pipeline,32,23,20.0757
+LightGBM,pipeline,32,23,1.8688
+Extra trees,pipeline,32,24,20.4485
+Logistic regression,pipeline,32,24,0.9062
+CatBoost,pipeline,32,24,2.3325
+Random forest,pipeline,32,24,22.7222
+XGBoost,pipeline,32,24,1.4085
+Linear SVM,pipeline,32,24,0.9703
+LightGBM,pipeline,32,24,1.6372
+Histogram boosting,pipeline,32,24,3.9357
+Extra trees,model_only,32,0,27.3042
+Histogram boosting,model_only,32,0,4.3655
+LightGBM,model_only,32,0,1.7206
+Linear SVM,model_only,32,0,0.2905
+Logistic regression,model_only,32,0,0.2911
+XGBoost,model_only,32,0,1.0414
+Random forest,model_only,32,0,23.9929
+CatBoost,model_only,32,0,3.1909
+Extra trees,model_only,32,1,23.8672
+XGBoost,model_only,32,1,1.0844
+CatBoost,model_only,32,1,2.6061
+Histogram boosting,model_only,32,1,3.6179
+Linear SVM,model_only,32,1,0.254
+Random forest,model_only,32,1,21.7702
+Logistic regression,model_only,32,1,0.408
+LightGBM,model_only,32,1,1.242
+Linear SVM,model_only,32,2,0.22
+Histogram boosting,model_only,32,2,2.7085
+CatBoost,model_only,32,2,2.078
+LightGBM,model_only,32,2,1.3991
+Logistic regression,model_only,32,2,0.456
+XGBoost,model_only,32,2,0.7521
+Extra trees,model_only,32,2,20.1905
+Random forest,model_only,32,2,20.6012
+XGBoost,model_only,32,3,0.5145
+Random forest,model_only,32,3,19.4999
+CatBoost,model_only,32,3,2.7667
+LightGBM,model_only,32,3,1.1467
+Logistic regression,model_only,32,3,0.3194
+Extra trees,model_only,32,3,21.9008
+Linear SVM,model_only,32,3,0.3434
+Histogram boosting,model_only,32,3,3.2901
+Random forest,model_only,32,4,20.4113
+Extra trees,model_only,32,4,21.0768
+Histogram boosting,model_only,32,4,3.3494
+XGBoost,model_only,32,4,0.9148
+CatBoost,model_only,32,4,2.1119
+LightGBM,model_only,32,4,1.1674
+Logistic regression,model_only,32,4,0.4611
+Linear SVM,model_only,32,4,0.1966
+Extra trees,model_only,32,5,21.5583
+Random forest,model_only,32,5,22.5324
+Logistic regression,model_only,32,5,0.4107
+LightGBM,model_only,32,5,1.3345
+Linear SVM,model_only,32,5,0.2562
+XGBoost,model_only,32,5,1.2889
+CatBoost,model_only,32,5,1.5122
+Histogram boosting,model_only,32,5,3.7105
+Logistic regression,model_only,32,6,0.3483
+XGBoost,model_only,32,6,1.2679
+LightGBM,model_only,32,6,1.4588
+Random forest,model_only,32,6,27.4892
+Extra trees,model_only,32,6,29.3801
+Linear SVM,model_only,32,6,0.3448
+CatBoost,model_only,32,6,1.7494
+Histogram boosting,model_only,32,6,3.8991
+Histogram boosting,model_only,32,7,3.6292
+Extra trees,model_only,32,7,25.5416
+CatBoost,model_only,32,7,2.8522
+Logistic regression,model_only,32,7,0.4522
+XGBoost,model_only,32,7,1.2181
+LightGBM,model_only,32,7,1.3331
+Linear SVM,model_only,32,7,0.2522
+Random forest,model_only,32,7,26.3179
+Extra trees,model_only,32,8,24.6005
+CatBoost,model_only,32,8,2.2313
+Logistic regression,model_only,32,8,0.3881
+Linear SVM,model_only,32,8,0.2324
+Random forest,model_only,32,8,24.0454
+Histogram boosting,model_only,32,8,3.803
+LightGBM,model_only,32,8,1.3924
+XGBoost,model_only,32,8,0.8743
+LightGBM,model_only,32,9,1.4078
+Linear SVM,model_only,32,9,0.309
+Random forest,model_only,32,9,21.4438
+Logistic regression,model_only,32,9,0.2913
+Extra trees,model_only,32,9,21.2514
+XGBoost,model_only,32,9,1.2387
+CatBoost,model_only,32,9,2.4213
+Histogram boosting,model_only,32,9,3.1758
+CatBoost,model_only,32,10,1.8401
+Linear SVM,model_only,32,10,0.286
+Random forest,model_only,32,10,22.7978
+LightGBM,model_only,32,10,1.3371
+Logistic regression,model_only,32,10,0.3263
+Histogram boosting,model_only,32,10,3.4275
+XGBoost,model_only,32,10,0.8658
+Extra trees,model_only,32,10,20.8483
+XGBoost,model_only,32,11,0.6788
+Histogram boosting,model_only,32,11,3.399
+Linear SVM,model_only,32,11,0.2988
+Logistic regression,model_only,32,11,0.2536
+Random forest,model_only,32,11,22.6071
+CatBoost,model_only,32,11,2.3593
+Extra trees,model_only,32,11,23.6348
+LightGBM,model_only,32,11,1.1106
+CatBoost,model_only,32,12,2.2672
+Logistic regression,model_only,32,12,0.3614
+Linear SVM,model_only,32,12,0.1973
+Extra trees,model_only,32,12,21.6931
+LightGBM,model_only,32,12,1.1063
+XGBoost,model_only,32,12,0.9077
+Histogram boosting,model_only,32,12,3.3416
+Random forest,model_only,32,12,21.9741
+XGBoost,model_only,32,13,0.7934
+Extra trees,model_only,32,13,21.6693
+Linear SVM,model_only,32,13,0.3664
+Random forest,model_only,32,13,19.3119
+CatBoost,model_only,32,13,2.3148
+Histogram boosting,model_only,32,13,3.1264
+LightGBM,model_only,32,13,1.3956
+Logistic regression,model_only,32,13,0.2917
+LightGBM,model_only,32,14,1.1956
+Logistic regression,model_only,32,14,0.3573
+CatBoost,model_only,32,14,2.2895
+Random forest,model_only,32,14,20.4961
+Linear SVM,model_only,32,14,0.2581
+Histogram boosting,model_only,32,14,3.1115
+XGBoost,model_only,32,14,0.8123
+Extra trees,model_only,32,14,22.6995
+Logistic regression,model_only,32,15,0.3588
+Linear SVM,model_only,32,15,0.2149
+Extra trees,model_only,32,15,22.5719
+Random forest,model_only,32,15,21.3905
+XGBoost,model_only,32,15,0.8183
+CatBoost,model_only,32,15,2.0407
+LightGBM,model_only,32,15,1.1558
+Histogram boosting,model_only,32,15,3.5559
+Logistic regression,model_only,32,16,0.3776
+Random forest,model_only,32,16,23.8224
+Histogram boosting,model_only,32,16,3.6836
+Extra trees,model_only,32,16,24.2625
+LightGBM,model_only,32,16,0.9018
+XGBoost,model_only,32,16,0.6783
+Linear SVM,model_only,32,16,0.1857
+CatBoost,model_only,32,16,1.5698
+Logistic regression,model_only,32,17,0.2483
+LightGBM,model_only,32,17,0.7489
+Random forest,model_only,32,17,24.7213
+Histogram boosting,model_only,32,17,3.7411
+CatBoost,model_only,32,17,2.5489
+Extra trees,model_only,32,17,20.1356
+Linear SVM,model_only,32,17,0.2562
+XGBoost,model_only,32,17,0.6892
+LightGBM,model_only,32,18,0.8016
+CatBoost,model_only,32,18,1.9474
+Logistic regression,model_only,32,18,0.2522
+Histogram boosting,model_only,32,18,2.3233
+Linear SVM,model_only,32,18,0.1403
+Extra trees,model_only,32,18,23.6351
+Random forest,model_only,32,18,27.1388
+XGBoost,model_only,32,18,0.9946
+CatBoost,model_only,32,19,2.7478
+Histogram boosting,model_only,32,19,3.3177
+Logistic regression,model_only,32,19,0.2999
+LightGBM,model_only,32,19,1.3441
+Linear SVM,model_only,32,19,0.2539
+Random forest,model_only,32,19,23.394
+XGBoost,model_only,32,19,0.8946
+Extra trees,model_only,32,19,22.3003
+Logistic regression,model_only,32,20,0.3673
+LightGBM,model_only,32,20,1.1698
+Histogram boosting,model_only,32,20,3.5407
+Extra trees,model_only,32,20,20.0372
+Linear SVM,model_only,32,20,0.2323
+CatBoost,model_only,32,20,2.1698
+XGBoost,model_only,32,20,0.8506
+Random forest,model_only,32,20,23.1291
+Extra trees,model_only,32,21,22.6186
+LightGBM,model_only,32,21,1.1205
+Random forest,model_only,32,21,21.1742
+Linear SVM,model_only,32,21,0.2335
+XGBoost,model_only,32,21,0.8361
+Logistic regression,model_only,32,21,0.2774
+CatBoost,model_only,32,21,2.4187
+Histogram boosting,model_only,32,21,3.567
+Linear SVM,model_only,32,22,0.2503
+CatBoost,model_only,32,22,2.2434
+Extra trees,model_only,32,22,22.006
+Histogram boosting,model_only,32,22,3.4481
+Random forest,model_only,32,22,21.226
+LightGBM,model_only,32,22,1.1151
+XGBoost,model_only,32,22,0.7351
+Logistic regression,model_only,32,22,0.3103
+Extra trees,model_only,32,23,21.4506
+Linear SVM,model_only,32,23,0.8258
+XGBoost,model_only,32,23,0.7094
+Random forest,model_only,32,23,20.913
+Logistic regression,model_only,32,23,0.3361
+CatBoost,model_only,32,23,2.1931
+LightGBM,model_only,32,23,1.2121
+Histogram boosting,model_only,32,23,3.5781
+Extra trees,model_only,32,24,20.5607
+LightGBM,model_only,32,24,1.2839
+XGBoost,model_only,32,24,0.811
+Linear SVM,model_only,32,24,0.3282
+CatBoost,model_only,32,24,2.0897
+Histogram boosting,model_only,32,24,3.2651
+Random forest,model_only,32,24,22.2111
+Logistic regression,model_only,32,24,0.3391
+Linear SVM,pipeline,256,0,1.1299
+Logistic regression,pipeline,256,0,0.9146
+Random forest,pipeline,256,0,21.3362
+LightGBM,pipeline,256,0,3.5974
+XGBoost,pipeline,256,0,1.6485
+Extra trees,pipeline,256,0,24.1768
+CatBoost,pipeline,256,0,2.7344
+Histogram boosting,pipeline,256,0,6.4007
+Random forest,pipeline,256,1,23.0161
+XGBoost,pipeline,256,1,1.817
+Linear SVM,pipeline,256,1,1.8816
+CatBoost,pipeline,256,1,3.0946
+Logistic regression,pipeline,256,1,1.0106
+Extra trees,pipeline,256,1,23.8506
+LightGBM,pipeline,256,1,3.2997
+Histogram boosting,pipeline,256,1,5.5287
+Random forest,pipeline,256,2,22.4853
+CatBoost,pipeline,256,2,2.6128
+Logistic regression,pipeline,256,2,1.0497
+Linear SVM,pipeline,256,2,0.9041
+Extra trees,pipeline,256,2,23.4926
+LightGBM,pipeline,256,2,3.8229
+Histogram boosting,pipeline,256,2,6.1756
+XGBoost,pipeline,256,2,1.7879
+Logistic regression,pipeline,256,3,0.9931
+LightGBM,pipeline,256,3,3.1017
+CatBoost,pipeline,256,3,2.3381
+Histogram boosting,pipeline,256,3,7.0945
+XGBoost,pipeline,256,3,1.7176
+Random forest,pipeline,256,3,23.8118
+Linear SVM,pipeline,256,3,1.2504
+Extra trees,pipeline,256,3,23.7627
+Logistic regression,pipeline,256,4,1.1817
+Extra trees,pipeline,256,4,24.5109
+XGBoost,pipeline,256,4,1.3292
+CatBoost,pipeline,256,4,2.2652
+Histogram boosting,pipeline,256,4,7.728
+LightGBM,pipeline,256,4,4.4843
+Random forest,pipeline,256,4,26.9939
+Linear SVM,pipeline,256,4,1.1647
+Logistic regression,pipeline,256,5,1.7915
+Histogram boosting,pipeline,256,5,6.1853
+XGBoost,pipeline,256,5,1.9166
+Linear SVM,pipeline,256,5,1.0431
+LightGBM,pipeline,256,5,3.5484
+Extra trees,pipeline,256,5,24.1959
+CatBoost,pipeline,256,5,2.9432
+Random forest,pipeline,256,5,25.7544
+Random forest,pipeline,256,6,23.7558
+Logistic regression,pipeline,256,6,1.0556
+XGBoost,pipeline,256,6,1.8624
+Histogram boosting,pipeline,256,6,6.0913
+Extra trees,pipeline,256,6,25.2127
+LightGBM,pipeline,256,6,3.5396
+Linear SVM,pipeline,256,6,0.9948
+CatBoost,pipeline,256,6,2.6037
+Random forest,pipeline,256,7,23.8528
+Extra trees,pipeline,256,7,23.2211
+Linear SVM,pipeline,256,7,1.0478
+CatBoost,pipeline,256,7,2.5327
+XGBoost,pipeline,256,7,1.686
+Histogram boosting,pipeline,256,7,5.7998
+Logistic regression,pipeline,256,7,0.9427
+LightGBM,pipeline,256,7,3.024
+LightGBM,pipeline,256,8,3.0304
+Histogram boosting,pipeline,256,8,5.7546
+Linear SVM,pipeline,256,8,0.9567
+Logistic regression,pipeline,256,8,0.8612
+XGBoost,pipeline,256,8,1.4351
+Random forest,pipeline,256,8,22.3832
+CatBoost,pipeline,256,8,2.934
+Extra trees,pipeline,256,8,23.5298
+Linear SVM,pipeline,256,9,1.1643
+Histogram boosting,pipeline,256,9,5.6706
+LightGBM,pipeline,256,9,3.4678
+Logistic regression,pipeline,256,9,0.9708
+CatBoost,pipeline,256,9,2.5762
+XGBoost,pipeline,256,9,1.5763
+Extra trees,pipeline,256,9,24.0721
+Random forest,pipeline,256,9,22.7933
+Logistic regression,pipeline,256,10,1.043
+LightGBM,pipeline,256,10,3.1188
+Random forest,pipeline,256,10,19.0525
+CatBoost,pipeline,256,10,1.8721
+Extra trees,pipeline,256,10,29.5202
+Linear SVM,pipeline,256,10,2.8173
+Histogram boosting,pipeline,256,10,9.1395
+XGBoost,pipeline,256,10,1.8209
+CatBoost,pipeline,256,11,2.7343
+Histogram boosting,pipeline,256,11,6.052
+Extra trees,pipeline,256,11,27.2122
+Linear SVM,pipeline,256,11,1.1662
+Logistic regression,pipeline,256,11,0.9822
+LightGBM,pipeline,256,11,3.3982
+XGBoost,pipeline,256,11,1.8129
+Random forest,pipeline,256,11,23.5867
+Histogram boosting,pipeline,256,12,6.0564
+LightGBM,pipeline,256,12,3.0599
+Extra trees,pipeline,256,12,27.6305
+Linear SVM,pipeline,256,12,1.4399
+Logistic regression,pipeline,256,12,1.1467
+Random forest,pipeline,256,12,27.806
+XGBoost,pipeline,256,12,2.1113
+CatBoost,pipeline,256,12,2.9986
+Extra trees,pipeline,256,13,26.2033
+Logistic regression,pipeline,256,13,1.1797
+XGBoost,pipeline,256,13,1.682
+Linear SVM,pipeline,256,13,1.1536
+Random forest,pipeline,256,13,23.9473
+CatBoost,pipeline,256,13,2.6026
+Histogram boosting,pipeline,256,13,6.0714
+LightGBM,pipeline,256,13,3.9117
+Linear SVM,pipeline,256,14,1.0704
+XGBoost,pipeline,256,14,1.8266
+LightGBM,pipeline,256,14,2.5083
+Extra trees,pipeline,256,14,22.5967
+Logistic regression,pipeline,256,14,0.764
+CatBoost,pipeline,256,14,2.2558
+Histogram boosting,pipeline,256,14,6.087
+Random forest,pipeline,256,14,27.1319
+LightGBM,pipeline,256,15,4.1324
+CatBoost,pipeline,256,15,3.4826
+Random forest,pipeline,256,15,25.9205
+Histogram boosting,pipeline,256,15,6.3198
+Logistic regression,pipeline,256,15,1.1333
+Extra trees,pipeline,256,15,23.7212
+Linear SVM,pipeline,256,15,1.1399
+XGBoost,pipeline,256,15,2.1928
+CatBoost,pipeline,256,16,2.0618
+Random forest,pipeline,256,16,26.6736
+Extra trees,pipeline,256,16,24.9919
+Histogram boosting,pipeline,256,16,5.7457
+Linear SVM,pipeline,256,16,1.024
+Logistic regression,pipeline,256,16,1.2014
+XGBoost,pipeline,256,16,1.937
+LightGBM,pipeline,256,16,3.496
+Histogram boosting,pipeline,256,17,5.7325
+Linear SVM,pipeline,256,17,1.1162
+Logistic regression,pipeline,256,17,0.8865
+XGBoost,pipeline,256,17,1.5269
+Random forest,pipeline,256,17,22.0548
+Extra trees,pipeline,256,17,23.3362
+LightGBM,pipeline,256,17,3.4298
+CatBoost,pipeline,256,17,3.0197
+XGBoost,pipeline,256,18,2.0155
+Histogram boosting,pipeline,256,18,5.9043
+Linear SVM,pipeline,256,18,0.8426
+Logistic regression,pipeline,256,18,0.5992
+Extra trees,pipeline,256,18,23.8068
+Random forest,pipeline,256,18,22.6753
+CatBoost,pipeline,256,18,3.1366
+LightGBM,pipeline,256,18,3.7877
+Histogram boosting,pipeline,256,19,6.458
+XGBoost,pipeline,256,19,2.1124
+Random forest,pipeline,256,19,27.585
+CatBoost,pipeline,256,19,2.8974
+Logistic regression,pipeline,256,19,1.527
+Linear SVM,pipeline,256,19,1.1687
+Extra trees,pipeline,256,19,26.9892
+LightGBM,pipeline,256,19,3.6883
+Random forest,pipeline,256,20,25.1688
+XGBoost,pipeline,256,20,1.9248
+Histogram boosting,pipeline,256,20,6.0944
+Extra trees,pipeline,256,20,23.7317
+LightGBM,pipeline,256,20,3.7731
+Logistic regression,pipeline,256,20,1.1607
+Linear SVM,pipeline,256,20,1.1121
+CatBoost,pipeline,256,20,3.1515
+Logistic regression,pipeline,256,21,1.6666
+Extra trees,pipeline,256,21,27.5362
+Random forest,pipeline,256,21,27.6012
+XGBoost,pipeline,256,21,4.1871
+LightGBM,pipeline,256,21,4.5924
+Histogram boosting,pipeline,256,21,6.7681
+Linear SVM,pipeline,256,21,1.3428
+CatBoost,pipeline,256,21,3.9412
+Histogram boosting,pipeline,256,22,9.2349
+LightGBM,pipeline,256,22,4.2284
+XGBoost,pipeline,256,22,3.0637
+CatBoost,pipeline,256,22,3.9284
+Logistic regression,pipeline,256,22,1.4177
+Linear SVM,pipeline,256,22,1.823
+Random forest,pipeline,256,22,29.5439
+Extra trees,pipeline,256,22,24.0371
+Logistic regression,pipeline,256,23,1.103
+Extra trees,pipeline,256,23,23.9315
+Linear SVM,pipeline,256,23,1.0698
+Random forest,pipeline,256,23,21.9926
+Histogram boosting,pipeline,256,23,5.6752
+XGBoost,pipeline,256,23,1.9424
+CatBoost,pipeline,256,23,2.6276
+LightGBM,pipeline,256,23,3.2032
+Linear SVM,pipeline,256,24,0.9568
+XGBoost,pipeline,256,24,1.9888
+Histogram boosting,pipeline,256,24,5.6288
+Extra trees,pipeline,256,24,23.458
+Random forest,pipeline,256,24,21.6404
+CatBoost,pipeline,256,24,3.1171
+Logistic regression,pipeline,256,24,1.0209
+LightGBM,pipeline,256,24,3.5453
+Logistic regression,model_only,256,0,0.4644
+Linear SVM,model_only,256,0,0.2425
+CatBoost,model_only,256,0,2.5244
+Histogram boosting,model_only,256,0,6.6627
+XGBoost,model_only,256,0,1.6969
+Extra trees,model_only,256,0,25.5271
+Random forest,model_only,256,0,27.2661
+LightGBM,model_only,256,0,3.4114
+Logistic regression,model_only,256,1,0.4251
+Random forest,model_only,256,1,32.9453
+Histogram boosting,model_only,256,1,6.2975
+LightGBM,model_only,256,1,3.4672
+XGBoost,model_only,256,1,1.5706
+CatBoost,model_only,256,1,2.2296
+Extra trees,model_only,256,1,30.3709
+Linear SVM,model_only,256,1,0.3946
+Random forest,model_only,256,2,25.4883
+XGBoost,model_only,256,2,1.6739
+CatBoost,model_only,256,2,2.4676
+Logistic regression,model_only,256,2,0.533
+Histogram boosting,model_only,256,2,6.1908
+Extra trees,model_only,256,2,27.8775
+Linear SVM,model_only,256,2,0.5671
+LightGBM,model_only,256,2,3.5505
+CatBoost,model_only,256,3,1.6759
+LightGBM,model_only,256,3,1.9998
+Logistic regression,model_only,256,3,0.2517
+Extra trees,model_only,256,3,22.879
+XGBoost,model_only,256,3,1.5191
+Random forest,model_only,256,3,19.7225
+Histogram boosting,model_only,256,3,4.0695
+Linear SVM,model_only,256,3,0.3045
+Random forest,model_only,256,4,24.7152
+Extra trees,model_only,256,4,25.1174
+CatBoost,model_only,256,4,2.1981
+Linear SVM,model_only,256,4,0.3825
+Histogram boosting,model_only,256,4,3.8372
+LightGBM,model_only,256,4,2.0444
+Logistic regression,model_only,256,4,0.2492
+XGBoost,model_only,256,4,1.2956
+Logistic regression,model_only,256,5,0.3561
+LightGBM,model_only,256,5,3.1491
+CatBoost,model_only,256,5,1.5084
+XGBoost,model_only,256,5,1.1154
+Random forest,model_only,256,5,24.8163
+Extra trees,model_only,256,5,21.1457
+Linear SVM,model_only,256,5,0.2463
+Histogram boosting,model_only,256,5,4.1123
+Histogram boosting,model_only,256,6,3.558
+Extra trees,model_only,256,6,29.0291
+Logistic regression,model_only,256,6,0.5358
+XGBoost,model_only,256,6,1.5915
+Linear SVM,model_only,256,6,0.3322
+LightGBM,model_only,256,6,3.2377
+Random forest,model_only,256,6,43.4793
+CatBoost,model_only,256,6,1.8684
+LightGBM,model_only,256,7,2.2231
+Linear SVM,model_only,256,7,0.2771
+Histogram boosting,model_only,256,7,3.7831
+XGBoost,model_only,256,7,1.1081
+CatBoost,model_only,256,7,2.5717
+Extra trees,model_only,256,7,22.6104
+Logistic regression,model_only,256,7,0.3577
+Random forest,model_only,256,7,21.2098
+Logistic regression,model_only,256,8,0.3444
+XGBoost,model_only,256,8,1.4594
+Histogram boosting,model_only,256,8,4.1238
+LightGBM,model_only,256,8,2.16
+Extra trees,model_only,256,8,19.6829
+Linear SVM,model_only,256,8,0.3949
+CatBoost,model_only,256,8,1.805
+Random forest,model_only,256,8,24.7466
+Random forest,model_only,256,9,24.7429
+Logistic regression,model_only,256,9,0.5096
+XGBoost,model_only,256,9,1.588
+Linear SVM,model_only,256,9,0.303
+Extra trees,model_only,256,9,31.7577
+LightGBM,model_only,256,9,3.5085
+CatBoost,model_only,256,9,1.9972
+Histogram boosting,model_only,256,9,6.2013
+XGBoost,model_only,256,10,1.5049
+Logistic regression,model_only,256,10,0.4055
+Extra trees,model_only,256,10,27.4763
+Linear SVM,model_only,256,10,0.3937
+CatBoost,model_only,256,10,2.0286
+LightGBM,model_only,256,10,3.5247
+Random forest,model_only,256,10,31.879
+Histogram boosting,model_only,256,10,7.5876
+Random forest,model_only,256,11,27.2765
+Linear SVM,model_only,256,11,0.3871
+Histogram boosting,model_only,256,11,6.4538
+Logistic regression,model_only,256,11,0.3808
+LightGBM,model_only,256,11,3.2684
+Extra trees,model_only,256,11,29.2285
+XGBoost,model_only,256,11,1.5858
+CatBoost,model_only,256,11,2.4841
+XGBoost,model_only,256,12,1.685
+Linear SVM,model_only,256,12,0.366
+Histogram boosting,model_only,256,12,7.9957
+Random forest,model_only,256,12,26.5914
+Logistic regression,model_only,256,12,0.4866
+Extra trees,model_only,256,12,30.0427
+CatBoost,model_only,256,12,1.9797
+LightGBM,model_only,256,12,3.5945
+Logistic regression,model_only,256,13,0.4662
+Random forest,model_only,256,13,27.5616
+Extra trees,model_only,256,13,26.6959
+Histogram boosting,model_only,256,13,6.4554
+CatBoost,model_only,256,13,2.0153
+LightGBM,model_only,256,13,3.6067
+Linear SVM,model_only,256,13,0.357
+XGBoost,model_only,256,13,1.5522
+Histogram boosting,model_only,256,14,6.4738
+Extra trees,model_only,256,14,25.9743
+Random forest,model_only,256,14,25.3937
+Linear SVM,model_only,256,14,0.4078
+Logistic regression,model_only,256,14,0.3675
+CatBoost,model_only,256,14,1.8324
+LightGBM,model_only,256,14,3.4123
+XGBoost,model_only,256,14,1.9926
+Logistic regression,model_only,256,15,0.5878
+LightGBM,model_only,256,15,3.7907
+XGBoost,model_only,256,15,1.3651
+Random forest,model_only,256,15,27.9325
+Histogram boosting,model_only,256,15,6.2678
+Extra trees,model_only,256,15,28.8292
+CatBoost,model_only,256,15,1.868
+Linear SVM,model_only,256,15,0.4065
+Random forest,model_only,256,16,26.8934
+CatBoost,model_only,256,16,2.1278
+Histogram boosting,model_only,256,16,5.9999
+LightGBM,model_only,256,16,3.3157
+Extra trees,model_only,256,16,27.6629
+Logistic regression,model_only,256,16,0.4887
+Linear SVM,model_only,256,16,0.2401
+XGBoost,model_only,256,16,1.5248
+Extra trees,model_only,256,17,30.0183
+XGBoost,model_only,256,17,1.47
+Logistic regression,model_only,256,17,0.4649
+CatBoost,model_only,256,17,1.9118
+Linear SVM,model_only,256,17,0.4683
+Histogram boosting,model_only,256,17,6.1717
+LightGBM,model_only,256,17,3.5188
+Random forest,model_only,256,17,27.7758
+XGBoost,model_only,256,18,1.6773
+Linear SVM,model_only,256,18,0.4185
+Extra trees,model_only,256,18,27.9282
+Random forest,model_only,256,18,24.8531
+CatBoost,model_only,256,18,1.8967
+LightGBM,model_only,256,18,3.3073
+Logistic regression,model_only,256,18,0.3835
+Histogram boosting,model_only,256,18,7.9249
+Histogram boosting,model_only,256,19,6.1581
+Random forest,model_only,256,19,27.7188
+Logistic regression,model_only,256,19,0.5048
+XGBoost,model_only,256,19,1.6632
+LightGBM,model_only,256,19,3.4922
+CatBoost,model_only,256,19,2.0539
+Extra trees,model_only,256,19,28.8976
+Linear SVM,model_only,256,19,0.3976
+Linear SVM,model_only,256,20,0.2536
+Histogram boosting,model_only,256,20,6.5305
+LightGBM,model_only,256,20,4.7651
+XGBoost,model_only,256,20,1.5484
+Logistic regression,model_only,256,20,0.4131
+Extra trees,model_only,256,20,27.5443
+CatBoost,model_only,256,20,1.8843
+Random forest,model_only,256,20,24.2456
+Linear SVM,model_only,256,21,0.3301
+Extra trees,model_only,256,21,24.6032
+Logistic regression,model_only,256,21,0.4615
+Random forest,model_only,256,21,24.1493
+LightGBM,model_only,256,21,3.2787
+CatBoost,model_only,256,21,2.073
+XGBoost,model_only,256,21,1.6126
+Histogram boosting,model_only,256,21,8.6163
+Random forest,model_only,256,22,25.2999
+Extra trees,model_only,256,22,26.5687
+Logistic regression,model_only,256,22,0.4963
+Linear SVM,model_only,256,22,0.2698
+Histogram boosting,model_only,256,22,6.6994
+XGBoost,model_only,256,22,1.8991
+LightGBM,model_only,256,22,3.4602
+CatBoost,model_only,256,22,1.8486
+CatBoost,model_only,256,23,1.2773
+Random forest,model_only,256,23,26.9944
+XGBoost,model_only,256,23,1.5639
+Histogram boosting,model_only,256,23,6.0179
+Extra trees,model_only,256,23,27.1404
+LightGBM,model_only,256,23,3.4301
+Linear SVM,model_only,256,23,0.357
+Logistic regression,model_only,256,23,0.3345
+Logistic regression,model_only,256,24,0.3006
+LightGBM,model_only,256,24,3.1282
+Linear SVM,model_only,256,24,0.2739
+XGBoost,model_only,256,24,1.4645
+Random forest,model_only,256,24,26.3567
+Extra trees,model_only,256,24,24.7415
+Histogram boosting,model_only,256,24,5.9011
+CatBoost,model_only,256,24,2.7789
+Linear SVM,pipeline,3413,0,1.7488
+CatBoost,pipeline,3413,0,3.925
+Random forest,pipeline,3413,0,31.0571
+Extra trees,pipeline,3413,0,43.3643
+Histogram boosting,pipeline,3413,0,32.866
+Logistic regression,pipeline,3413,0,1.9287
+XGBoost,pipeline,3413,0,7.2462
+LightGBM,pipeline,3413,0,31.7101
+XGBoost,pipeline,3413,1,8.0049
+CatBoost,pipeline,3413,1,4.982
+Extra trees,pipeline,3413,1,38.5143
+Linear SVM,pipeline,3413,1,2.0015
+Random forest,pipeline,3413,1,29.0084
+LightGBM,pipeline,3413,1,26.268
+Logistic regression,pipeline,3413,1,1.4126
+Histogram boosting,pipeline,3413,1,30.4623
+LightGBM,pipeline,3413,2,25.3164
+CatBoost,pipeline,3413,2,5.0778
+Linear SVM,pipeline,3413,2,2.1312
+Random forest,pipeline,3413,2,31.6886
+XGBoost,pipeline,3413,2,7.1414
+Extra trees,pipeline,3413,2,34.2751
+Histogram boosting,pipeline,3413,2,30.2486
+Logistic regression,pipeline,3413,2,1.7468
+Extra trees,pipeline,3413,3,36.2314
+Logistic regression,pipeline,3413,3,1.6589
+Random forest,pipeline,3413,3,29.8731
+CatBoost,pipeline,3413,3,4.9497
+XGBoost,pipeline,3413,3,7.1256
+LightGBM,pipeline,3413,3,26.2721
+Linear SVM,pipeline,3413,3,1.6961
+Histogram boosting,pipeline,3413,3,29.2733
+Extra trees,pipeline,3413,4,37.2385
+LightGBM,pipeline,3413,4,26.6734
+CatBoost,pipeline,3413,4,4.5274
+Histogram boosting,pipeline,3413,4,28.2984
+Random forest,pipeline,3413,4,35.9417
+Linear SVM,pipeline,3413,4,2.5335
+Logistic regression,pipeline,3413,4,2.1769
+XGBoost,pipeline,3413,4,9.1183
+Random forest,pipeline,3413,5,39.5515
+LightGBM,pipeline,3413,5,28.3991
+Extra trees,pipeline,3413,5,40.3225
+Histogram boosting,pipeline,3413,5,28.0242
+Logistic regression,pipeline,3413,5,1.3654
+Linear SVM,pipeline,3413,5,1.0696
+CatBoost,pipeline,3413,5,3.838
+XGBoost,pipeline,3413,5,6.948
+CatBoost,pipeline,3413,6,5.4186
+Extra trees,pipeline,3413,6,37.617
+Histogram boosting,pipeline,3413,6,28.4646
+Random forest,pipeline,3413,6,35.6791
+Logistic regression,pipeline,3413,6,1.9706
+LightGBM,pipeline,3413,6,28.0607
+Linear SVM,pipeline,3413,6,1.849
+XGBoost,pipeline,3413,6,7.5745
+XGBoost,pipeline,3413,7,7.0933
+LightGBM,pipeline,3413,7,26.8081
+CatBoost,pipeline,3413,7,5.0129
+Linear SVM,pipeline,3413,7,1.7055
+Random forest,pipeline,3413,7,33.7565
+Extra trees,pipeline,3413,7,39.0088
+Histogram boosting,pipeline,3413,7,32.0751
+Logistic regression,pipeline,3413,7,2.2824
+Linear SVM,pipeline,3413,8,1.5358
+Histogram boosting,pipeline,3413,8,29.7665
+Logistic regression,pipeline,3413,8,1.8554
+Extra trees,pipeline,3413,8,36.6095
+Random forest,pipeline,3413,8,35.8798
+CatBoost,pipeline,3413,8,5.8808
+LightGBM,pipeline,3413,8,36.1067
+XGBoost,pipeline,3413,8,5.9713
+CatBoost,pipeline,3413,9,3.6237
+Logistic regression,pipeline,3413,9,1.463
+Extra trees,pipeline,3413,9,42.2189
+Random forest,pipeline,3413,9,32.3755
+Histogram boosting,pipeline,3413,9,34.0215
+LightGBM,pipeline,3413,9,26.5928
+Linear SVM,pipeline,3413,9,1.6999
+XGBoost,pipeline,3413,9,7.0066
+Histogram boosting,pipeline,3413,10,29.5318
+CatBoost,pipeline,3413,10,5.9133
+LightGBM,pipeline,3413,10,26.4688
+Logistic regression,pipeline,3413,10,2.5087
+Extra trees,pipeline,3413,10,37.0851
+Random forest,pipeline,3413,10,34.4894
+Linear SVM,pipeline,3413,10,1.965
+XGBoost,pipeline,3413,10,7.2245
+XGBoost,pipeline,3413,11,6.9653
+LightGBM,pipeline,3413,11,27.0344
+CatBoost,pipeline,3413,11,4.3427
+Linear SVM,pipeline,3413,11,1.9087
+Logistic regression,pipeline,3413,11,1.5728
+Extra trees,pipeline,3413,11,37.394
+Histogram boosting,pipeline,3413,11,33.4821
+Random forest,pipeline,3413,11,43.6346
+XGBoost,pipeline,3413,12,10.3175
+LightGBM,pipeline,3413,12,30.3098
+CatBoost,pipeline,3413,12,4.9575
+Histogram boosting,pipeline,3413,12,36.981
+Linear SVM,pipeline,3413,12,1.9181
+Random forest,pipeline,3413,12,33.7153
+Extra trees,pipeline,3413,12,39.2463
+Logistic regression,pipeline,3413,12,1.5726
+Histogram boosting,pipeline,3413,13,29.7172
+CatBoost,pipeline,3413,13,4.1838
+Linear SVM,pipeline,3413,13,1.9089
+Random forest,pipeline,3413,13,31.223
+Logistic regression,pipeline,3413,13,1.9437
+XGBoost,pipeline,3413,13,7.6414
+Extra trees,pipeline,3413,13,38.4189
+LightGBM,pipeline,3413,13,28.7466
+Random forest,pipeline,3413,14,37.4036
+XGBoost,pipeline,3413,14,10.6952
+Extra trees,pipeline,3413,14,49.4641
+Linear SVM,pipeline,3413,14,4.0422
+Logistic regression,pipeline,3413,14,2.1959
+LightGBM,pipeline,3413,14,31.2206
+CatBoost,pipeline,3413,14,6.1678
+Histogram boosting,pipeline,3413,14,37.1577
+Linear SVM,pipeline,3413,15,2.1208
+XGBoost,pipeline,3413,15,5.097
+Extra trees,pipeline,3413,15,43.5747
+CatBoost,pipeline,3413,15,5.7049
+Logistic regression,pipeline,3413,15,2.0834
+Random forest,pipeline,3413,15,35.8255
+Histogram boosting,pipeline,3413,15,31.9478
+LightGBM,pipeline,3413,15,26.1872
+Linear SVM,pipeline,3413,16,1.7176
+CatBoost,pipeline,3413,16,4.6437
+Histogram boosting,pipeline,3413,16,34.9686
+Extra trees,pipeline,3413,16,37.0812
+XGBoost,pipeline,3413,16,7.0478
+LightGBM,pipeline,3413,16,26.7416
+Logistic regression,pipeline,3413,16,1.6946
+Random forest,pipeline,3413,16,33.4193
+XGBoost,pipeline,3413,17,7.1139
+CatBoost,pipeline,3413,17,5.6674
+Logistic regression,pipeline,3413,17,1.7064
+Random forest,pipeline,3413,17,32.1972
+Linear SVM,pipeline,3413,17,1.8237
+LightGBM,pipeline,3413,17,28.4314
+Extra trees,pipeline,3413,17,36.1147
+Histogram boosting,pipeline,3413,17,28.8854
+CatBoost,pipeline,3413,18,4.3427
+Logistic regression,pipeline,3413,18,1.8791
+XGBoost,pipeline,3413,18,6.2113
+Linear SVM,pipeline,3413,18,3.0122
+Extra trees,pipeline,3413,18,43.5266
+Histogram boosting,pipeline,3413,18,33.2106
+LightGBM,pipeline,3413,18,29.4037
+Random forest,pipeline,3413,18,33.7585
+Random forest,pipeline,3413,19,33.938
+Linear SVM,pipeline,3413,19,1.6223
+Histogram boosting,pipeline,3413,19,27.7266
+Extra trees,pipeline,3413,19,38.9696
+Logistic regression,pipeline,3413,19,1.8862
+LightGBM,pipeline,3413,19,30.665
+XGBoost,pipeline,3413,19,7.6583
+CatBoost,pipeline,3413,19,4.2614
+XGBoost,pipeline,3413,20,8.2893
+CatBoost,pipeline,3413,20,4.8576
+Logistic regression,pipeline,3413,20,1.9341
+LightGBM,pipeline,3413,20,30.496
+Histogram boosting,pipeline,3413,20,36.7313
+Linear SVM,pipeline,3413,20,1.8856
+Random forest,pipeline,3413,20,33.9075
+Extra trees,pipeline,3413,20,35.4912
+LightGBM,pipeline,3413,21,26.6521
+Histogram boosting,pipeline,3413,21,31.5243
+XGBoost,pipeline,3413,21,7.2046
+Logistic regression,pipeline,3413,21,1.6341
+CatBoost,pipeline,3413,21,4.9511
+Extra trees,pipeline,3413,21,36.3237
+Linear SVM,pipeline,3413,21,1.7786
+Random forest,pipeline,3413,21,39.9818
+Extra trees,pipeline,3413,22,43.1643
+XGBoost,pipeline,3413,22,7.5974
+Histogram boosting,pipeline,3413,22,32.4599
+CatBoost,pipeline,3413,22,5.7649
+Linear SVM,pipeline,3413,22,2.5215
+LightGBM,pipeline,3413,22,34.0198
+Logistic regression,pipeline,3413,22,2.331
+Random forest,pipeline,3413,22,40.0229
+Extra trees,pipeline,3413,23,38.1821
+CatBoost,pipeline,3413,23,5.0362
+Histogram boosting,pipeline,3413,23,32.736
+Random forest,pipeline,3413,23,33.9621
+XGBoost,pipeline,3413,23,5.9056
+Linear SVM,pipeline,3413,23,1.701
+LightGBM,pipeline,3413,23,28.4042
+Logistic regression,pipeline,3413,23,1.7328
+CatBoost,pipeline,3413,24,4.5709
+XGBoost,pipeline,3413,24,7.2502
+Extra trees,pipeline,3413,24,37.2644
+Random forest,pipeline,3413,24,31.1641
+LightGBM,pipeline,3413,24,28.5086
+Logistic regression,pipeline,3413,24,2.184
+Histogram boosting,pipeline,3413,24,34.019
+Linear SVM,pipeline,3413,24,1.9375
+Random forest,model_only,3413,0,36.3934
+Extra trees,model_only,3413,0,42.4185
+Histogram boosting,model_only,3413,0,35.3455
+XGBoost,model_only,3413,0,7.3974
+Linear SVM,model_only,3413,0,0.478
+Logistic regression,model_only,3413,0,0.4549
+LightGBM,model_only,3413,0,31.3871
+CatBoost,model_only,3413,0,3.8482
+Logistic regression,model_only,3413,1,0.7637
+CatBoost,model_only,3413,1,3.4644
+XGBoost,model_only,3413,1,8.0214
+Linear SVM,model_only,3413,1,0.4281
+Random forest,model_only,3413,1,39.587
+Extra trees,model_only,3413,1,44.4127
+LightGBM,model_only,3413,1,30.119
+Histogram boosting,model_only,3413,1,37.8904
+CatBoost,model_only,3413,2,5.5112
+Histogram boosting,model_only,3413,2,38.7345
+Linear SVM,model_only,3413,2,0.4565
+LightGBM,model_only,3413,2,30.3705
+Extra trees,model_only,3413,2,39.2776
+Logistic regression,model_only,3413,2,0.4626
+Random forest,model_only,3413,2,35.6058
+XGBoost,model_only,3413,2,7.3885
+LightGBM,model_only,3413,3,32.6434
+Random forest,model_only,3413,3,40.0543
+CatBoost,model_only,3413,3,4.5509
+Histogram boosting,model_only,3413,3,35.1881
+Extra trees,model_only,3413,3,43.1946
+XGBoost,model_only,3413,3,8.0592
+Logistic regression,model_only,3413,3,0.4789
+Linear SVM,model_only,3413,3,0.1805
+XGBoost,model_only,3413,4,5.6158
+Random forest,model_only,3413,4,31.9262
+Logistic regression,model_only,3413,4,0.5982
+Histogram boosting,model_only,3413,4,33.9755
+Linear SVM,model_only,3413,4,0.4038
+Extra trees,model_only,3413,4,41.3338
+CatBoost,model_only,3413,4,4.8231
+LightGBM,model_only,3413,4,32.2282
+Histogram boosting,model_only,3413,5,34.888
+Logistic regression,model_only,3413,5,0.6159
+Extra trees,model_only,3413,5,44.13
+Linear SVM,model_only,3413,5,0.4415
+XGBoost,model_only,3413,5,8.483
+CatBoost,model_only,3413,5,4.758
+Random forest,model_only,3413,5,35.0337
+LightGBM,model_only,3413,5,30.0074
+Logistic regression,model_only,3413,6,0.5718
+CatBoost,model_only,3413,6,4.0696
+LightGBM,model_only,3413,6,29.2977
+Histogram boosting,model_only,3413,6,35.714
+XGBoost,model_only,3413,6,7.982
+Linear SVM,model_only,3413,6,0.4461
+Random forest,model_only,3413,6,40.2782
+Extra trees,model_only,3413,6,40.5259
+Histogram boosting,model_only,3413,7,38.1804
+Linear SVM,model_only,3413,7,0.5185
+Random forest,model_only,3413,7,38.3089
+LightGBM,model_only,3413,7,28.6829
+Extra trees,model_only,3413,7,45.0272
+XGBoost,model_only,3413,7,8.1059
+Logistic regression,model_only,3413,7,0.601
+CatBoost,model_only,3413,7,3.7995
+CatBoost,model_only,3413,8,3.1316
+LightGBM,model_only,3413,8,30.4959
+Histogram boosting,model_only,3413,8,36.1573
+Logistic regression,model_only,3413,8,0.5793
+Random forest,model_only,3413,8,37.986
+Extra trees,model_only,3413,8,41.7794
+Linear SVM,model_only,3413,8,0.4838
+XGBoost,model_only,3413,8,7.0796
+Logistic regression,model_only,3413,9,0.46
+CatBoost,model_only,3413,9,3.7874
+Extra trees,model_only,3413,9,43.1283
+Histogram boosting,model_only,3413,9,35.7261
+XGBoost,model_only,3413,9,7.6678
+Linear SVM,model_only,3413,9,0.4685
+LightGBM,model_only,3413,9,32.2784
+Random forest,model_only,3413,9,38.0157
+XGBoost,model_only,3413,10,7.4605
+Random forest,model_only,3413,10,33.7746
+Extra trees,model_only,3413,10,29.0365
+Linear SVM,model_only,3413,10,0.4537
+Logistic regression,model_only,3413,10,0.4593
+Histogram boosting,model_only,3413,10,33.7193
+CatBoost,model_only,3413,10,4.0538
+LightGBM,model_only,3413,10,29.7987
+Linear SVM,model_only,3413,11,0.5312
+Random forest,model_only,3413,11,35.253
+CatBoost,model_only,3413,11,5.026
+XGBoost,model_only,3413,11,7.0796
+Logistic regression,model_only,3413,11,0.5773
+LightGBM,model_only,3413,11,29.8633
+Extra trees,model_only,3413,11,43.3343
+Histogram boosting,model_only,3413,11,37.1871
+Extra trees,model_only,3413,12,44.2676
+Random forest,model_only,3413,12,38.3791
+XGBoost,model_only,3413,12,7.7066
+Logistic regression,model_only,3413,12,0.5871
+Histogram boosting,model_only,3413,12,27.8076
+LightGBM,model_only,3413,12,27.6226
+Linear SVM,model_only,3413,12,0.4512
+CatBoost,model_only,3413,12,3.7962
+Random forest,model_only,3413,13,35.1186
+LightGBM,model_only,3413,13,28.069
+XGBoost,model_only,3413,13,7.4158
+Histogram boosting,model_only,3413,13,33.6
+Linear SVM,model_only,3413,13,0.4771
+Logistic regression,model_only,3413,13,0.452
+CatBoost,model_only,3413,13,3.6258
+Extra trees,model_only,3413,13,39.8215
+Linear SVM,model_only,3413,14,0.3891
+CatBoost,model_only,3413,14,4.5855
+XGBoost,model_only,3413,14,9.4596
+Extra trees,model_only,3413,14,46.1861
+Histogram boosting,model_only,3413,14,34.9899
+Random forest,model_only,3413,14,36.4997
+Logistic regression,model_only,3413,14,0.513
+LightGBM,model_only,3413,14,29.0078
+Linear SVM,model_only,3413,15,0.3769
+CatBoost,model_only,3413,15,2.9339
+Extra trees,model_only,3413,15,27.886
+Logistic regression,model_only,3413,15,0.4606
+Random forest,model_only,3413,15,33.0956
+XGBoost,model_only,3413,15,5.9415
+LightGBM,model_only,3413,15,27.6485
+Histogram boosting,model_only,3413,15,35.9902
+CatBoost,model_only,3413,16,5.0452
+Histogram boosting,model_only,3413,16,35.198
+LightGBM,model_only,3413,16,31.1287
+Logistic regression,model_only,3413,16,0.5921
+Random forest,model_only,3413,16,35.5401
+Extra trees,model_only,3413,16,36.7701
+XGBoost,model_only,3413,16,7.4959
+Linear SVM,model_only,3413,16,0.4113
+Logistic regression,model_only,3413,17,0.4194
+Histogram boosting,model_only,3413,17,36.1601
+LightGBM,model_only,3413,17,29.8439
+Random forest,model_only,3413,17,35.3621
+Linear SVM,model_only,3413,17,0.4052
+XGBoost,model_only,3413,17,7.191
+Extra trees,model_only,3413,17,42.2376
+CatBoost,model_only,3413,17,4.1054
+CatBoost,model_only,3413,18,2.953
+Linear SVM,model_only,3413,18,0.4523
+Random forest,model_only,3413,18,36.8651
+Extra trees,model_only,3413,18,41.2393
+LightGBM,model_only,3413,18,30.2568
+Histogram boosting,model_only,3413,18,34.6119
+Logistic regression,model_only,3413,18,0.7084
+XGBoost,model_only,3413,18,7.1464
+Linear SVM,model_only,3413,19,0.326
+CatBoost,model_only,3413,19,3.9809
+Histogram boosting,model_only,3413,19,34.2483
+Logistic regression,model_only,3413,19,0.5708
+Random forest,model_only,3413,19,37.8837
+LightGBM,model_only,3413,19,30.4319
+XGBoost,model_only,3413,19,8.6285
+Extra trees,model_only,3413,19,41.2415
+Extra trees,model_only,3413,20,41.3693
+XGBoost,model_only,3413,20,8.8555
+Random forest,model_only,3413,20,37.7858
+Histogram boosting,model_only,3413,20,33.7789
+Logistic regression,model_only,3413,20,0.6016
+CatBoost,model_only,3413,20,4.7211
+Linear SVM,model_only,3413,20,0.6353
+LightGBM,model_only,3413,20,34.2102
+XGBoost,model_only,3413,21,8.3762
+Random forest,model_only,3413,21,42.2799
+Logistic regression,model_only,3413,21,0.602
+LightGBM,model_only,3413,21,29.6543
+Histogram boosting,model_only,3413,21,32.5514
+Extra trees,model_only,3413,21,42.7617
+Linear SVM,model_only,3413,21,0.4541
+CatBoost,model_only,3413,21,4.6259
+CatBoost,model_only,3413,22,3.9645
+Random forest,model_only,3413,22,37.1288
+Extra trees,model_only,3413,22,43.4712
+LightGBM,model_only,3413,22,30.2747
+Logistic regression,model_only,3413,22,0.5722
+XGBoost,model_only,3413,22,7.3006
+Linear SVM,model_only,3413,22,0.4038
+Histogram boosting,model_only,3413,22,34.305
+CatBoost,model_only,3413,23,3.6655
+Logistic regression,model_only,3413,23,0.5894
+Extra trees,model_only,3413,23,42.1537
+Linear SVM,model_only,3413,23,0.4076
+Random forest,model_only,3413,23,36.5413
+LightGBM,model_only,3413,23,30.1777
+Histogram boosting,model_only,3413,23,38.4873
+XGBoost,model_only,3413,23,8.2778
+XGBoost,model_only,3413,24,8.501
+Histogram boosting,model_only,3413,24,38.4408
+Random forest,model_only,3413,24,35.8446
+Extra trees,model_only,3413,24,38.8457
+Linear SVM,model_only,3413,24,0.4439
+LightGBM,model_only,3413,24,27.0331
+Logistic regression,model_only,3413,24,0.6306
+CatBoost,model_only,3413,24,3.9995

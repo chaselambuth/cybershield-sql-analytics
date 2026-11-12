@@ -1,0 +1,221 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v0017",
+  "position": {
+    "x": 24,
+    "y": 705,
+    "z": 17,
+    "height": 200,
+    "width": 1392,
+    "tabOrder": 17
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "flow_id"
+                }
+              },
+              "queryRef": "SupportingFlows.flow_id",
+              "nativeQueryRef": "flow_id",
+              "displayName": "Record ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "src_ip"
+                }
+              },
+              "queryRef": "SupportingFlows.src_ip",
+              "nativeQueryRef": "src_ip",
+              "displayName": "Source"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "dst_ip"
+                }
+              },
+              "queryRef": "SupportingFlows.dst_ip",
+              "nativeQueryRef": "dst_ip",
+              "displayName": "Destination"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "dst_port"
+                }
+              },
+              "queryRef": "SupportingFlows.dst_port",
+              "nativeQueryRef": "dst_port",
+              "displayName": "Destination port"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "raw_timestamp"
+                }
+              },
+              "queryRef": "SupportingFlows.raw_timestamp",
+              "nativeQueryRef": "raw_timestamp",
+              "displayName": "Raw timestamp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "retrospective_label"
+                }
+              },
+              "queryRef": "SupportingFlows.retrospective_label",
+              "nativeQueryRef": "retrospective_label",
+              "displayName": "Original label"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "SupportingFlows.src_ip"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Supporting original records · linked by prepared window key'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#182A3A'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

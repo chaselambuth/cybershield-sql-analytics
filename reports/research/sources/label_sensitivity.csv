@@ -1,0 +1,7 @@
+source,policy,eligible_windows,positive_windows,unresolved_windows
+original,exclude_unknown_windows,11398,15,0
+original,attempted_as_benign,11398,15,0
+original,attempted_as_attack,11398,15,0
+corrected,exclude_unknown_windows,1509,24,5
+corrected,attempted_as_benign,1514,29,5
+corrected,attempted_as_attack,1514,29,5

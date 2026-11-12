@@ -1,0 +1,177 @@
+{
+  "status": "passed_with_schema_fallback",
+  "checked": [
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\page.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0001\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0002\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0003\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0004\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0005\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0006\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\01_quality\\visuals\\v0007\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\page.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0008\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0009\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0010\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0011\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0012\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0013\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0014\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0015\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0016\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\02_investigations\\visuals\\v0017\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\page.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\visuals\\v0018\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\visuals\\v0019\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\visuals\\v0020\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\visuals\\v0021\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\visuals\\v0022\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\03_models\\visuals\\v0023\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\04_flow_evidence\\page.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\04_flow_evidence\\visuals\\v0024\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\04_flow_evidence\\visuals\\v0025\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\04_flow_evidence\\visuals\\v0026\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\pages\\pages.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\report.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json"
+    },
+    {
+      "file": "power_bi\\CyberShield.Report\\definition\\version.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/versionMetadata/1.0.0/schema.json",
+      "validated_against": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/versionMetadata/1.0.0/schema.json"
+    }
+  ],
+  "errors": [],
+  "schema_url_aliases": {},
+  "schema_fallbacks": {
+    "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json"
+  },
+  "scope": "PBIR JSON schema validation; does not substitute for Desktop refresh or DAX checks",
+  "limitation": "Exact Desktop-upgraded schemas returned 404; listed files validated against the generated format schemas."
+}

@@ -1,0 +1,25 @@
+method,repeat,fit_ms
+Random forest,0,686.5031
+Linear SVM,0,27.1523
+Logistic regression,0,19.7976
+XGBoost,0,147.8161
+Histogram boosting,0,561.5005
+LightGBM,0,85.5533
+CatBoost,0,1347.5988
+Extra trees,0,450.1151
+LightGBM,1,75.6681
+CatBoost,1,1186.4974
+Histogram boosting,1,546.1883
+XGBoost,1,115.4039
+Extra trees,1,431.0081
+Linear SVM,1,29.1131
+Logistic regression,1,17.8365
+Random forest,1,664.9911
+XGBoost,2,101.7083
+Random forest,2,699.5157
+Histogram boosting,2,569.5085
+Linear SVM,2,27.7337
+LightGBM,2,82.924
+Logistic regression,2,23.0347
+Extra trees,2,455.6464
+CatBoost,2,1171.82

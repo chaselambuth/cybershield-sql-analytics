@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-11-01T21:25:04.116031+00:00",
+  "report_bundle_id": "bundle_38b300e881ec37bbe78d6b2e15502d714d37b286b57d2a9bcdb40485c8063193",
+  "desktop_validation": "passed",
+  "desktop_version": "2.159.883.0",
+  "saved_pbix": "CyberShield.pbix",
+  "cached_project_reopen_verified": true,
+  "native_flow_drillthrough_verified": true,
+  "windows": 11398,
+  "supporting_flows": 207006,
+  "prototype_decisions": 91184,
+  "detector_quality_rows": 15,
+  "latency_groups": 64,
+  "schema_validation": "passed_with_schema_fallback",
+  "schema_limitation": "Exact Desktop-upgraded schemas returned 404; listed files validated against the generated format schemas.",
+  "tests": {
+    "previous_completed_run": "54 passed",
+    "final_recheck": "36 passed; 3 failures and 15 setup errors caused by database/temp-directory permissions in a restricted test environment; not rerun there"
+  },
+  "completion_note": "Report saved and usable."
+}

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cybershield-analytics"
+version = "0.1.0"
+description = "Inspectable PostgreSQL security-flow analytics and development evaluation"
+requires-python = ">=3.11"
+dependencies = [
+  "psycopg[binary]>=3.2,<4", "numpy>=1.26,<3", "pandas>=2.2,<3",
+  "scikit-learn>=1.5,<2", "matplotlib>=3.9,<4", "PyYAML>=6,<7",
+  "Flask>=3.1,<4", "waitress>=3,<4", "sqlglot>=26,<40"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+reporting = ["jsonschema>=4.23,<5"]
+research = ["nbformat>=5.10,<6", "nbclient>=0.10,<1", "nbconvert>=7,<8",
+            "ipykernel>=6,<8", "psutil>=6,<8", "lightgbm>=4.6,<5",
+            "xgboost>=3,<4", "catboost>=1.2,<2"]
+
+[project.scripts]
+cybershield = "cybershield.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cybershield = ["web_assets/*.html", "web_assets/static/*.css", "web_assets/static/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires the dedicated local PostgreSQL database"]
+

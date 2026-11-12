@@ -1,0 +1,80 @@
+table FactSourceAudit
+	lineageTag: 4a2d666b-d816-5ebe-b632-6df4c2beea8b
+
+	measure 'Audit value' = IF(HASONEVALUE('FactSourceAudit'[metric]) && HASONEVALUE('FactSourceAudit'[time_scope]) && HASONEVALUE('FactSourceAudit'[label_policy]) && HASONEVALUE('DimDataset'[dataset_id]), SELECTEDVALUE('FactSourceAudit'[value]), BLANK())
+		formatString: #,0
+		lineageTag: f3f818c5-e3df-559e-baf9-421613d352f0
+
+	measure 'Original accepted' = CALCULATE(MAX('FactSourceAudit'[value]), REMOVEFILTERS('DimDataset'), 'DimDataset'[dataset_id] = "original", 'FactSourceAudit'[metric] = "accepted_rows")
+		formatString: #,0
+		lineageTag: 7ca032d0-ef9e-5fdf-b9fa-daf4c989e4b1
+
+	measure 'Original quarantined' = CALCULATE(MAX('FactSourceAudit'[value]), REMOVEFILTERS('DimDataset'), 'DimDataset'[dataset_id] = "original", 'FactSourceAudit'[metric] = "rejected_rows")
+		formatString: #,0
+		lineageTag: f90d5bba-9e38-5f28-a8ca-ba7c1ad7c6de
+
+	measure 'Original eligible' = CALCULATE(MAX('FactSourceAudit'[value]), REMOVEFILTERS('DimDataset'), 'DimDataset'[dataset_id] = "original", 'FactSourceAudit'[metric] = "temporal_eligible_rows")
+		formatString: #,0
+		lineageTag: 2c519cbd-842c-5943-8ebd-9325d22ee64e
+
+	column dataset_id
+		dataType: string
+		isHidden
+		lineageTag: 4c866c98-f8b7-58a3-9a86-f7e304257ca5
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+	column metric
+		dataType: string
+		lineageTag: e2c6157c-fcc3-544f-87f9-4a2bd6619a24
+		summarizeBy: none
+		sourceColumn: metric
+
+	column metric_label
+		dataType: string
+		lineageTag: b6574511-e1e8-5257-9dd8-6370c13e7e8d
+		summarizeBy: none
+		sourceColumn: metric_label
+
+	column value
+		dataType: double
+		lineageTag: f6b5c53a-50aa-5ab2-892b-f5d7d06e799e
+		summarizeBy: none
+		sourceColumn: value
+
+	column unit
+		dataType: string
+		lineageTag: aadb2fc1-3031-5ac8-93ee-67ac8c0f56e4
+		summarizeBy: none
+		sourceColumn: unit
+
+	column time_scope
+		dataType: string
+		lineageTag: 1f028c86-0387-5c2d-8dbb-6c980c869fdb
+		summarizeBy: none
+		sourceColumn: time_scope
+
+	column status
+		dataType: string
+		lineageTag: c95eaca4-dd45-5e65-a07e-4c172d53e891
+		summarizeBy: none
+		sourceColumn: status
+
+	column label_policy
+		dataType: string
+		lineageTag: 7996806d-6502-51f9-b48f-e90b7f5b8df6
+		summarizeBy: none
+		sourceColumn: label_policy
+
+	column clock_policy
+		dataType: string
+		lineageTag: e3679bb5-e79f-550d-b647-c38b2fca4bd7
+		summarizeBy: none
+		sourceColumn: clock_policy
+
+	partition FactSourceAudit = m
+		mode: import
+		source = LoadBundleTable("FactSourceAudit")
+
+	annotation PBI_ResultType = Table
+

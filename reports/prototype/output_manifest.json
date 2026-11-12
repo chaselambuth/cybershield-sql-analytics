@@ -1,0 +1,23 @@
+{
+  "analytics\\01_activity.csv": "1813d2e2791f82a6ef3f44ed88795684ebe38bbb61f3b22fc61169d0d78dab20",
+  "analytics\\02_bursts.csv": "00a80b3005ec995addf47dbf31e695d2e540c2e85fcfdc92f029bc039d59e75b",
+  "analytics\\03_port_diversity.csv": "5adb58239ef9534ba7fc05f27c36b232e7b7d82e427b4d3dcc4522b365aba8c6",
+  "analytics\\04_service_activity.csv": "dfeefa854b7029fc278524f78a0e3c2ca1a70fc69dffc58b92f9f47b740366c1",
+  "analytics\\05_category_profiles.csv": "95af139168b88770fd4f7f971eda9b8f9807dc352768bf88b5ee30cc37328b87",
+  "analytics\\06_transitions.csv": "b99845067df083fcf14191d592d9d038116dd9fba63bd1cf16dd60110b9d6e5f",
+  "analytics\\07_support.csv": "464bda67edcd75bb6b88b8181f4e5492483b82b05887a1f47f1945168d166184",
+  "analytics\\08_error_analysis.csv": "bd6162aa7a9391083557cf8806844f6a6028b31fa874fe04a8bf5b9d859b8485",
+  "claim_evidence.csv": "9b1098e6d4b50268ddf41ecf1610ae5f7f50d92af39bf3738bc258499929b437",
+  "config.yaml": "6ee96eae94a969ded5d96bc212f5e4574933165c37082fbb1d188eb1a0ba9a47",
+  "data_quality.json": "83cb7331665c5f918e2dd312e10a19afe0a1e994defdc8703c3fa124c7ad81fc",
+  "development_protocol.json": "955ed424f776215666cc31179d5847419c4c4239d27c22a57eb54455d94456f2",
+  "figures\\01_activity.png": "f0443e9873d409e38647b63525228f1e4624b682cfa0154b178e3c737b9f3d1e",
+  "figures\\02_comparison.png": "6b27bbcc9aad7e4aacba84e693bff801b659879badcd5df5da4445a5d59ee94f",
+  "figures\\03_precision_recall.png": "e24a39b313040c11f59651610524d04232afebe737c49122280691aeecc0d7a7",
+  "findings.md": "c4b197e1b149e36d204232fb5143c5def375e64d634841310eae08ae80db88ca",
+  "metrics.csv": "10d54705439dc77dba1201384db7e2d45878882e0ab009a6991bdd05ccc82345",
+  "query_plans.json": "66a980605c2129e09f9ba06fc3c7c669835dda9193a79062fabc26c96d3a9c04",
+  "summary.json": "e9f0c95b77355d6ff9ac888b69340bcafff50c5ff350d491f6bcfff474bf9b65",
+  "triage_evidence.csv": "7186a048d6813d91f58289a556f35b59cce5b84ae540592cb38310d395a7cbcc",
+  "triage_queue.csv": "e43b5e81d3539892237a648b2147bddc2d2442c48c2c2924ce09410bcdb6822b"
+}

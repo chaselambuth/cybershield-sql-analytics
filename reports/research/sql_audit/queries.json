@@ -1,0 +1,11 @@
+{
+  "feature_run_id": "464b8de2-25da-4368-9333-eeade277dc70",
+  "queries": {
+    "source_provenance": "SELECT s.* FROM source_file s JOIN feature_run r\n            ON s.source_id=ANY(r.source_ids) WHERE r.feature_run_id=%s",
+    "ingestion": "SELECT i.* FROM ingestion_run i JOIN feature_run r\n            ON i.source_id=ANY(r.source_ids) WHERE r.feature_run_id=%s ORDER BY i.started_at",
+    "flow_quality": "SELECT count(*) AS accepted_rows,\n            count(*) FILTER (WHERE clock_usable) AS clock_usable_rows,\n            count(*) FILTER (WHERE bytes_per_second IS NULL) AS missing_bytes_rate,\n            count(*) FILTER (WHERE packets_per_second IS NULL) AS missing_packets_rate,\n            count(*)-count(DISTINCT record_hash) AS duplicate_content_rows\n            FROM flow f JOIN feature_run r ON f.source_id=ANY(r.source_ids)\n            WHERE r.feature_run_id=%s",
+    "flow_labels": "SELECT l.label,count(*) AS flows,\n            count(*) FILTER (WHERE f.clock_usable) AS temporal_eligible_flows\n            FROM flow f JOIN flow_label l USING(flow_id)\n            JOIN feature_run r ON f.source_id=ANY(r.source_ids)\n            WHERE r.feature_run_id=%s GROUP BY l.label ORDER BY flows DESC",
+    "attack_sources": "SELECT host(f.src_ip) AS src_ip,count(*) AS attack_flows,\n            count(*) FILTER (WHERE f.clock_usable) AS temporal_eligible_attack_flows\n            FROM flow f JOIN flow_label l USING(flow_id)\n            JOIN feature_run r ON f.source_id=ANY(r.source_ids)\n            WHERE r.feature_run_id=%s AND l.is_attack GROUP BY f.src_ip ORDER BY attack_flows DESC",
+    "feature_fetch": "SELECT host(f.src_ip) AS src_ip,f.window_start,f.flow_count,f.unique_ports,\n            f.unique_destinations,f.service_flows,f.packets,f.bytes,f.mean_duration_us\n            FROM window_features f WHERE feature_run_id=%s ORDER BY window_start,src_ip"
+  }
+}

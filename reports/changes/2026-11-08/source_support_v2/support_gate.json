@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "reasons": [],
+  "observed": {
+    "train_positive_episode_groups": 2,
+    "validation_positive_episode_groups": 7,
+    "validation_positive_days": 2,
+    "validation_positive_dependency_blocks": 4,
+    "benign_calibration_windows": 152
+  },
+  "episode_overlap": {},
+  "groups_with_unscored_fragments": 0,
+  "train_validation_overlapping_sources": 32,
+  "independence": "Episode groups and source/day blocks are proxies; independence is not established.",
+  "uncertainty": "No confidence intervals; report raw counts and correlation caveats.",
+  "mlp": "deferred; support gates do not authorize neural training",
+  "final_test": "unsupported; development/validation only"
+}

@@ -1,0 +1,23 @@
+{
+  "selected_for_next_data_adapter": "corrected CIC-IDS2017, CNS2022 release",
+  "active_prototype_source": "original CIC-IDS2017 remains active",
+  "decision_basis": "Tuesday audit: explicit subsecond clocks preserve full-day temporal coverage and source/destination fields; richer attempted-label provenance.",
+  "conditions_before_ml_use": [
+    "Resolve attempted-label target policy and run sensitivity analysis.",
+    "Audit semantic mappings and duration units against author code.",
+    "Create a new UTC-aware ingestion adapter and frozen source manifest.",
+    "Redesign splits around independent episodes; do not transplant original clock intervals.",
+    "Audit other development days without evaluating a final holdout."
+  ],
+  "limitations": [
+    "Tuesday-only comparison; no representative current enterprise traffic.",
+    "Corrected and original share the same capture, so they are not independent validation sources.",
+    "UNSW not numerically audited; cannot rank its quality empirically.",
+    "An acquisition preview read the corrected Friday header and first record before Tuesday selection. Neither entered this audit or model comparison; do not claim Friday is entirely unseen."
+  ],
+  "unsw_download_check": {
+    "status": 403,
+    "date": "2026-10-24 America/New_York",
+    "url": "https://unsw-my.sharepoint.com/:f:/g/personal/z5025758_ad_unsw_edu_au/EnuQZZn3XuNBjgfcUu4DIVMBLCHyoLHqOswirpOQifr1ag?e=gKWkLS"
+  }
+}

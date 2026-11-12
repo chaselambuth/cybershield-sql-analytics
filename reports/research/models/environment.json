@@ -1,0 +1,42 @@
+{
+  "status": "development_only",
+  "seed": 1729,
+  "threads": 1,
+  "feature_columns": [
+    "flow_count",
+    "unique_ports",
+    "unique_destinations",
+    "service_flows",
+    "packets",
+    "bytes",
+    "mean_duration_us"
+  ],
+  "created_utc": "2026-10-25T03:16:15.082156+00:00",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 32,
+  "physical_cpus": 24,
+  "ram_bytes": 34053414912,
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "psutil": "7.2.2",
+    "threadpoolctl": "3.7.0",
+    "nbclient": "0.11.0"
+  },
+  "masks": {
+    "train": 3493,
+    "calibration": 1245,
+    "development": 3413,
+    "benign_calibration": 1242
+  },
+  "training_positive_windows": 6,
+  "development_positive_windows": 6,
+  "timing_scope": "Warm CPU calls; no SQL, network, Flask, loading, serialization or window wait.",
+  "warning": "Six correlated development positives; no independent-episode generalization claim."
+}

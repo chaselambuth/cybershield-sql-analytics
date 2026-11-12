@@ -1,0 +1,130 @@
+table Window
+	lineageTag: 20401460-19e2-5b97-afcb-6d5c02c5b2ce
+
+	measure 'Observed flows' = SUM('Window'[flow_count])
+		formatString: #,0
+		lineageTag: aed9e784-be6b-5668-a757-6a082f250555
+
+	measure 'Observed windows' = COUNTROWS('Window')
+		formatString: #,0
+		lineageTag: 8ae04d69-8402-5372-95c2-0ac18caee7ef
+
+	measure 'Active sources' = DISTINCTCOUNT('Window'[src_ip])
+		formatString: #,0
+		lineageTag: e4da0537-a56b-50c3-ba12-46fe67910175
+
+	measure Alerts = IF(HASONEVALUE('DimDetector'[detector_id]), CALCULATE(COUNTROWS('FactPrototypeDecision'), 'FactPrototypeDecision'[predicted_attack] = TRUE()), BLANK())
+		formatString: #,0
+		lineageTag: fd046722-990b-5d0d-80d1-04260a527093
+
+	measure 'False alerts' = CALCULATE([Alerts], 'Window'[is_attack] = FALSE(), 'Window'[unknown_flows] = 0)
+		formatString: #,0
+		lineageTag: 7765d0a8-896f-50bc-a07d-b32a8181e40e
+
+	measure 'Role context' = SELECTEDVALUE('Window'[role_context], "Multiple roles; retrospective decisions")
+		lineageTag: f3df9546-3ef9-5b19-a624-b1e8d4a47fbe
+
+	column window_key
+		dataType: string
+		isHidden
+		lineageTag: 18d5b31c-c306-5836-a471-d24a8cc7f2ec
+		summarizeBy: none
+		sourceColumn: window_key
+
+	column src_ip
+		dataType: string
+		lineageTag: 3c29f74e-84ed-5f4a-9e46-4b1fdd47fb65
+		summarizeBy: none
+		sourceColumn: src_ip
+
+	column window_start
+		dataType: dateTime
+		formatString: yyyy-MM-dd HH:mm
+		lineageTag: 65e06c2a-68c4-5196-a7b8-f10f77f03a09
+		summarizeBy: none
+		sourceColumn: window_start
+
+	column split
+		dataType: string
+		lineageTag: ffcaee51-c4c2-5130-9be3-9a2a1b2cefb7
+		summarizeBy: none
+		sourceColumn: split
+
+	column flow_count
+		dataType: int64
+		lineageTag: 590cc0a5-2737-5a02-92dd-b21d8f386bc2
+		summarizeBy: none
+		sourceColumn: flow_count
+
+	column unique_ports
+		dataType: int64
+		lineageTag: bc37a4e6-5c05-5ee1-b6eb-d8e593ac6fc4
+		summarizeBy: none
+		sourceColumn: unique_ports
+
+	column unique_destinations
+		dataType: int64
+		lineageTag: 0ffd2f32-6210-52e3-91d5-73c610727a26
+		summarizeBy: none
+		sourceColumn: unique_destinations
+
+	column service_flows
+		dataType: int64
+		lineageTag: 22b96f55-f153-51ad-a649-37d81360dde3
+		summarizeBy: none
+		sourceColumn: service_flows
+
+	column packets
+		dataType: int64
+		lineageTag: 6cb1581b-432e-5833-9884-839c4f7b97c3
+		summarizeBy: none
+		sourceColumn: packets
+
+	column bytes
+		dataType: int64
+		lineageTag: 8d90cab0-adcb-5d90-8461-7dc5410a81db
+		summarizeBy: none
+		sourceColumn: bytes
+
+	column mean_duration_us
+		dataType: double
+		lineageTag: 0acc2fac-db83-5d79-9207-82404f849be7
+		summarizeBy: none
+		sourceColumn: mean_duration_us
+
+	column attack_flows
+		dataType: int64
+		lineageTag: ffbf9c5e-db80-5c77-a346-073b80f9c018
+		summarizeBy: none
+		sourceColumn: attack_flows
+
+	column unknown_flows
+		dataType: int64
+		lineageTag: 3efa15c1-9540-5dc1-956a-5b314b9080f4
+		summarizeBy: none
+		sourceColumn: unknown_flows
+
+	column categories
+		dataType: string
+		lineageTag: 58ac9c47-0a1a-5eb4-b4d4-3a1f7929b277
+		summarizeBy: none
+		sourceColumn: categories
+
+	column is_attack
+		dataType: boolean
+		lineageTag: ac8c4eea-34ad-5463-9898-cdfb30ee0cef
+		summarizeBy: none
+		sourceColumn: is_attack
+
+	column role_context
+		dataType: string
+		lineageTag: 7c9e923a-6bc0-538a-820b-9a914158e18e
+		summarizeBy: none
+		sourceColumn: role_context
+
+	partition Window = m
+		mode: import
+		source = LoadBundleTable("Window")
+
+	annotation PBI_ResultType = Table
+

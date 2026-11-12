@@ -1,0 +1,26 @@
+status: development_only
+release: CIC-IDS2017-original-GeneratedLabelledFlows
+scoring_entity: source_ip
+window_minutes: 5
+window_origin: "2000-01-01 00:00:00"
+time_convention: naive_capture_clock
+timestamp_policy: strict_unrepaired
+lookback_minutes: 60
+false_positive_target: 0.01
+rule_reference_quantile: 0.99
+seed: 1729
+model:
+  C: 1.0
+  class_weight: balanced
+  solver: lbfgs
+  max_iter: 2000
+# Retrospective prototype clocks: preserve reported hour, no AM/PM guesses.
+# All selected data are Tuesday; Friday is prohibited by the ingestion CLI.
+# Evaluation uses only morning-clock records: train 08:55–09:45,
+# calibration 09:45–10:00, development check 10:00–11:00.
+# Adjacent intervals can share one attack episode: this is descriptive only.
+splits:
+  train: ["2017-07-04 08:55:00", "2017-07-04 09:45:00"]
+  calibration: ["2017-07-04 09:45:00", "2017-07-04 10:00:00"]
+  development: ["2017-07-04 10:00:00", "2017-07-04 11:00:00"]
+

@@ -1,0 +1,24 @@
+relationship 8f3e4ef0-ae3f-50df-a7ea-92177bf7ec19
+	fromColumn: FactPrototypeDecision.window_key
+	toColumn: Window.window_key
+
+relationship 4d7aabff-6ae7-5109-89e5-eee69f895941
+	fromColumn: SupportingFlows.window_key
+	toColumn: Window.window_key
+
+relationship 25ecaefb-15c8-5571-b22c-bf7b9be204fe
+	fromColumn: FactPrototypeDecision.detector_id
+	toColumn: DimDetector.detector_id
+
+relationship c3a9ed95-f4da-5986-8e0d-488aaf772d24
+	fromColumn: FactEvaluation.detector_id
+	toColumn: DimDetector.detector_id
+
+relationship ba5db60d-2d42-5e81-9fb0-9727148836f8
+	fromColumn: FactLatency.detector_id
+	toColumn: DimDetector.detector_id
+
+relationship 8c80e6d6-84a8-5dfc-91af-ad830a146fdb
+	fromColumn: FactSourceAudit.dataset_id
+	toColumn: DimDataset.dataset_id
+

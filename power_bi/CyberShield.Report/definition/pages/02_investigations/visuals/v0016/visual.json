@@ -1,0 +1,395 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v0016",
+  "position": {
+    "x": 24,
+    "y": 490,
+    "z": 16,
+    "height": 190,
+    "width": 1392,
+    "tabOrder": 16
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "src_ip"
+                }
+              },
+              "queryRef": "Window.src_ip",
+              "nativeQueryRef": "src_ip",
+              "displayName": "Source"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "window_start"
+                }
+              },
+              "queryRef": "Window.window_start",
+              "nativeQueryRef": "window_start",
+              "displayName": "Reported completion window"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "flow_count"
+                }
+              },
+              "queryRef": "Window.flow_count",
+              "nativeQueryRef": "flow_count",
+              "displayName": "Flows"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "service_flows"
+                }
+              },
+              "queryRef": "Window.service_flows",
+              "nativeQueryRef": "service_flows",
+              "displayName": "Service flows"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "attack_flows"
+                }
+              },
+              "queryRef": "Window.attack_flows",
+              "nativeQueryRef": "attack_flows",
+              "displayName": "Attack-labeled flows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "Alerts"
+                }
+              },
+              "queryRef": "Window.Alerts",
+              "nativeQueryRef": "Alerts",
+              "displayName": "Alerts"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "False alerts"
+                }
+              },
+              "queryRef": "Window.False alerts",
+              "nativeQueryRef": "False alerts",
+              "displayName": "False alerts"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Window"
+                    }
+                  },
+                  "Property": "window_key"
+                }
+              },
+              "queryRef": "Window.window_key",
+              "nativeQueryRef": "window_key",
+              "displayName": "Window key"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Window.src_ip"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "200D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Window.window_start"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "180D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Window.window_key"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Source windows · click a row; flow counts never multiply by detector'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#182A3A'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "19416008003616750477",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "src_ip"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e5a85093185701006552",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "window_start"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "39e7a5d8138854040800",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "flow_count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "846a5082788696de7abd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "service_flows"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c654a1bbe01e98873916",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "attack_flows"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cc0da8bb0ccaa10b2442",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "Alerts"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a4c2023aec0cec05cbe2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "False alerts"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "091d3dc42a60bae54210",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "window_key"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "status": "development_only",
+  "config_sha256": "6ee96eae94a969ded5d96bc212f5e4574933165c37082fbb1d188eb1a0ba9a47",
+  "cutoffs": {
+    "rule_volume": 1.0564740420272032,
+    "rule_ports": 1.210526315789474,
+    "rule_services": 1.3333333333333335,
+    "sql_combined": 2.0000000000000004,
+    "logistic_regression": 0.0011931504128365419,
+    "flow_count_baseline": 547.0000000000001,
+    "random_baseline": 0.991502466119947,
+    "always_benign": 1.0
+  },
+  "scales": {
+    "rule_volume": 517.7599999999957,
+    "rule_ports": 19.0,
+    "rule_services": 3.0
+  },
+  "features": [
+    "flow_count",
+    "unique_ports",
+    "unique_destinations",
+    "service_flows",
+    "packets",
+    "bytes",
+    "mean_duration_us"
+  ],
+  "config": {
+    "status": "development_only",
+    "release": "CIC-IDS2017-original-GeneratedLabelledFlows",
+    "scoring_entity": "source_ip",
+    "window_minutes": 5,
+    "window_origin": "2000-01-01 00:00:00",
+    "time_convention": "naive_capture_clock",
+    "timestamp_policy": "strict_unrepaired",
+    "lookback_minutes": 60,
+    "false_positive_target": 0.01,
+    "rule_reference_quantile": 0.99,
+    "seed": 1729,
+    "model": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "solver": "lbfgs",
+      "max_iter": 2000
+    },
+    "splits": {
+      "train": [
+        "2017-07-04 08:55:00",
+        "2017-07-04 09:45:00"
+      ],
+      "calibration": [
+        "2017-07-04 09:45:00",
+        "2017-07-04 10:00:00"
+      ],
+      "development": [
+        "2017-07-04 10:00:00",
+        "2017-07-04 11:00:00"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "development_only",
+  "experiment_id": "4b812462-e408-4a6c-9c2f-f5c9f02a3494",
+  "feature_run_id": "9d3df5df-7354-4e74-af40-4df1358ea69e",
+  "support": {
+    "train": {
+      "windows": 3493,
+      "positive_windows": 6
+    },
+    "calibration": {
+      "windows": 1245,
+      "positive_windows": 3
+    },
+    "development": {
+      "windows": 3413,
+      "positive_windows": 6
+    },
+    "unscored": {
+      "windows": 3247,
+      "positive_windows": 0
+    }
+  },
+  "total_windows": 11398,
+  "unknown_windows": 0,
+  "benign_calibration_windows": 1242,
+  "calibration_target": 0.01,
+  "warning": "Adjacent Tuesday intervals may share an attack episode. Not a final holdout study.",
+  "schema": "cs_tuesday",
+  "synthetic": false,
+  "data_quality": {
+    "input_rows": 445909,
+    "accepted_rows": 445892,
+    "rejected_rows": 17,
+    "clock_usable_rows": 207006
+  }
+}

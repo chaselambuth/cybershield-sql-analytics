@@ -1,0 +1,195 @@
+table FactEvaluation
+	lineageTag: 4f2131f8-eaae-5cf8-be6a-b7058c05429f
+
+	measure 'Caught positives' = IF(HASONEVALUE('DimDetector'[detector_id]), SUM('FactEvaluation'[tp]), BLANK())
+		formatString: 0
+		lineageTag: 34fdfaa6-5dd2-558f-8f35-a85e16606467
+
+	measure 'False positive windows' = IF(HASONEVALUE('DimDetector'[detector_id]), SUM('FactEvaluation'[fp]), BLANK())
+		formatString: #,0
+		lineageTag: 670217de-79b3-5685-91ed-690b36c66ef4
+
+	measure 'Recall rate' = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(SUM('FactEvaluation'[tp]), SUM('FactEvaluation'[tp]) + SUM('FactEvaluation'[fn])), BLANK())
+		formatString: 0.0%
+		lineageTag: d0488bba-1bdc-5ecf-acb2-7d55a3809607
+
+	measure 'Precision rate' = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(SUM('FactEvaluation'[tp]), SUM('FactEvaluation'[tp]) + SUM('FactEvaluation'[fp])), BLANK())
+		formatString: 0.0%
+		lineageTag: 60e65b95-fc1a-5660-b9bb-35fa73f540bd
+
+	measure 'F1 score' = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(2 * SUM('FactEvaluation'[tp]), 2 * SUM('FactEvaluation'[tp]) + SUM('FactEvaluation'[fp]) + SUM('FactEvaluation'[fn])), BLANK())
+		formatString: 0.000
+		lineageTag: a3967941-b77c-5e85-9929-d1ca4ce21d49
+
+	measure 'False alerts per 1000' = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(1000 * SUM('FactEvaluation'[fp]), SUM('FactEvaluation'[fp]) + SUM('FactEvaluation'[tn])), BLANK())
+		formatString: 0.00
+		lineageTag: 1d28093a-ce45-5bc0-b49d-5458c4513473
+
+	measure 'Caught of total' = IF(HASONEVALUE('DimDetector'[detector_id]), FORMAT(SUM('FactEvaluation'[tp]), "0") & " of " & FORMAT(SUM('FactEvaluation'[positives]), "0"), "Select one detector")
+		lineageTag: a29837d8-5c58-5f7c-a4c2-0795c3506ea5
+
+	measure 'Average precision' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactEvaluation'[average_precision]), BLANK())
+		formatString: 0.000
+		lineageTag: d34452f8-f97c-5b55-a5a6-97c4c62f4167
+
+	measure 'Fit median ms' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactEvaluation'[fit_median_ms]), BLANK())
+		formatString: 0.00
+		lineageTag: 09d5db12-3b34-5a10-a35b-759fec339e7c
+
+	measure 'Model bytes' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactEvaluation'[serialized_bytes]), BLANK())
+		formatString: #,0
+		lineageTag: b7fb29cd-2530-5e00-a60a-9de9728aecfe
+
+	column detector_id
+		dataType: string
+		isHidden
+		lineageTag: ad19686f-b704-5c5b-b3b3-a2e5b74b1704
+		summarizeBy: none
+		sourceColumn: detector_id
+
+	column quality_provider
+		dataType: string
+		lineageTag: 0cb7e15d-077c-59f6-8278-8bd940d73ad3
+		summarizeBy: none
+		sourceColumn: quality_provider
+
+	column cohort
+		dataType: string
+		lineageTag: b53243ce-d561-5ed5-bf10-065b70203f71
+		summarizeBy: none
+		sourceColumn: cohort
+
+	column cutoff_text
+		dataType: string
+		lineageTag: 5b05547c-1b40-586b-a0a8-7ce3a6bf2aa0
+		summarizeBy: none
+		sourceColumn: cutoff_text
+
+	column windows
+		dataType: int64
+		lineageTag: 2f4c56ba-ea3a-58f0-ba96-0a734141a898
+		summarizeBy: none
+		sourceColumn: windows
+
+	column positives
+		dataType: int64
+		lineageTag: 124ce60c-4504-5419-a2f7-a522ee7720d3
+		summarizeBy: none
+		sourceColumn: positives
+
+	column negatives
+		dataType: int64
+		lineageTag: 73b0930e-07c4-59a2-9638-99530891afd6
+		summarizeBy: none
+		sourceColumn: negatives
+
+	column tp
+		dataType: int64
+		lineageTag: eac463b9-cd76-563a-90c7-40976c0873c2
+		summarizeBy: none
+		sourceColumn: tp
+
+	column fp
+		dataType: int64
+		lineageTag: 17d21efd-960c-58a8-920d-f35378179380
+		summarizeBy: none
+		sourceColumn: fp
+
+	column tn
+		dataType: int64
+		lineageTag: 57221301-9b82-5223-9129-7d2f81db1b21
+		summarizeBy: none
+		sourceColumn: tn
+
+	column fn
+		dataType: int64
+		lineageTag: b7c08a7d-8542-5c7a-be58-ac4af720dd10
+		summarizeBy: none
+		sourceColumn: fn
+
+	column alerts
+		dataType: int64
+		lineageTag: 058b31c7-d076-5dd0-b8f8-83d847dc5126
+		summarizeBy: none
+		sourceColumn: alerts
+
+	column precision
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 2dc45b3f-715e-5f49-bda9-ccd767e5a338
+		summarizeBy: none
+		sourceColumn: precision
+
+	column recall
+		dataType: double
+		formatString: 0.0%
+		lineageTag: b7df23ac-f105-5102-9ed9-48c47b089be3
+		summarizeBy: none
+		sourceColumn: recall
+
+	column f1
+		dataType: double
+		lineageTag: 0d641676-9418-5aa2-bf08-51808d6d7ced
+		summarizeBy: none
+		sourceColumn: f1
+
+	column false_positives_per_1000
+		dataType: double
+		lineageTag: bae8bdd4-8b7b-526f-a427-9ce89b6b997a
+		summarizeBy: none
+		sourceColumn: false_positives_per_1000
+
+	column average_precision
+		dataType: double
+		lineageTag: a69251ec-29de-5ce8-ada5-ae6b98b9e82e
+		summarizeBy: none
+		sourceColumn: average_precision
+
+	column roc_auc
+		dataType: double
+		lineageTag: 5a104323-1c49-578b-93a7-e3e4bfd1addc
+		summarizeBy: none
+		sourceColumn: roc_auc
+
+	column fit_median_ms
+		dataType: double
+		lineageTag: 9e80e012-8270-578c-8690-fcaa59886b52
+		summarizeBy: none
+		sourceColumn: fit_median_ms
+
+	column fit_max_ms
+		dataType: double
+		lineageTag: 785cdf33-7339-5ee3-b1e3-9b3cb63488b6
+		summarizeBy: none
+		sourceColumn: fit_max_ms
+
+	column serialized_bytes
+		dataType: double
+		lineageTag: 11231e9c-83c9-5aa2-8199-f334c33c5b53
+		summarizeBy: none
+		sourceColumn: serialized_bytes
+
+	column single_pipeline_median_ms
+		dataType: double
+		lineageTag: ec504607-d5b9-519b-8ea6-d4eb1c3f0365
+		summarizeBy: none
+		sourceColumn: single_pipeline_median_ms
+
+	column single_pipeline_p95_ms
+		dataType: double
+		lineageTag: 730423bb-78f9-5f33-9041-34a8c13fc53d
+		summarizeBy: none
+		sourceColumn: single_pipeline_p95_ms
+
+	column pareto_observed
+		dataType: string
+		lineageTag: de489808-18f0-5d6a-bc6e-0d2bdac491ce
+		summarizeBy: none
+		sourceColumn: pareto_observed
+
+	partition FactEvaluation = m
+		mode: import
+		source = LoadBundleTable("FactEvaluation")
+
+	annotation PBI_ResultType = Table
+

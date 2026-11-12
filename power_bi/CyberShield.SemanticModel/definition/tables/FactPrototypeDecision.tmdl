@@ -1,0 +1,47 @@
+table FactPrototypeDecision
+	lineageTag: eb2b2afa-0d28-54be-8cd4-75231303e768
+
+	column window_key
+		dataType: string
+		isHidden
+		lineageTag: 746a6a21-e8b7-5eba-96df-6e583c093c48
+		summarizeBy: none
+		sourceColumn: window_key
+
+	column detector_id
+		dataType: string
+		isHidden
+		lineageTag: 6687a5f0-4bf6-5268-8791-c6ecf556d704
+		summarizeBy: none
+		sourceColumn: detector_id
+
+	column predicted_attack
+		dataType: boolean
+		lineageTag: 6da91c97-8a15-5425-9192-f805126e435e
+		summarizeBy: none
+		sourceColumn: predicted_attack
+
+	column score
+		dataType: double
+		lineageTag: 7bfe3e0a-4610-5b46-b949-1293fe12794f
+		summarizeBy: none
+		sourceColumn: score
+
+	column within_detector_rank
+		dataType: int64
+		lineageTag: 111e9fab-ac90-5e54-8703-da9e82fbbaad
+		summarizeBy: none
+		sourceColumn: within_detector_rank
+
+	column cutoff_text
+		dataType: string
+		lineageTag: 936dae57-9aa7-57d2-b488-701c493af99a
+		summarizeBy: none
+		sourceColumn: cutoff_text
+
+	partition FactPrototypeDecision = m
+		mode: import
+		source = LoadBundleTable("FactPrototypeDecision")
+
+	annotation PBI_ResultType = Table
+

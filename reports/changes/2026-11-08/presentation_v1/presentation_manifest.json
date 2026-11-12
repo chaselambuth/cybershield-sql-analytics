@@ -1,0 +1,17 @@
+{
+  "kind": "cybershield_reporting_addendum_v1",
+  "created_utc": "2026-11-08T05:57:40.467409+00:00",
+  "run_id": "9ef6eb5b-5439-4b25-8f97-c88eb8e14b04",
+  "design_sha256": "58c89d45db658372f95a32461634ccaece2726bae0af1dd73cc02d508d3f0599",
+  "prepared_sha256": "5b5b33e1d074283cab7d20ff0979ae1b40fc1e0974d4fc65a0e635b0f8d9eb0b",
+  "input_quality_sha256": "2b15220d6a173bae0518a29c3dff6db204536f69194a4fb4a8ccf24304daef8a",
+  "benchmark_registration_sha256": "4610cea7f567d3695f9dc334fa2d116558a115fbb6cf2495ad0785e85a4c5dcc",
+  "script_sha256": "ee925f14340cedb26331830c58916a4d424379656005c6fb9a099a21aa34a3a6",
+  "purpose": "Saved-model reproduction check, explicit model-file identities, full family coverage and legible reporting figures. No refitting, cutoff changes, model selection or overwrite of the frozen benchmark.",
+  "files": {
+    "model_artifact_index.json": "ee3b7af5f8cf2acec337ac2cda669f91f2b871e2fc173640643d1642935afa38",
+    "validation_comparison.png": "84f011aca0eafe0459984c1b70232469dada18d24fda9a8131f5ef0ee1fcfe02",
+    "validation_family_coverage.csv": "52fb082404edf3406cd26f6081a3b836943dc0bc9a49a354ab611744ebb37297",
+    "warm_cpu_latency.png": "007f2cd322ed524ebe0422df56f44025e1a368d36412d7558dfe05dcc0f6d13d"
+  }
+}

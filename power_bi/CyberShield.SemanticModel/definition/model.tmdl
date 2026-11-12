@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Window
+ref table DimDetector
+ref table FactPrototypeDecision
+ref table FactEvaluation
+ref table FactLatency
+ref table DimDataset
+ref table FactSourceAudit
+ref table SupportingFlows
+ref table RunContext
+ref table DetectorArtifactMap
+
+ref cultureInfo en-US
+

@@ -1,0 +1,14 @@
+{
+  "experiment_id": "45b7feae-ffe5-4c71-998c-b87afe724bd6",
+  "feature_run_id": "464b8de2-25da-4368-9333-eeade277dc70",
+  "schema": "cs_tuesday",
+  "snapshot_created_utc": "2026-10-25T03:12:01.622526+00:00",
+  "files": {
+    "window_scores.csv": "64b0e85558c17adf39c48b00dfa94a159227c25c40c75704de2e375f5fc50368",
+    "development_protocol.json": "955ed424f776215666cc31179d5847419c4c4239d27c22a57eb54455d94456f2",
+    "data_quality.json": "83cb7331665c5f918e2dd312e10a19afe0a1e994defdc8703c3fa124c7ad81fc",
+    "artifact_manifest.json": "d141eb5171f4921b016c679f48f900e90883caae874142500ef12ff5a9da470e"
+  },
+  "source_run_directory": "reports\\runs\\real_20261025T022514Z_660a4c30",
+  "read_only_research": true
+}

@@ -1,0 +1,66 @@
+table RunContext
+	lineageTag: e7c7dcd5-7193-5b9e-a57f-a4cd52793ed0
+
+	measure 'Evidence banner' = "Original CIC-IDS2017 | unrepaired morning clock | development: 6 positive / 3,407 benign | one correlated campaign"
+		lineageTag: 12add5c0-8bb7-58e6-a0be-bc69012694c7
+
+	column pipeline_experiment_id
+		dataType: string
+		lineageTag: 8af1d9ab-23c9-513d-b729-8f41a56907ab
+		summarizeBy: none
+		sourceColumn: pipeline_experiment_id
+
+	column feature_run_id
+		dataType: string
+		lineageTag: dbcd53f6-8936-5503-8a8b-9b996465e16b
+		summarizeBy: none
+		sourceColumn: feature_run_id
+
+	column benchmark_id
+		dataType: string
+		lineageTag: c942c174-7af7-5a40-b8a6-2df0e47bd930
+		summarizeBy: none
+		sourceColumn: benchmark_id
+
+	column dataset
+		dataType: string
+		lineageTag: 505bbe61-1218-568b-8286-83dbe2136de4
+		summarizeBy: none
+		sourceColumn: dataset
+
+	column clock_policy
+		dataType: string
+		lineageTag: 41031f47-c78f-55cb-88d9-5809348b4837
+		summarizeBy: none
+		sourceColumn: clock_policy
+
+	column cohort
+		dataType: string
+		lineageTag: 42d9866f-61e0-52d1-a7bb-47655eeb5f9a
+		summarizeBy: none
+		sourceColumn: cohort
+
+	column hardware
+		dataType: string
+		lineageTag: 230ab06e-cee7-5438-b822-1f4bbd654f9a
+		summarizeBy: none
+		sourceColumn: hardware
+
+	column benchmark_created_utc
+		dataType: string
+		lineageTag: 3a547267-db65-5324-b63a-6b0d5bc85880
+		summarizeBy: none
+		sourceColumn: benchmark_created_utc
+
+	column report_note
+		dataType: string
+		lineageTag: 0310fdb6-aa40-5acb-bd37-17ce5ade777c
+		summarizeBy: none
+		sourceColumn: report_note
+
+	partition RunContext = m
+		mode: import
+		source = LoadBundleTable("RunContext")
+
+	annotation PBI_ResultType = Table
+

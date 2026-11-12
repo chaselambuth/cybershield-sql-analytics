@@ -1,0 +1,37 @@
+{
+  "verified_utc": "2026-11-02T06:16:21.417376+00:00",
+  "live_cases_passed": 6,
+  "live_cases_total": 6,
+  "reference_cases_passed": 6,
+  "reference_cases_total": 6,
+  "offline_tests_passed": 29,
+  "postgresql_integration_tests_deselected": 3,
+  "all_final_report_citations_including_next_steps_verified": true,
+  "browser_checks": [
+    "desktop two-column layout",
+    "reference run",
+    "citation expands matching flow evidence",
+    "mobile layout"
+  ],
+  "javascript_syntax": "passed",
+  "credential_in_public_artifact_scan": "passed",
+  "config_json_git_ignored": true,
+  "files_sha256": {
+    "src/cybershield/agent.py": "f076dfbc5fd6ed0ea6c59f6101bffdbc5cb3549adf86f01af595ca832334e546",
+    "src/cybershield/web.py": "d9c05283df9ac6d86e955a14578eb4d378c3872e30b6f5f01eced2d91ff1bb18",
+    "src/cybershield/web_assets/investigate.html": "cae17d4a32cfa6e3acac03e14e6959890ebc4e099ad4a35e5561e3c7e30e3d7b",
+    "src/cybershield/web_assets/static/agent.js": "7c02f105bda129f621fe3a7288a9b3979b3ac746da5f8372a5514f5ce49167d5",
+    "src/cybershield/web_assets/static/investigation.css": "3c53065a10342a196837f16c78f74e6d1f445d2c399856d0421884a49dd397a9",
+    "evals/agent_cases.json": "021fb849993b9bb63e6ea70d8114dd791d2ecf6b63a7675634620f54642fa629",
+    "docs/agent_knowledge.json": "089767623656d07c461ccb92fd1e00c65b28461a5b2ad2e3aa1b34e4b8dbe92f",
+    "scripts/evaluate_agent.py": "1b77b49410e45a29ea1fc3cb24cae7a49afbd491681cf2765bd6ad5583491c31",
+    "tests/test_agent.py": "15a81dc9fac0b8fbd2f342bde69be86676f0a32aba10033f27bfb13243755c0b",
+    "reports/agent_evaluation/live.json": "1ba78559ce260dca78e2fc536d63a6602c54b726242a9f4fa20a608ffc2366fd",
+    "reports/agent_evaluation/reference.json": "c0010b3197c564080abacce325007857cbb64337bd614b04b279704222d20653"
+  },
+  "limitations": [
+    "Small heterogeneous smoke suite; not production readiness or semantic truth guarantee.",
+    "Reference planning is deterministic; no live-model quality claim is inferred from it.",
+    "Detector latency benchmark is separate from agent response latency."
+  ]
+}

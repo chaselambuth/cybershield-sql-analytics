@@ -1,0 +1,39 @@
+{
+  "run_id": "9ef6eb5b-5439-4b25-8f97-c88eb8e14b04",
+  "preparation": "prepared",
+  "benchmark": {
+    "status": "completed_development_validation",
+    "run_id": "9ef6eb5b-5439-4b25-8f97-c88eb8e14b04",
+    "methods": [
+      "Logistic regression",
+      "Linear SVM",
+      "Random forest",
+      "Extra trees",
+      "Histogram boosting",
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "sql_combined",
+      "always_benign"
+    ],
+    "validation_windows": 2485,
+    "validation_positive_windows": 21,
+    "budgets": [
+      0.01,
+      0.001,
+      0.005,
+      0.02
+    ],
+    "no_final_test": true,
+    "mlp": "deferred",
+    "support_warning": "Episode groups and source/day blocks are proxies; independence is not established."
+  },
+  "design_sha256": "58c89d45db658372f95a32461634ccaece2726bae0af1dd73cc02d508d3f0599",
+  "prepared_sha256": "5b5b33e1d074283cab7d20ff0979ae1b40fc1e0974d4fc65a0e635b0f8d9eb0b",
+  "source_audit_rows": 1552419,
+  "tests": {
+    "offline_passed": 91,
+    "integration_passed": 8
+  },
+  "notes": "Read the dated report for scope and actual saved results."
+}

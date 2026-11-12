@@ -1,0 +1,23 @@
+method,src_ip,false_alerts
+LR: all features,192.168.10.12,9
+LR: all features,192.168.10.14,6
+LR: all features,192.168.10.15,11
+LR: all features,192.168.10.16,3
+LR: all features,192.168.10.17,4
+LR: all features,192.168.10.19,6
+LR: all features,192.168.10.5,6
+LR: all features,192.168.10.51,8
+LR: all features,192.168.10.8,6
+LR: all features,192.168.10.9,5
+sql_combined,117.27.230.185,1
+sql_combined,117.27.230.186,1
+sql_combined,191.237.32.134,1
+sql_combined,192.168.10.12,1
+sql_combined,192.168.10.14,2
+sql_combined,192.168.10.15,2
+sql_combined,192.168.10.19,1
+sql_combined,192.168.10.5,2
+sql_combined,192.168.10.50,5
+sql_combined,192.168.10.8,3
+sql_combined,52.84.134.210,1
+sql_combined,87.250.247.184,1

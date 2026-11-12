@@ -1,0 +1,60 @@
+{
+  "name": "CyberShield",
+  "dataColors": [
+    "#147D92",
+    "#D56B45",
+    "#496591",
+    "#7F8C9D",
+    "#6E9C81"
+  ],
+  "background": "#F5F7FA",
+  "foreground": "#182A3A",
+  "tableAccent": "#147D92",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11
+    }
+  },
+  "visualStyles": {
+    "tableEx": {
+      "*": {
+        "columnHeaders": [
+          {
+            "fontSize": 12,
+            "wordWrap": true
+          }
+        ],
+        "values": [
+          {
+            "fontSize": 11,
+            "wordWrap": true
+          }
+        ],
+        "grid": [
+          {
+            "rowPadding": 5
+          }
+        ],
+        "total": [
+          {
+            "totals": false
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [
+          {
+            "textSize": 11
+          }
+        ]
+      }
+    }
+  }
+}

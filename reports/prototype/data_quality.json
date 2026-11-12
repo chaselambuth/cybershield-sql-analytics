@@ -1,0 +1,41 @@
+{
+  "source_id": 1,
+  "skipped": true,
+  "bytes": 174696560,
+  "sha256": "ae9c88e10c41a8eb1ff454ae98bc513454925097d0b0b57180f94e79de445815",
+  "filename": "TrafficLabelling /Tuesday-WorkingHours.pcap_ISCX.csv",
+  "warnings": {
+    "missing_or_invalid_bytes_rate": 264,
+    "missing_or_invalid_packets_rate": 264
+  },
+  "synthetic": false,
+  "input_rows": 445909,
+  "label_counts": {
+    "BENIGN": 432057,
+    "FTP-Patator": 7938,
+    "SSH-Patator": 5897
+  },
+  "accepted_rows": 445892,
+  "rejected_rows": 17,
+  "raw_hour_counts": {
+    "1": 36800,
+    "2": 72648,
+    "3": 48141,
+    "4": 63005,
+    "5": 165,
+    "8": 1683,
+    "9": 89692,
+    "10": 58514,
+    "11": 57167,
+    "12": 18077
+  },
+  "timestamp_policy": "reported_clock_morning_only_no_repair",
+  "clock_usable_rows": 207006,
+  "duplicate_headers": [
+    "Fwd Header Length"
+  ],
+  "rejection_reasons": {
+    "invalid_duration": 17
+  },
+  "content_duplicate_rows": 4
+}

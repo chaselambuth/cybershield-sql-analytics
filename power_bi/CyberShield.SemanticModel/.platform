@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CyberShield"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "667d3f4f-0d4a-4128-ae1a-9773971b57bf"
+  }
+}

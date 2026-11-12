@@ -1,0 +1,90 @@
+table FactLatency
+	lineageTag: 1e9ef66d-ea82-5f14-9519-c03db990fd8c
+
+	measure 'Median call ms' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[median_ms]), BLANK())
+		formatString: 0.000
+		lineageTag: 67d42a8f-5126-55ba-b809-f03e1a5bc989
+
+	measure 'P95 call ms' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[p95_ms]), BLANK())
+		formatString: 0.000
+		lineageTag: b8a62a82-e160-5c59-9700-b6180d6a0e0a
+
+	measure 'Measured calls' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[calls]), BLANK())
+		formatString: 0
+		lineageTag: dbb3105f-93c4-591c-964f-8b865d0eb232
+
+	measure 'Rows per second' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[rows_per_second]), BLANK())
+		formatString: #,0
+		lineageTag: 6fbdb100-3a13-5d28-a4d5-4b50d751884e
+
+	measure 'Amortized us per row' = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[amortized_us_per_row]), BLANK())
+		formatString: 0.00
+		lineageTag: 5f2e9878-9cac-5463-9572-c46e232413c1
+
+	column scope
+		dataType: string
+		lineageTag: ebc80fbf-63d5-5ca8-b0a1-91cb509f2771
+		summarizeBy: none
+		sourceColumn: scope
+
+	column batch_size
+		dataType: int64
+		lineageTag: b737e5a5-2bdb-5cfa-a459-c3c1cf649f4a
+		summarizeBy: none
+		sourceColumn: batch_size
+
+	column median_ms
+		dataType: double
+		lineageTag: 6f9b80a0-c027-547b-a5d5-fbf0b89a24c1
+		summarizeBy: none
+		sourceColumn: median_ms
+
+	column p95_ms
+		dataType: double
+		lineageTag: e7687ece-5c28-55da-a6c5-e039ea63d44e
+		summarizeBy: none
+		sourceColumn: p95_ms
+
+	column calls
+		dataType: int64
+		lineageTag: a6d1deba-7bc8-5da6-90c1-90ba84067ba5
+		summarizeBy: none
+		sourceColumn: calls
+
+	column amortized_us_per_row
+		dataType: double
+		lineageTag: b0b8706b-604a-55c3-bfed-098709016c62
+		summarizeBy: none
+		sourceColumn: amortized_us_per_row
+
+	column rows_per_second
+		dataType: double
+		lineageTag: 9f6e876a-455d-59c8-87bb-58d2a7ac438d
+		summarizeBy: none
+		sourceColumn: rows_per_second
+
+	column detector_id
+		dataType: string
+		isHidden
+		lineageTag: d7efa210-9a31-58c5-b3bf-427eca688228
+		summarizeBy: none
+		sourceColumn: detector_id
+
+	column scope_display
+		dataType: string
+		lineageTag: dcf610e5-eec8-5b18-a637-e44c8c6a7a81
+		summarizeBy: none
+		sourceColumn: scope_display
+
+	column hardware_context
+		dataType: string
+		lineageTag: 6abe147a-1218-5831-b183-60bf8551f713
+		summarizeBy: none
+		sourceColumn: hardware_context
+
+	partition FactLatency = m
+		mode: import
+		source = LoadBundleTable("FactLatency")
+
+	annotation PBI_ResultType = Table
+

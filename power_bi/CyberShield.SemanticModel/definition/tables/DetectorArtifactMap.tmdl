@@ -1,0 +1,28 @@
+table DetectorArtifactMap
+	lineageTag: 20eb1be0-cac1-5324-9103-b48815856f53
+
+	column detector_id
+		dataType: string
+		isHidden
+		lineageTag: abe08364-8a6d-580d-b156-174f91b5671d
+		summarizeBy: none
+		sourceColumn: detector_id
+
+	column evidence_role
+		dataType: string
+		lineageTag: acac0679-dd77-5bc0-90d1-040ba458902f
+		summarizeBy: none
+		sourceColumn: evidence_role
+
+	column provider
+		dataType: string
+		lineageTag: e6fc15bc-e0e4-5ac4-824a-1760576bfb73
+		summarizeBy: none
+		sourceColumn: provider
+
+	partition DetectorArtifactMap = m
+		mode: import
+		source = LoadBundleTable("DetectorArtifactMap")
+
+	annotation PBI_ResultType = Table
+

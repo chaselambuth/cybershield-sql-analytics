@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="workspace-token" content="{{ token }}">
+  <title>CyberShield · Investigation Agent</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='investigation.css') }}">
+  <script src="{{ url_for('static',filename='agent.js') }}" defer></script>
+</head>
+<body>
+<aside class="rail">
+  <a href="/investigate" class="brand"><span class="shield" aria-hidden="true"><svg viewBox="0 0 32 36"><path d="M16 3 28 8v10c0 8-12 15-12 15S4 26 4 18V8Z"/><path d="M11 12h10M11 18h6M11 24h3"/></svg></span><span>CyberShield<small>RESEARCH WORKSPACE</small></span></a>
+  <div class="rail-label">WORKSPACE</div>
+  <a class="nav active" href="/investigate"><span>⌕</span> Investigations <i></i></a>
+  <a class="nav" href="/"><span>▤</span> SQL explorer</a>
+  <div class="rail-label cases-label">INVESTIGATION STARTERS</div>
+  <div id="examples"></div>
+  <div class="rail-note"><span class="pulse"></span> Pinned research evidence<p>Original CIC-IDS2017<br>Tuesday · morning clock</p><div class="version">CYBERSHIELD / AGENT LAB</div></div>
+</aside>
+<main>
+  <header><div><span class="header-mark">CS</span> Research <span>/</span> <strong>Investigations</strong></div><div class="readonly">Read-only tools <span>LOCAL</span></div></header>
+  <div class="page">
+    <div class="intro"><div><div class="eyebrow">EVIDENCE OPERATIONS <span>/ 01</span></div><h1>Investigations</h1><p>Follow the signal. Make the evidence explain itself.</p></div><div class="provider" id="provider">Checking model configuration</div></div>
+    <div class="scope-strip"><span>DEVELOPMENT COHORT</span><strong>3,413 <small>windows</small></strong><span class="divider"></span><strong>6 <small>positive</small></strong><span class="divider"></span><strong>1 <small>correlated campaign</small></strong><a href="#scope-note">Scope &amp; limitations ↗</a></div>
+    <section class="ask panel">
+      <div class="section-label"><span class="spark">⌕</span> Investigation query <span class="subtle">01 / DEFINE THE QUESTION</span></div>
+      <label class="sr-only" for="question">Investigation question</label>
+      <textarea id="question" maxlength="1200" placeholder="Investigate the highest-priority SQL alert. What evidence supports it, and what remains uncertain?">Investigate the highest-priority SQL alert. Inspect its supporting flows and explain what remains uncertain.</textarea>
+      <div class="ask-bottom"><div><label for="mode">Execution</label><select id="mode"><option value="live">Live agent · OpenAI</option><option value="reference">Reference demo · no LLM</option></select></div><button id="investigate" type="button">Start investigation <span>↗</span></button></div>
+      <p id="mode-note" class="mode-note">Live mode sends your question and retrieved public benchmark evidence to OpenAI. Credentials stay on this server.</p>
+    </section>
+    <div class="run-strip" aria-label="Run metrics"><div><span>STATUS</span><strong id="run-status">Ready</strong></div><div><span>END-TO-END LATENCY</span><strong id="latency">—</strong></div><div><span>TOOL CALLS</span><strong id="tool-count">—</strong></div><div><span>TOKENS · IN / OUT</span><strong id="tokens">—</strong></div><div><span>ESTIMATED API COST</span><strong id="cost">—</strong></div></div>
+    <p id="run-message" role="status" aria-live="polite"></p>
+    <div class="workspace-grid">
+      <section class="panel brief-panel"><div class="panel-heading"><h2><span class="section-number">02</span> Investigation brief</h2><button class="download" id="download" disabled>↓ Export run JSON</button></div><div id="brief"><div class="empty"><div class="empty-icon" aria-hidden="true">⌕</div><div><h3>No investigation yet</h3><p>Ask a question above, or choose a starting point.<br>Findings, source records, and citations will appear here.</p></div></div></div><div id="evidence"></div></section>
+      <section class="panel trace-panel"><div class="panel-heading"><h2><span class="section-number">03</span> Execution trace</h2><span class="trace-badge">TOOL LOG</span></div><div class="trace-caption">Tool actions and timings. Model reasoning is not displayed.</div><ol id="trace"><li class="trace-placeholder">Waiting for an investigation</li></ol><div class="budget">8 tools max <span>·</span> 6 model turns <span>·</span> 90s budget</div></section>
+    </div>
+    <footer id="scope-note"><span>i</span><p>Historical development data, not live incident response. Six correlated positive windows cannot establish production accuracy or confirmed compromise. Agent latency and detector inference latency are separate measurements. Citation checks verify references, not the truth of every generated sentence.</p></footer>
+  </div>
+</main>
+</body>
+</html>

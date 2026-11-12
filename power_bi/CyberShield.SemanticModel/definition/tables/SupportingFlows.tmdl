@@ -1,0 +1,108 @@
+table SupportingFlows
+	lineageTag: 9991e13d-34d5-50c4-b010-0c049ce29274
+
+	column flow_id
+		dataType: string
+		lineageTag: 72adfdff-0224-5ca8-b8dc-b31d12210992
+		summarizeBy: none
+		sourceColumn: flow_id
+
+	column source_file_id
+		dataType: string
+		lineageTag: 4775125a-cee3-5601-97f4-f7c145018663
+		summarizeBy: none
+		sourceColumn: source_file_id
+
+	column source_flow_id
+		dataType: string
+		lineageTag: ceeba660-1557-5e55-9fc4-66cb3f02c645
+		summarizeBy: none
+		sourceColumn: source_flow_id
+
+	column src_ip
+		dataType: string
+		lineageTag: 19c288b3-4e3a-5f82-8114-8d502d2e89d5
+		summarizeBy: none
+		sourceColumn: src_ip
+
+	column dst_ip
+		dataType: string
+		lineageTag: 3a7a1858-7a05-5283-beed-1a12ad977bec
+		summarizeBy: none
+		sourceColumn: dst_ip
+
+	column src_port
+		dataType: int64
+		lineageTag: e4c1cb41-5169-544f-865c-e1148a9099d3
+		summarizeBy: none
+		sourceColumn: src_port
+
+	column dst_port
+		dataType: int64
+		lineageTag: a539f081-42e7-547a-b142-855db51bc4de
+		summarizeBy: none
+		sourceColumn: dst_port
+
+	column protocol
+		dataType: int64
+		lineageTag: bd47a150-4e15-508a-89b2-1ac4a327d592
+		summarizeBy: none
+		sourceColumn: protocol
+
+	column raw_timestamp
+		dataType: string
+		lineageTag: 4f5bfec6-b157-5c74-a5ee-f849125fa24e
+		summarizeBy: none
+		sourceColumn: raw_timestamp
+
+	column reported_start
+		dataType: dateTime
+		formatString: yyyy-MM-dd HH:mm
+		lineageTag: 695f315b-a73e-5fc6-af89-cc1c5a1ee810
+		summarizeBy: none
+		sourceColumn: reported_start
+
+	column reported_end
+		dataType: dateTime
+		formatString: yyyy-MM-dd HH:mm
+		lineageTag: d0a4400e-5e0f-546b-ac84-5858c1afd3a0
+		summarizeBy: none
+		sourceColumn: reported_end
+
+	column duration_us
+		dataType: int64
+		lineageTag: def3a548-06e1-57b0-b250-5b5590199174
+		summarizeBy: none
+		sourceColumn: duration_us
+
+	column packets
+		dataType: int64
+		lineageTag: f6a5ca63-52cb-5b9b-ab41-8a6a47656740
+		summarizeBy: none
+		sourceColumn: packets
+
+	column bytes
+		dataType: int64
+		lineageTag: f1dd1504-ff7e-5001-8fdd-ffcf9cfc96e5
+		summarizeBy: none
+		sourceColumn: bytes
+
+	column retrospective_label
+		dataType: string
+		lineageTag: 3e74adf0-f6d8-53dc-9b28-75caf7196450
+		summarizeBy: none
+		sourceColumn: retrospective_label
+
+	column window_key
+		dataType: string
+		isHidden
+		lineageTag: 3d7fced5-0e1b-56bf-b2c9-221550a8a661
+		summarizeBy: none
+		sourceColumn: window_key
+
+	partition SupportingFlows = m
+		mode: import
+		source = LoadBundleTable("SupportingFlows")
+
+	annotation PBI_ResultType = Table
+

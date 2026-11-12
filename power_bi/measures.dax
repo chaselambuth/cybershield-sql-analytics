@@ -1,0 +1,77 @@
+-- Window
+Observed flows = SUM('Window'[flow_count])
+
+-- Window
+Observed windows = COUNTROWS('Window')
+
+-- Window
+Active sources = DISTINCTCOUNT('Window'[src_ip])
+
+-- Window
+Alerts = IF(HASONEVALUE('DimDetector'[detector_id]), CALCULATE(COUNTROWS('FactPrototypeDecision'), 'FactPrototypeDecision'[predicted_attack] = TRUE()), BLANK())
+
+-- Window
+False alerts = CALCULATE([Alerts], 'Window'[is_attack] = FALSE(), 'Window'[unknown_flows] = 0)
+
+-- Window
+Role context = SELECTEDVALUE('Window'[role_context], "Multiple roles; retrospective decisions")
+
+-- FactEvaluation
+Caught positives = IF(HASONEVALUE('DimDetector'[detector_id]), SUM('FactEvaluation'[tp]), BLANK())
+
+-- FactEvaluation
+False positive windows = IF(HASONEVALUE('DimDetector'[detector_id]), SUM('FactEvaluation'[fp]), BLANK())
+
+-- FactEvaluation
+Recall rate = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(SUM('FactEvaluation'[tp]), SUM('FactEvaluation'[tp]) + SUM('FactEvaluation'[fn])), BLANK())
+
+-- FactEvaluation
+Precision rate = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(SUM('FactEvaluation'[tp]), SUM('FactEvaluation'[tp]) + SUM('FactEvaluation'[fp])), BLANK())
+
+-- FactEvaluation
+F1 score = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(2 * SUM('FactEvaluation'[tp]), 2 * SUM('FactEvaluation'[tp]) + SUM('FactEvaluation'[fp]) + SUM('FactEvaluation'[fn])), BLANK())
+
+-- FactEvaluation
+False alerts per 1000 = IF(HASONEVALUE('DimDetector'[detector_id]), DIVIDE(1000 * SUM('FactEvaluation'[fp]), SUM('FactEvaluation'[fp]) + SUM('FactEvaluation'[tn])), BLANK())
+
+-- FactEvaluation
+Caught of total = IF(HASONEVALUE('DimDetector'[detector_id]), FORMAT(SUM('FactEvaluation'[tp]), "0") & " of " & FORMAT(SUM('FactEvaluation'[positives]), "0"), "Select one detector")
+
+-- FactEvaluation
+Average precision = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactEvaluation'[average_precision]), BLANK())
+
+-- FactEvaluation
+Fit median ms = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactEvaluation'[fit_median_ms]), BLANK())
+
+-- FactEvaluation
+Model bytes = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactEvaluation'[serialized_bytes]), BLANK())
+
+-- FactLatency
+Median call ms = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[median_ms]), BLANK())
+
+-- FactLatency
+P95 call ms = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[p95_ms]), BLANK())
+
+-- FactLatency
+Measured calls = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[calls]), BLANK())
+
+-- FactLatency
+Rows per second = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[rows_per_second]), BLANK())
+
+-- FactLatency
+Amortized us per row = IF(HASONEVALUE('DimDetector'[detector_id]), SELECTEDVALUE('FactLatency'[amortized_us_per_row]), BLANK())
+
+-- FactSourceAudit
+Audit value = IF(HASONEVALUE('FactSourceAudit'[metric]) && HASONEVALUE('FactSourceAudit'[time_scope]) && HASONEVALUE('FactSourceAudit'[label_policy]) && HASONEVALUE('DimDataset'[dataset_id]), SELECTEDVALUE('FactSourceAudit'[value]), BLANK())
+
+-- FactSourceAudit
+Original accepted = CALCULATE(MAX('FactSourceAudit'[value]), REMOVEFILTERS('DimDataset'), 'DimDataset'[dataset_id] = "original", 'FactSourceAudit'[metric] = "accepted_rows")
+
+-- FactSourceAudit
+Original quarantined = CALCULATE(MAX('FactSourceAudit'[value]), REMOVEFILTERS('DimDataset'), 'DimDataset'[dataset_id] = "original", 'FactSourceAudit'[metric] = "rejected_rows")
+
+-- FactSourceAudit
+Original eligible = CALCULATE(MAX('FactSourceAudit'[value]), REMOVEFILTERS('DimDataset'), 'DimDataset'[dataset_id] = "original", 'FactSourceAudit'[metric] = "temporal_eligible_rows")
+
+-- RunContext
+Evidence banner = "Original CIC-IDS2017 | unrepaired morning clock | development: 6 positive / 3,407 benign | one correlated campaign"

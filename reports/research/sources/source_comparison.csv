@@ -1,0 +1,4 @@
+source,evidence,input_rows,columns,negative_duration_rows,duplicate_content_rows_excluding_id,temporal_eligible_rows,active_windows,positive_windows,positive_sources,unknown_windows,attempted_rows,unambiguous_full_day_clock,endpoint_fields,adapter_ready
+original,full Tuesday records audited,445909.0,85.0,17.0,4.0,207006.0,11398.0,15.0,1.0,0.0,0.0,False,True,True
+corrected,full Tuesday records audited,322078.0,91.0,0.0,0.0,322078.0,1514.0,29.0,1.0,5.0,39.0,True,True,False
+UNSW-NB15,official documentation only; download HTTP 403,,,,,,,,,,,,,False

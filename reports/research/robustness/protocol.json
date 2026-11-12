@@ -1,0 +1,323 @@
+{
+  "status": "development_only",
+  "seed": 1729,
+  "estimator": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "max_iter": 2000
+  },
+  "feature_groups": {
+    "volume": [
+      "flow_count"
+    ],
+    "diversity": [
+      "unique_ports",
+      "unique_destinations"
+    ],
+    "services": [
+      "service_flows"
+    ],
+    "size_duration": [
+      "packets",
+      "bytes",
+      "mean_duration_us"
+    ]
+  },
+  "variants": {
+    "LR: all features": [
+      "flow_count",
+      "unique_ports",
+      "unique_destinations",
+      "service_flows",
+      "packets",
+      "bytes",
+      "mean_duration_us"
+    ],
+    "LR: without volume": [
+      "unique_ports",
+      "unique_destinations",
+      "service_flows",
+      "packets",
+      "bytes",
+      "mean_duration_us"
+    ],
+    "LR: without diversity": [
+      "flow_count",
+      "service_flows",
+      "packets",
+      "bytes",
+      "mean_duration_us"
+    ],
+    "LR: without services": [
+      "flow_count",
+      "unique_ports",
+      "unique_destinations",
+      "packets",
+      "bytes",
+      "mean_duration_us"
+    ],
+    "LR: without size_duration": [
+      "flow_count",
+      "unique_ports",
+      "unique_destinations",
+      "service_flows"
+    ],
+    "LR: flow count only": [
+      "flow_count"
+    ]
+  },
+  "false_alert_targets": [
+    0.001,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "sql_controls": [
+    "sql_combined",
+    "rule_volume",
+    "rule_ports",
+    "rule_services"
+  ],
+  "primary_comparison_target": 0.01,
+  "training_parameters": {
+    "LR: all features": {
+      "features": [
+        "flow_count",
+        "unique_ports",
+        "unique_destinations",
+        "service_flows",
+        "packets",
+        "bytes",
+        "mean_duration_us"
+      ],
+      "imputer_medians": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        4.0,
+        0.0,
+        66.0
+      ],
+      "scaler_means": [
+        1.21835029629434,
+        1.0695066008337948,
+        0.8612598152121301,
+        0.03335066034001658,
+        1.8832978780450051,
+        1.7572189306213826,
+        5.1514249540207855
+      ],
+      "scaler_scales": [
+        1.0083426362277064,
+        0.5651909663269127,
+        0.5845904852858299,
+        0.3192010799990403,
+        1.489607600428837,
+        3.189408488897523,
+        3.5004329518154846
+      ],
+      "coefficients": [
+        -0.052108352333043256,
+        -0.3655547617426076,
+        -0.621433316865308,
+        1.2454287971523974,
+        0.022679377364008352,
+        -0.016033347458493427,
+        0.21574187017031748
+      ],
+      "intercept": -9.194383330398308
+    },
+    "LR: without volume": {
+      "features": [
+        "unique_ports",
+        "unique_destinations",
+        "service_flows",
+        "packets",
+        "bytes",
+        "mean_duration_us"
+      ],
+      "imputer_medians": [
+        1.0,
+        1.0,
+        0.0,
+        4.0,
+        0.0,
+        66.0
+      ],
+      "scaler_means": [
+        1.0695066008337948,
+        0.8612598152121301,
+        0.03335066034001658,
+        1.8832978780450051,
+        1.7572189306213826,
+        5.1514249540207855
+      ],
+      "scaler_scales": [
+        0.5651909663269127,
+        0.5845904852858299,
+        0.3192010799990403,
+        1.489607600428837,
+        3.189408488897523,
+        3.5004329518154846
+      ],
+      "coefficients": [
+        -0.3897020195607941,
+        -0.4745212411578131,
+        1.326752338934451,
+        0.047233073655564756,
+        -0.0432486931855961,
+        0.13415740298789455
+      ],
+      "intercept": -10.097974898619043
+    },
+    "LR: without diversity": {
+      "features": [
+        "flow_count",
+        "service_flows",
+        "packets",
+        "bytes",
+        "mean_duration_us"
+      ],
+      "imputer_medians": [
+        1.0,
+        0.0,
+        4.0,
+        0.0,
+        66.0
+      ],
+      "scaler_means": [
+        1.21835029629434,
+        0.03335066034001658,
+        1.8832978780450051,
+        1.7572189306213826,
+        5.1514249540207855
+      ],
+      "scaler_scales": [
+        1.0083426362277064,
+        0.3192010799990403,
+        1.489607600428837,
+        3.189408488897523,
+        3.5004329518154846
+      ],
+      "coefficients": [
+        -0.2207997030302448,
+        1.5689255577178345,
+        -0.12711047716607715,
+        -0.26871776502321276,
+        -0.0035231207848129345
+      ],
+      "intercept": -11.113940726869945
+    },
+    "LR: without services": {
+      "features": [
+        "flow_count",
+        "unique_ports",
+        "unique_destinations",
+        "packets",
+        "bytes",
+        "mean_duration_us"
+      ],
+      "imputer_medians": [
+        1.0,
+        1.0,
+        1.0,
+        4.0,
+        0.0,
+        66.0
+      ],
+      "scaler_means": [
+        1.21835029629434,
+        1.0695066008337948,
+        0.8612598152121301,
+        1.8832978780450051,
+        1.7572189306213826,
+        5.1514249540207855
+      ],
+      "scaler_scales": [
+        1.0083426362277064,
+        0.5651909663269127,
+        0.5845904852858299,
+        1.489607600428837,
+        3.189408488897523,
+        3.5004329518154846
+      ],
+      "coefficients": [
+        0.8140743500688052,
+        -2.603770753991234,
+        -2.5139181315916304,
+        1.376206051670302,
+        1.2690171580422627,
+        0.5157975159807785
+      ],
+      "intercept": -9.253653259519334
+    },
+    "LR: without size_duration": {
+      "features": [
+        "flow_count",
+        "unique_ports",
+        "unique_destinations",
+        "service_flows"
+      ],
+      "imputer_medians": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "scaler_means": [
+        1.21835029629434,
+        1.0695066008337948,
+        0.8612598152121301,
+        0.03335066034001658
+      ],
+      "scaler_scales": [
+        1.0083426362277064,
+        0.5651909663269127,
+        0.5845904852858299,
+        0.3192010799990403
+      ],
+      "coefficients": [
+        0.03873465024316746,
+        -0.2913021703209924,
+        -0.5461233110024921,
+        1.2761180452611007
+      ],
+      "intercept": -9.12302499467128
+    },
+    "LR: flow count only": {
+      "features": [
+        "flow_count"
+      ],
+      "imputer_medians": [
+        1.0
+      ],
+      "scaler_means": [
+        1.21835029629434
+      ],
+      "scaler_scales": [
+        1.0083426362277064
+      ],
+      "coefficients": [
+        1.8132784422781223
+      ],
+      "intercept": -4.243921254522966
+    }
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1"
+  },
+  "input_data_sha256": "9aa01f9bf71bcd9d74c1095c55aa10d07052a9fe05c732fa3b71d611f092af3e",
+  "protocol_sha256": "d245e9657576457e6fb0b69a98c70ef4d5490b2a8e3fef61054826c9cf2de388",
+  "code_sha256": {
+    "src\\cybershield\\robustness.py": "3cf66e3418f0efde8325de807ae60d804144d6c11f9679b277cc5bc584c05eb8",
+    "src\\cybershield\\evaluate.py": "7a7ad189ed593cff56059994416a9cd1475024effc998814ed8d02591e7aa9b2",
+    "src\\cybershield\\research.py": "9ca8e14d02790c5921bcd9dc4b2b0f09addaf2fb6eb559d0295a20b50010b224",
+    "sql\\features\\source_windows.sql": "3aa59f5142b50821daaa96b82e3d0fb38258284be0fa80ff7f46b54c341466cb",
+    "sql\\detection\\scores.sql": "32fd7637f37fbd5be47accd0e11ba911f0859f6838797067aa814b12316f947a"
+  },
+  "interpretation": "Matched feature removals and budget scenarios on correlated development windows; no causal attribution, general model selection, or independent test estimate."
+}

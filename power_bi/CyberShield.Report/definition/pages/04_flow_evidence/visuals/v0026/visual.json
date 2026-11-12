@@ -1,0 +1,311 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v0026",
+  "position": {
+    "x": 24,
+    "y": 290,
+    "z": 26,
+    "height": 610,
+    "width": 1392,
+    "tabOrder": 26
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "flow_id"
+                }
+              },
+              "queryRef": "SupportingFlows.flow_id",
+              "nativeQueryRef": "flow_id",
+              "displayName": "Record ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "source_file_id"
+                }
+              },
+              "queryRef": "SupportingFlows.source_file_id",
+              "nativeQueryRef": "source_file_id",
+              "displayName": "Source file"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "source_flow_id"
+                }
+              },
+              "queryRef": "SupportingFlows.source_flow_id",
+              "nativeQueryRef": "source_flow_id",
+              "displayName": "CIC flow identifier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "src_ip"
+                }
+              },
+              "queryRef": "SupportingFlows.src_ip",
+              "nativeQueryRef": "src_ip",
+              "displayName": "Source"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "dst_ip"
+                }
+              },
+              "queryRef": "SupportingFlows.dst_ip",
+              "nativeQueryRef": "dst_ip",
+              "displayName": "Destination"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "src_port"
+                }
+              },
+              "queryRef": "SupportingFlows.src_port",
+              "nativeQueryRef": "src_port",
+              "displayName": "Source port"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "dst_port"
+                }
+              },
+              "queryRef": "SupportingFlows.dst_port",
+              "nativeQueryRef": "dst_port",
+              "displayName": "Destination port"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "raw_timestamp"
+                }
+              },
+              "queryRef": "SupportingFlows.raw_timestamp",
+              "nativeQueryRef": "raw_timestamp",
+              "displayName": "Raw timestamp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "reported_end"
+                }
+              },
+              "queryRef": "SupportingFlows.reported_end",
+              "nativeQueryRef": "reported_end",
+              "displayName": "Reported completion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "packets"
+                }
+              },
+              "queryRef": "SupportingFlows.packets",
+              "nativeQueryRef": "packets",
+              "displayName": "Packets"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "bytes"
+                }
+              },
+              "queryRef": "SupportingFlows.bytes",
+              "nativeQueryRef": "bytes",
+              "displayName": "Bytes"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SupportingFlows"
+                    }
+                  },
+                  "Property": "retrospective_label"
+                }
+              },
+              "queryRef": "SupportingFlows.retrospective_label",
+              "nativeQueryRef": "retrospective_label",
+              "displayName": "Original label"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "SupportingFlows.src_ip"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Underlying flows'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#182A3A'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,4 @@
+label,flows,temporal_eligible_flows
+BENIGN,432057,199068
+FTP-Patator,7938,7938
+SSH-Patator,5897,0

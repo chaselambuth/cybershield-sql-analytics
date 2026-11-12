@@ -1,0 +1,35 @@
+{
+  "model.joblib": "2efdf49941942ebde6fa226bbdeaa5604a22232efe37ea3a5c11c3f8536cdec8",
+  "development_protocol.json": "955ed424f776215666cc31179d5847419c4c4239d27c22a57eb54455d94456f2",
+  "sql_files": {
+    "sql\\analytics\\01_activity.sql": "928726c57d9a8886eed881c4fa3574e4914e940ba4217349e5741ddee12b6352",
+    "sql\\analytics\\02_bursts.sql": "cfad7051749b8782fc493f3c99f24e11af31f6f2b65a4f61c4f0df995b924412",
+    "sql\\analytics\\03_port_diversity.sql": "823b32be34c061013a4e869d07a4d4137e5bcf8de9c7c429bc655e6a99971a5f",
+    "sql\\analytics\\04_service_activity.sql": "2abcc20594f3f00cbab73ab219408322006fd233337cd8616aac0e02a8feaa4a",
+    "sql\\analytics\\05_category_profiles.sql": "75a007b4abe6d187f72cf7663cc9eda427006f88f3ab84b755c68f90c0ab4968",
+    "sql\\analytics\\06_transitions.sql": "057f8f5c3d1b3d1bb5b8b12373d344eb6600181ffe890ca2f7f47b5b4b05738b",
+    "sql\\analytics\\07_support.sql": "49803f00b7a0127dd9f5b18fa017b75f5b79b10029e0847117338f5d4000bdeb",
+    "sql\\analytics\\08_error_analysis.sql": "669f05915562d715831bd3e7c85f82f8193bd97e6ee5ad66e283e9a6a7c22b92",
+    "sql\\detection\\scores.sql": "32fd7637f37fbd5be47accd0e11ba911f0859f6838797067aa814b12316f947a",
+    "sql\\features\\source_windows.sql": "3aa59f5142b50821daaa96b82e3d0fb38258284be0fa80ff7f46b54c341466cb",
+    "sql\\features\\window_labels.sql": "05bb2a58e9622145bd3b487d1e372713bd076fb7eb2e41f5db0e1dfc22414f66",
+    "sql\\migrations\\001_core.sql": "2aa27e431dadfa4c808e643781b75a6099db3395e9ff37626f181ab0326b6869"
+  },
+  "python_files": {
+    "src\\cybershield\\__init__.py": "4944fbb0363a24fa274215ad2393834d4fe3ace4fb0d57178bab0f694b91ff4b",
+    "src\\cybershield\\__main__.py": "11cf323249f4ba4e79c9fb7660c0979fc91a3822bc5362286376b69808b41195",
+    "src\\cybershield\\cli.py": "e8ea3f8fcd12ce262fab25d2ca3ff0b6e7a712ea8778fc4a1f1d24be4997ec9f",
+    "src\\cybershield\\db.py": "e1758a7ac2b210243eafab424c8485a7d8f4752a6efffd695eb13aea9ec064a2",
+    "src\\cybershield\\evaluate.py": "7a7ad189ed593cff56059994416a9cd1475024effc998814ed8d02591e7aa9b2",
+    "src\\cybershield\\fixture.py": "7fe6d8f82091ff989076b5e779d4b6452c666d35aa4ba874915e77a4d4a7473c",
+    "src\\cybershield\\ingest.py": "6112c13fc93ae671bf2dc76ae045b5ad1768df801b948c337e428ff3adcc93d0",
+    "src\\cybershield\\reports.py": "8fd4c9170a6f37540b7a9439526b0e019ae523b57ceb0eb02804c78f9cddeb22"
+  },
+  "versions": {
+    "psycopg": "3.3.6",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  }
+}

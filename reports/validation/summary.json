@@ -1,0 +1,29 @@
+{
+  "review_date": "2026-11-12",
+  "tracked_files": 250,
+  "tracked_bytes_excluding_this_summary": 10633283,
+  "structure_checks": {
+    "markdown": 15,
+    "json": 75,
+    "yaml": 3,
+    "notebooks": 3,
+    "images": 23,
+    "toml": 1,
+    "csv": 43,
+    "python": 40,
+    "sql": 15
+  },
+  "errors": [],
+  "secret_token_findings": [],
+  "offline_tests": {
+    "passed": 91,
+    "postgresql_tests_not_rerun": 8
+  },
+  "notebook_01": "Fresh clean-kernel execution passed with complete, error-free saved outputs.",
+  "notebooks_02_03": "Recorded executions retained; code, saved outputs and interpretations unchanged.",
+  "notebook_hash_tamper_rejection": "passed",
+  "scientific_inputs_verified": 38,
+  "benchmark_id": "benchmark_21f6c3061d69fc836ccf7620125bf2bbd4190a4c0565b7bd4eb5e23cd17c2178",
+  "prototype_report_hashes_verified": 21,
+  "scope": "Static file and content review plus offline tests; no new detector benchmark, database execution, provider calls or Desktop validation."
+}

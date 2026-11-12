@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="workspace-token" content="{{ token }}">
+  <title>CyberShield · SQL Workspace</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e182b'/%3E%3Cpath d='M16 5l9 4v7c0 6-9 11-9 11S7 22 7 16V9z' fill='none' stroke='%2348d6ad' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ url_for('static',filename='workspace.css') }}">
+  <script src="{{ url_for('static',filename='workspace.js') }}" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="CyberShield workspace">
+    <span class="brand-icon"><svg viewBox="0 0 32 36" aria-hidden="true"><path d="M16 3 29 9v10c0 8-13 14-13 14S3 27 3 19V9Z"/><path d="m9 18 5 5 9-11"/></svg></span>
+    <span>CyberShield<small>ANALYTICS WORKSPACE</small></span>
+  </a>
+  <div class="side-label">WORKSPACE</div>
+  <div class="nav-current"><span aria-hidden="true">⌘</span> SQL explorer <span class="nav-dot"></span></div>
+  <a class="example-button" href="/investigate">✦ Investigation agent</a>
+  <label class="side-label dataset-label" for="dataset">DATA SOURCE</label>
+  <div class="dataset-select"><select id="dataset"><option value="real">CIC-IDS2017 · Tuesday</option><option value="fixture">Synthetic fixture</option></select></div>
+  <p class="side-description" id="source-description">Labeled network flows<br>Local PostgreSQL database</p>
+  <div class="side-label example-heading">START WITH A QUESTION</div>
+  <nav id="examples" aria-label="Example investigations"></nav>
+  <div class="sidebar-bottom"><span class="connection-dot" id="connection-dot"></span><span id="connection-text">Connecting to database…</span><small>Queries stay on this computer</small></div>
+</aside>
+<main>
+  <header class="topbar"><span>Workspace <span class="slash">/</span> <strong>SQL explorer</strong></span><span class="readonly"><span></span> Read-only connection</span></header>
+  <div class="page">
+    <div class="page-heading"><div><div class="eyebrow">INVESTIGATE YOUR DATA</div><h1>From query to insight.</h1><p>Explore network activity, inspect alerts, and follow the evidence.</p></div><div class="local-pill"><span></span> LOCAL WORKSPACE</div></div>
+    <section class="metrics" aria-label="Dataset overview">
+      <div class="metric"><span>ACCEPTED FLOWS</span><strong id="stat-flows">—</strong><small>Complete source file</small></div>
+      <div class="metric"><span>ACTIVE SOURCE WINDOWS</span><strong id="stat-windows">—</strong><small>Latest feature run · 5 minutes</small></div>
+      <div class="metric"><span>ATTACK-LABELED WINDOWS</span><strong id="stat-positive">—</strong><small>Retrospective benchmark labels</small></div>
+      <div class="metric"><span>TRAFFIC CATEGORIES</span><strong id="stat-categories">—</strong><small>Includes benign traffic</small></div>
+    </section>
+    <div class="workbench">
+      <div class="query-column">
+        <section class="editor-panel panel" aria-labelledby="editor-heading">
+          <div class="panel-header"><div><span class="terminal-icon">&gt;_</span><h2 id="editor-heading">Query editor</h2><span class="language-tag">PostgreSQL</span></div><button class="text-button" id="clear-query" type="button">Clear</button></div>
+          <div class="query-caption"><span id="query-title">Highest-priority windows</span><span class="shortcut">Ctrl / ⌘ + Enter to run</span></div>
+          <div class="code-editor"><div class="line-numbers" id="line-numbers" aria-hidden="true">1</div><textarea id="sql-editor" spellcheck="false" aria-label="SQL query" placeholder="SELECT * FROM latest_triage LIMIT 20;"></textarea></div>
+          <div class="editor-footer"><span><span class="tiny-dot"></span> SELECT and WITH queries</span><div><label for="row-limit">Result limit</label><select id="row-limit"><option value="100">100 rows</option><option value="250" selected>250 rows</option><option value="500">500 rows</option></select><button class="run-button" id="run-query" type="button"><span id="run-icon">▶</span><span id="run-label">Run query</span></button></div></div>
+        </section>
+        <section class="results-panel panel" aria-labelledby="results-heading">
+          <div class="panel-header"><div><h2 id="results-heading">Results</h2><span id="result-count" class="count-tag">0</span></div><div><span id="query-timing"></span><button class="export-button" id="export-csv" type="button" disabled><span aria-hidden="true">↓</span> Export CSV</button></div></div>
+          <div id="result-message" class="result-message" role="status" aria-live="polite">Choose an example or write a query to explore your data.</div>
+          <div class="table-scroll" id="table-scroll" tabindex="0" aria-label="Query results"><table id="results-table"><thead></thead><tbody></tbody></table></div>
+          <div class="results-footer"><span id="result-summary">Ready when you are.</span><span>Live PostgreSQL results</span></div>
+        </section>
+      </div>
+      <aside class="schema-panel panel" aria-labelledby="schema-heading"><div class="panel-header"><div><h2 id="schema-heading">Schema reference</h2></div><span class="schema-mark">DB</span></div><p class="schema-intro">Click a table to inspect its columns. Use <code>latest_*</code> views to explore one run.</p><div id="schema-list"></div><div class="schema-tip"><strong>A useful starting point</strong><code>SELECT *<br>FROM latest_features<br>LIMIT 20;</code></div></aside>
+    </div>
+    <footer class="page-footer"><span class="note-icon">i</span><p id="data-note">Development dataset · Morning-clock scoring only. Adjacent windows can share an attack episode.</p><span id="schema-name"></span></footer>
+  </div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+[
+  {
+    "method": "Random forest",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/00.joblib",
+    "sha256": "ba724a319db1ba86c6065a56574e983f87b57b191dbf446ba18919b3e1f22a3d",
+    "serialized_bytes": 258370,
+    "estimator_class": "RandomForestClassifier",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "Linear SVM",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/01.joblib",
+    "sha256": "aff8cd3ea0484c041cb14878b48179f4191e05dd5a09fca932919604ae5faebb",
+    "serialized_bytes": 1997,
+    "estimator_class": "LinearSVC",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "Logistic regression",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/02.joblib",
+    "sha256": "0297b8f638d001ed9a8d9490d0cda7b8d2bb35fb9dcdaf1420ebc48f5e2d8ba4",
+    "serialized_bytes": 2129,
+    "estimator_class": "LogisticRegression",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "XGBoost",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/03.joblib",
+    "sha256": "04beb60297404364e248be4886eba3980b190afbb447305175fdb80eabcad317",
+    "serialized_bytes": 174750,
+    "estimator_class": "XGBClassifier",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "Histogram boosting",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/04.joblib",
+    "sha256": "086887cbb91c6ab2ed279d61c94b8d197bdf1fb5176f430e7da9778964002d5a",
+    "serialized_bytes": 318377,
+    "estimator_class": "HistGradientBoostingClassifier",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "LightGBM",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/05.joblib",
+    "sha256": "64c42115b4fb31c45aec9fb997706a96c2ada4eb5ae6ff17649ba7d6f77b9c21",
+    "serialized_bytes": 188032,
+    "estimator_class": "LGBMClassifier",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "CatBoost",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/06.joblib",
+    "sha256": "2feb4012b45be9022f820a5b9fc8dc128522cecfa987f954ac5175610132ea0d",
+    "serialized_bytes": 230686,
+    "estimator_class": "CatBoostClassifier",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  },
+  {
+    "method": "Extra trees",
+    "model_file": "reports/studies/corrected_development_v2_20261108_live/benchmark/models/07.joblib",
+    "sha256": "3397f14395b5f9fe9dbacdd62165fef3ba6f6785adc9c244357e2b941a0879f8",
+    "serialized_bytes": 303650,
+    "estimator_class": "ExtraTreesClassifier",
+    "scores_bitwise_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "all_registered_budget_decisions_equal": true
+  }
+]
