@@ -57,17 +57,11 @@ The SQL rules and ML use the same eligible development windows and cutoffs calib
 
 Start with [feature engineering](sql/features/source_windows.sql), [rule scores](sql/detection/scores.sql), [burst analysis](sql/analytics/02_bursts.sql), and [error analysis](sql/analytics/08_error_analysis.sql). These files contain the analytical transformations; Python handles parsing, experiment orchestration, the ML baseline, and plotting.
 
-```mermaid
-flowchart LR
-    A[Local CSV archive] --> B[Validation + COPY]
-    B --> C[PostgreSQL flows + separate labels]
-    C --> D[SQL window features]
-    D --> E[SQL rule scores]
-    D --> F[Logistic regression]
-    E --> G[Benign-only calibration + development comparison]
-    F --> G
-    G --> H[Triage queue, charts, findings]
-```
+## Project architecture
+
+![CyberShield project architecture](docs/assets/architecture.svg)
+
+See [architecture and database grains](docs/architecture.md) for component responsibilities and diagram reproduction.
 
 ## Run locally
 

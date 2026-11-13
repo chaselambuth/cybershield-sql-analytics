@@ -1,22 +1,18 @@
 # Architecture and database grains
 
-```mermaid
-flowchart LR
-    A[Local labeled-flow ZIP / synthetic fixture] --> B[Streaming parser + validation]
-    B --> C[Temporary typed staging + COPY]
-    B --> Q[Quarantine + rejection reasons]
-    C --> F[Normalized flows]
-    C --> L[Separate benchmark labels]
-    F --> W[SQL five-minute source features]
-    W --> R[SQL rule scores]
-    W --> M[Training-only logistic pipeline]
-    L --> T[Separate window targets]
-    R --> E[Benign-only cutoff calibration]
-    M --> E
-    T --> E
-    E --> V[Predictions + label-free triage view]
-    V --> O[Versioned CSVs, figures, findings]
+![CyberShield project architecture](assets/architecture.svg)
+
+The diagram covers ingestion, PostgreSQL feature engineering, separate SQL/ML evaluation, and the investigation interfaces. The corrected-data study remains separate from the prototype bundle used by Power BI and the agent.
+
+Regenerate the vector figure using the existing Matplotlib dependency:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/build_architecture.py
+# Optional local PNG preview:
+.\.venv\Scripts\python.exe scripts/build_architecture.py --png .tmp/architecture_preview.png
 ```
+
+The editable drawing source is [build_architecture.py](../scripts/build_architecture.py). The SVG is the canonical repository asset; PNG previews are optional.
 
 ```mermaid
 erDiagram
