@@ -6,7 +6,7 @@
   "base_commit": "05a39c9f7399776306df72f60053d9b63e798925",
   "code_hashes": {
     ".gitattributes": "43b5a230cc2a2df2f820ee5f33098c1391a891bcbb4589d6b04319f7e032cd27",
-    ".github/workflows/validate.yml": "ff47048e478fe8376020ec9b987d9f10510b38943c6626022792c43fd9da574a",
+    ".github/workflows/validate.yml": "6d06bb0d3a32123a70d1f849835b61b8054ab4219b071317e9cd53ee0eaa7494",
     ".gitignore": "1f3216c75f12f9dfa1eef9b48e5e251298c3dc3a6dbc6744808c77b30279b54a",
     "configs/neural_comparison_v1.json": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
     "pyproject.toml": "aeeae1dd30483c781e25d8ebcbefc7dff0fecf661d2954f954357316d6838206",
@@ -43,7 +43,7 @@
   },
   "candidate_file_hashes": {
     ".gitattributes": "43b5a230cc2a2df2f820ee5f33098c1391a891bcbb4589d6b04319f7e032cd27",
-    ".github/workflows/validate.yml": "ff47048e478fe8376020ec9b987d9f10510b38943c6626022792c43fd9da574a",
+    ".github/workflows/validate.yml": "6d06bb0d3a32123a70d1f849835b61b8054ab4219b071317e9cd53ee0eaa7494",
     ".gitignore": "1f3216c75f12f9dfa1eef9b48e5e251298c3dc3a6dbc6744808c77b30279b54a",
     "README.md": "b948ae8e5334c8ca5f3eb2eaca08785b6243a9cfd378a988e7dea40a4abd333d",
     "configs/neural_comparison_v1.json": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
