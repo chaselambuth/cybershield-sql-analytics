@@ -1,0 +1,85 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  portable:
+    name: Portable checks (Python 3.12)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - name: Install project and verification dependencies
+        run: |
+          python -m pip install -r requirements.lock
+          python -m pip install -e . --no-deps
+          python -m pip check
+      - name: Verify saved notebooks and prototype artifacts
+        run: |
+          python scripts/verify_research.py
+          python -m cybershield verify reports/prototype
+      - name: Verify headline model-comparison artifacts
+        run: python -m cybershield verify reports/neural_comparison_v1 --registration-sha256 f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c
+      - name: Run portable tests without a database or reporting bundle
+        run: python -m pytest -m 'not integration and not reporting_bundle' -q --tb=short
+      - name: Check chart data handling
+        run: node --test tests/test_charts.cjs
+
+  postgres:
+    name: PostgreSQL 16 and synthetic quickstart
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: cybershield
+          POSTGRES_USER: cybershield
+          POSTGRES_PASSWORD: synthetic-ci-only
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd 'pg_isready -U cybershield -d cybershield'
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      POSTGRES_HOST: 127.0.0.1
+      POSTGRES_PORT: '5432'
+      POSTGRES_DB: cybershield
+      POSTGRES_USER: cybershield
+      POSTGRES_PASSWORD: synthetic-ci-only
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - name: Install project and test dependencies
+        run: |
+          python -m pip install -c requirements.lock -e '.[dev]' psutil
+          python -m pip check
+      - name: Run isolated PostgreSQL integration tests
+        run: python -m pytest tests/test_postgres.py tests/test_corrected_study.py tests/test_workspace.py -m integration -q --tb=short
+      - name: Run the synthetic pipeline and HTTP workspace checks
+        run: |
+          python -m cybershield configure
+          python -m cybershield run --mode fixture
+          python scripts/check_quickstart.py

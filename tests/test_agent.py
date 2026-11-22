@@ -15,6 +15,7 @@ def store():
     return EvidenceStore()
 
 
+@pytest.mark.reporting_bundle
 def test_label_free_search_is_pinned_and_links_to_original_flows(store):
     found=store.execute('search_windows',{'source':None,'detector':'sql','limit':3})
     assert len(found['data']['windows'])==3
@@ -29,6 +30,7 @@ def test_label_free_search_is_pinned_and_links_to_original_flows(store):
     assert all(len(h)==64 for h in found['sources'].values())
 
 
+@pytest.mark.reporting_bundle
 def test_sqlite_is_physically_read_only_and_tools_reject_injection(store):
     with pytest.raises(sqlite3.OperationalError):
         store.db.execute('DELETE FROM Window')
@@ -42,6 +44,7 @@ def test_sqlite_is_physically_read_only_and_tools_reject_injection(store):
         validate(TOOL_MAP['compare_models'],{'max_false_positives':None,'max_p95_ms':float('nan')})
 
 
+@pytest.mark.reporting_bundle
 def test_no_matches_remain_empty_and_model_constraints_apply(store):
     assert not store.execute('search_windows',{'source':'203.0.113.250','detector':'sql','limit':3})['data']['windows']
     rows=store.execute('compare_models',{'max_false_positives':40,'max_p95_ms':2})['data']['models']
@@ -50,6 +53,7 @@ def test_no_matches_remain_empty_and_model_constraints_apply(store):
     assert all(r['detector_id']!='sql' for r in rows)
 
 
+@pytest.mark.reporting_bundle
 def test_reference_flow_is_disclosed_and_citations_match(store):
     result=run_investigation('Investigate the highest priority SQL alert.',mode='reference',store=store)
     assert result['status']=='completed'
@@ -73,6 +77,7 @@ def finish(ids=None,verdict='review_required'):
         'evidence_ids':ids or [],'next_steps':[]})
 
 
+@pytest.mark.reporting_bundle
 def test_unknown_citations_are_rejected_before_report_publication(store):
     r=run_investigation('Investigate alerts',store=store,planner=ScriptedPlanner([('get_context',{}),finish(['E99'])]))
     assert r['status']=='failed' and r['report'] is None and 'citations' in r['error']
@@ -81,6 +86,7 @@ def test_unknown_citations_are_rejected_before_report_publication(store):
     assert r['status']=='failed' and r['report'] is None
 
 
+@pytest.mark.reporting_bundle
 def test_missing_methodology_and_unavailable_tools_fail_closed(store):
     r=run_investigation('Investigate alerts',store=store,planner=ScriptedPlanner([('get_context',{}),finish(['E1'])]))
     assert r['status']=='failed' and 'methodology' in r['error']
@@ -88,12 +94,14 @@ def test_missing_methodology_and_unavailable_tools_fail_closed(store):
     assert r['status']=='failed' and not r['evidence']
 
 
+@pytest.mark.reporting_bundle
 def test_infinite_planning_is_bounded_and_partial_evidence_retained(store):
     r=run_investigation('Keep investigating',store=store,planner=ScriptedPlanner([('get_context',{})]*10))
     assert r['status']=='failed' and len(r['evidence'])==6 and r['tool_calls']==6
     assert 'budget' in r['error']
 
 
+@pytest.mark.reporting_bundle
 def test_out_of_scope_needs_no_evidence_and_web_reuses_local_token(store):
     r=run_investigation('Delete all records',store=store,planner=ScriptedPlanner([finish(verdict='out_of_scope')]))
     assert r['status']=='completed' and not r['evidence']
@@ -130,6 +138,7 @@ def test_openai_adapter_preserves_protocol_and_keeps_key_server_side(monkeypatch
     assert captured['timeout']==20
 
 
+@pytest.mark.reporting_bundle
 def test_reference_job_runs_end_to_end_over_http_without_database(monkeypatch,store):
     import time
     import cybershield.agent as module

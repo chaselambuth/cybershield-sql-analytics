@@ -1,5 +1,7 @@
 # Corrected-data development study
 
+The current [revised model comparison](../reports/neural_comparison_v1/README.md) replaces Linear SVM and Extra Trees with a neural MLP and autoencoder, using the same prepared windows and freshly measured CPU latency. The original registered eight-classical-model protocol and results below are retained for provenance; the revision has its own registration and does not create a new independent holdout or change the original protocol's support gate.
+
 This study is an opt-in extension of CyberShield. The original Tuesday application, historical reports, investigation agent and Power BI bundle remain separate. The new commands do not update application pointers or import a new dashboard bundle automatically.
 
 ## What is implemented

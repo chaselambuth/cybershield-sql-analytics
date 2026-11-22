@@ -1,0 +1,52 @@
+{
+  "kind": "cybershield_neural_comparison_v1",
+  "created_utc": "2026-11-21T22:42:28.539261+00:00",
+  "status": "revised_development_validation",
+  "parent_study": "reports/studies/corrected_development_v2_20261108_live",
+  "parent_prepared_sha256": "5b5b33e1d074283cab7d20ff0979ae1b40fc1e0974d4fc65a0e635b0f8d9eb0b",
+  "parent_benchmark_registration_sha256": "4610cea7f567d3695f9dc334fa2d116558a115fbb6cf2495ad0785e85a4c5dcc",
+  "protocol_sha256": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
+  "code_files": {
+    "sql/detection/scores.sql": "32fd7637f37fbd5be47accd0e11ba911f0859f6838797067aa814b12316f947a",
+    "sql/features/source_windows.sql": "3aa59f5142b50821daaa96b82e3d0fb38258284be0fa80ff7f46b54c341466cb",
+    "sql/features/window_labels.sql": "05bb2a58e9622145bd3b487d1e372713bd076fb7eb2e41f5db0e1dfc22414f66",
+    "sql/migrations/001_core.sql": "2aa27e431dadfa4c808e643781b75a6099db3395e9ff37626f181ab0326b6869",
+    "sql/migrations/002_query_workspace.sql": "467d3fb2b3cc208da11f2338c75be1b093493689ea6e1d6d7ea066f041b8a488",
+    "sql/migrations/003_flow_provenance.sql": "a357c3b1c16d6de982bdead0396c3e8c676a2c962ad32e2349a3f3f27c34bd87",
+    "src/cybershield/corrected.py": "656c99450d7cb7a9e17edc4239f2339d8c8dc4ce8f8216681a8bb82ae3a340de",
+    "src/cybershield/db.py": "e1758a7ac2b210243eafab424c8485a7d8f4752a6efffd695eb13aea9ec064a2",
+    "src/cybershield/evaluate.py": "7a7ad189ed593cff56059994416a9cd1475024effc998814ed8d02591e7aa9b2",
+    "src/cybershield/ingest.py": "0d558f099671aa53a12facba5eb60c9ded12171679a07ed8f137e170f46e402d",
+    "src/cybershield/protocol.py": "4887ec7a787f875df6617d459cefe6fdf74635bf80067f551ddf24e7a4f8b150",
+    "src/cybershield/research.py": "9ca8e14d02790c5921bcd9dc4b2b0f09addaf2fb6eb559d0295a20b50010b224",
+    "src/cybershield/study.py": "b176779f89eb0f7aa82ab7f43c259f019cb87403eb341d526939f86ff3de9c06",
+    "src/cybershield/study_benchmark.py": "f620c90632191a61ace58a41c9e3a337c1ad41b86c0708b63e00420b60a50910",
+    "src/cybershield/neural_comparison.py": "4b71a87b93af3af8e6025730e91447442fc23ec5e40ecec29fd42a0fd688188d",
+    "requirements.lock": "7492db49ec29a8217b56a0a788d0c4ef7dc68a98af0ae7cb9a8fe30ab4058144"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10",
+    "threadpoolctl": "3.7.0"
+  },
+  "windows": 5543,
+  "support": {
+    "size": {
+      "calibration": 152,
+      "train": 2906,
+      "validation": 2485
+    },
+    "sum": {
+      "calibration": 0,
+      "train": 24,
+      "validation": 21
+    }
+  },
+  "prior_access": "Requested after inspecting the original corrected validation results: Linear SVM caught 0/21 positives and Extra trees caught 1/21. Logistic regression is retained as a transparent baseline. This is a post-hoc model-roster revision, not prespecified validation.",
+  "input_reuse": "Byte-verified parent prepared windows and role assignments; original archived source verified. No re-ingestion or split reassignment.",
+  "registration_note": "Local hash receipt before new fits; not an external seal or a new independent holdout."
+}

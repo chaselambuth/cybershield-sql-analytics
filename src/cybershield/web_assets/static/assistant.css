@@ -1,0 +1,21 @@
+.ask-panel{margin-bottom:20px;padding:20px 20px 15px;background:#f8f9fd;border-color:#dce2ef}
+.ask-heading,.ask-heading>div{display:flex;align-items:center;gap:9px}.ask-heading{justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+.ask-heading h2{font-size:16px;letter-spacing:-.4px;margin:0}.ask-symbol{color:#6b60ab;font-size:22px}.ask-heading .language-tag{font-size:7px;letter-spacing:.7px;background:#efedfa;color:#645b91}
+.assistant-status{font-size:9px;color:#687f75}.ask-label{display:block;font-size:10px;color:#627c70;margin-bottom:8px}
+.ask-input-row{display:flex;align-items:stretch;gap:10px}
+#data-question{min-height:62px;height:62px;max-height:140px;padding:12px 14px;resize:vertical;border:1px solid #d6e4dc;border-radius:6px;background:#fff;color:#294838;font:12px/1.6 "Segoe UI",Arial,sans-serif;white-space:pre-wrap}
+#data-question:focus{outline:2px solid #52b495;outline-offset:1px}#data-question::placeholder{color:#8ba295}
+.draft-button{display:flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-width:116px;border-radius:6px;border:1px solid #635da8;background:#635da8;color:#fff;font-size:11px;font-weight:600;padding:12px}
+.draft-button:hover{background:#4d488c}.draft-button:disabled{opacity:.5;cursor:default}
+.ask-examples{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:12px}.ask-examples>span{font-size:7px;letter-spacing:1px;color:#739080;margin-right:2px}
+.ask-examples button{background:transparent;border:1px solid transparent;border-radius:4px;padding:5px 9px;color:#597464;font-size:9px}.ask-examples button:hover{border-color:#c9d6e3;color:#225e77;background:#f0f5f9}
+.draft-message{font-size:9px;line-height:1.7;color:#67798b;margin:12px 0 0}.draft-message.error{color:#aa4c3f}.draft-message.ready{color:#126b4f}
+.results-header{min-height:60px;height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}.results-header>div:last-child{margin-left:auto;flex-wrap:wrap;gap:8px}
+.result-views{display:flex;background:#f1f5f7;border:1px solid #e2e8ed;padding:2px;border-radius:5px}.result-views button{border:0;border-radius:3px;background:transparent;color:#7d8d9f;padding:5px 9px;font-size:9px}.result-views button[aria-pressed=true]{background:white;color:#166f55;box-shadow:0 1px 3px #182a4012}.result-views button:disabled{opacity:.45;cursor:default}
+.chart-panel{padding:15px 18px 8px}.chart-panel[hidden]{display:none}.chart-controls{display:flex;align-items:flex-end;flex-wrap:wrap;gap:12px;border-bottom:1px solid #edf1f4;padding-bottom:13px}
+.chart-controls label{font-size:8px;color:#7b8d9d;min-width:90px;flex:1}.chart-controls select{display:block;max-width:100%;width:100%;margin-top:5px;border:1px solid #e0e7eb;border-radius:5px;background:#fff;padding:6px 7px;font-size:10px;color:#3f5a6a}
+#chart-title{font-size:12px;font-weight:600;color:#354f5b;margin:18px 0 4px}.query-chart{overflow:auto;max-height:410px}.query-chart svg{display:block;width:100%;min-width:570px}
+.chart-grid{stroke:#e9eff1;stroke-width:1}.chart-baseline{stroke:#bccfc6;stroke-width:1}.chart-tick{fill:#91a0ac;font:11px "Segoe UI",Arial,sans-serif}.chart-label{fill:#4c6875;font:12px "Segoe UI",Arial,sans-serif}.chart-axis{fill:#728c97;font:11px "Segoe UI",Arial,sans-serif}
+.chart-bar{fill:#268e88;opacity:.88}.chart-bar:hover,.chart-bar:focus{fill:#0e664b;opacity:1;outline:none}.chart-line{fill:none;stroke:#467fac;stroke-width:2.5;stroke-linejoin:round}.chart-point{fill:#fff;stroke:#467fac;stroke-width:2}.chart-point:hover,.chart-point:focus{fill:#467fac;stroke-width:3;outline:none}
+.chart-note{font-size:9px;line-height:1.7;color:#8a9ca8;margin:8px 0}.chart-empty{font-size:11px;line-height:1.7;color:#7d8d9c;padding:25px 0}
+@media(max-width:700px){.ask-panel{padding:16px 13px}.ask-heading .language-tag{display:none}.ask-input-row{flex-direction:column}.draft-button{align-self:flex-end;padding:9px 14px}.chart-panel{padding-left:12px;padding-right:12px}.chart-controls{gap:8px}.chart-controls label{min-width:80px}.ask-heading{gap:7px}.assistant-status{font-size:8px}}

@@ -67,6 +67,6 @@ The completed evaluation and its limits are recorded in [the results summary](..
 
 The agent supports tool orchestration, evidence retrieval, structured outputs, provenance-linked reports, and cost/latency instrumentation. Its tools are read-only and bounded to the verified research bundle. Additional frameworks or agents require a measured need. The saved evaluation supports only the documented scenarios; production deployment and autonomous response have not been evaluated.
 
-The interface design draws on [Linear](https://linear.app/)'s restrained dark surfaces, fine borders, and compact typography, with CyberShield's own shield mark, amber/olive palette, layouts, and wording.
+The interface design draws on [Linear](https://linear.app/)'s restrained dark surfaces, fine borders, and compact typography, with CyberShield's own shield mark, midnight-blue, teal and violet palette, layouts, and wording.
 
 Implementation references: [OpenAI function calling](https://developers.openai.com/api/docs/guides/function-calling), [model capabilities and pricing](https://developers.openai.com/api/docs/models/gpt-5.4-mini). Research limitations remain in `power_bi/README.md`.

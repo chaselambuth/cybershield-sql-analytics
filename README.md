@@ -1,37 +1,110 @@
 # CyberShield Analytics
 
-**Solo project by Chase Lambuth.**
+**PostgreSQL security analytics, explainable alert scoring, and evidence-linked investigations.**
 
-**PostgreSQL security-flow investigations, explainable triage, and a measured ML comparison.**
+CyberShield analyzes network traffic with PostgreSQL, SQL-engineered features, SQL detection rules and machine learning to flag suspicious activity. An investigation agent helps trace flagged activity to supporting records, while Power BI provides interactive analytics and visualizations. Source records, scores and retrieved evidence remain linked so analysts can inspect the basis for each finding.
 
-CyberShield turns labeled network-flow records into an inspectable investigation: validate the source, build source-by-time features in SQL, rank suspicious windows, and trace each alert to supporting flows. The research sequence asks whether added ML complexity improves on transparent SQL rules and which signals and alert budgets drive the observed results.
+## Project architecture
 
-**Start with the [project walkthrough](docs/project_walkthrough.md).** Review the SQL transformations, three focused experiments, and measured evidence without starting a database. See the [November 8 corrected-data study](docs/corrected_study.md) for the new adapter, four-day source audit, registered protocols and current execution limits. Historical results and new support counts are kept separate.
+![CyberShield project architecture](docs/assets/architecture.svg)
 
-**Power BI reporting:** open [CyberShield.pbip](power_bi/CyberShield.pbip), or double-click **Open CyberShield Power BI.cmd**. Three pages cover source quality, security investigations, and model quality/latency, with supporting-flow drill-through. The report imports one validated frozen bundle. See [setup, refresh, and reproduction](power_bi/README.md).
+PostgreSQL owns the relational model, temporal features and explainable rules. Python handles ingestion, controlled experiments and the investigation agent. Power BI and the agent consume a verified reporting bundle.
 
-**Investigation agent:** double-click **Open CyberShield Agent.cmd** to open a bounded agent that chooses read-only evidence tools and produces cited briefs with visible tool traces, latency, tokens and estimated API cost. A free reference workflow is included. See [architecture and evaluation](docs/investigation_agent.md).
+## In action
 
-**SQL interface:** a local query editor with live results, CSV export, example investigations, and a schema reference, served at [http://127.0.0.1:8765](http://127.0.0.1:8765). To start it, double-click **Open CyberShield.cmd** in the project root, or run `.\.venv\Scripts\python.exe -m cybershield serve`. See [interface instructions](docs/query_workspace.md).
+### Ask your data
 
-**The application snapshot is development-only:** one original Tuesday source file, a restricted morning-clock scoring population, and adjacent intervals that can share an attack episode. The separate [corrected-source study](docs/corrected_study.md) now ingests four days and evaluates later Wednesday/Thursday windows under a registered protocol. Both remain offline research evidence with limited, correlated positives. Friday is excluded and its earlier acquisition preview is disclosed; no pristine final holdout or production intrusion-detection effectiveness is claimed.
+Draft PostgreSQL from a plain-English question, review it, then run the query and switch between its table and chart. Saved example questions work without an API key; custom drafting uses the existing local OpenAI configuration.
 
-## Three focused research notebooks
+![SQL explorer overview with dataset metrics, Ask your data, the query editor, and schema reference](docs/assets/sql_workspace_overview.jpg)
 
-- [Data exploration and three-source selection](notebooks/01_data_audit_and_source_selection.ipynb). Historical Tuesday audits of original and corrected CIC-IDS2017, plus a documentation-only UNSW-NB15 review. The recommended corrected adapter is now implemented in the separate study workflow; the application snapshot still uses the original.
-- [Eight-model quality and latency comparison](notebooks/02_model_quality_latency.ipynb). Fixed CPU configurations, exact detection counts, training cost, single-window median/P95 latency, batch throughput and raw repetitions on one frozen feature run.
-- [SQL feature ablation and alert budgets](notebooks/03_sql_feature_ablation_and_alert_budgets.ipynb). Six fixed logistic feature variants and four SQL controls at four benign-calibration budgets; matched decisions, missed positives and false-alert concentration explain sensitivity.
+<details>
+<summary>Saved query and traffic chart</summary>
 
-The notebooks contain saved tables and plots. Execution provenance and notebook hashes are recorded in `reports/research/notebook_execution.json`. See [verification instructions](docs/repository_validation.md).
+![SQL explorer showing a saved traffic query and its four hourly results](docs/assets/sql_workspace_chart.jpg)
 
-See [research findings](reports/research/findings.md), [primary-source review dated October 24](docs/model_research_2026-10-24.md), and [reproduction instructions](notebooks/README.md). Source selection is independent of model scores. The corrected archive's acquisition preview read one Friday record; no Friday records enter these experiments, and Friday is not claimed to be an entirely unseen final holdout.
+This saved example queries local PostgreSQL and makes no LLM or API calls. The table and CSV retain the exact values behind the chart.
 
-## Historically recorded prototype results
+The first hourly bucket is partial: 08:00 contains only the 08:50 and 08:55 windows (1,591 flows). Its lower count reflects incomplete hourly coverage; the rise to 09:00 does not establish a traffic surge.
 
-The [corrected-data result](docs/corrected_study.md#newly-measured-validation-result) uses a separate run and population: 1,552,419 accepted flows across four days; 2,485 known-label validation windows, including 21 positive. At the registered budget, CatBoost catches 17 positives with 18 false alerts and SQL catches 11 with 9. Strict unknown-window exclusion removes some attack-family coverage. Those results do not replace or merge with the historical numbers below.
+</details>
+
+### Investigation workbench
+
+Ask an investigation question, inspect the tool trace, and open the cited evidence. The free reference workflow uses no LLM or API calls; it is separate from the recorded live-agent evaluation.
+
+In live mode, the LLM chooses its next read-only tool from the question and previous results, including searches for ranked alerts, supporting-flow inspection, model comparisons under quality/latency constraints and methodology retrieval. Each tool result returns to the model with an evidence ID, informing further tool choices and the cited investigation brief it submits to finish the bounded workflow. The server checks citations against evidence retrieved in that run; the summary's claims still require analyst review.
+
+![CyberShield investigation workbench with architecture-inspired styling](docs/assets/investigation_workspace.png)
+
+Architecture-inspired interface, shown with live mode selected before execution.
+
+<details>
+<summary>Supporting flow records</summary>
+
+The evidence panel links a source window to original flow IDs and displays benchmark annotations separately from the ranking. The alert walkthrough below traces this exact 670-flow window.
+
+![Expanded evidence showing the selected window and supporting flows](docs/assets/investigation_evidence.jpg)
+
+</details>
+
+<details>
+<summary>Power BI investigations and model comparison</summary>
+
+Inspect observed traffic, development alerts, false-alert concentration and supporting records in Power BI Desktop.
+
+![Power BI Desktop security investigations page](power_bi/screenshots/02_security_investigations.jpg)
+
+Compare detection counts, false alerts, single-window latency and score ties on a fixed cohort.
+
+![Power BI Desktop model quality and compute cost page](power_bi/screenshots/03_model_quality_cost.jpg)
+
+</details>
+
+The screenshots show the historical Tuesday application snapshot. The corrected multi-day research study below uses a separate population and does not automatically replace the dashboard or agent bundle.
+
+## One alert, end to end
+
+The highest-ranked development alert in the saved prototype is source 172.16.0.1, in the reported-completion window 10:10–10:15 on July 4, 2017. Its 670 service flows produce a combined SQL score of 223.33, above the frozen cutoff of approximately 2.00. The score is dominated by service traffic; the ranking uses no ground-truth labels.
+
+[Follow the investigation](docs/alert_investigation.md): inspect the SQL calculation, identify the supporting source records, then check the retrospective annotations and limitations. The example can be reviewed entirely from tracked artifacts.
+
+## Research results
+
+### Corrected four-day development study
+
+The study covers 1,552,419 accepted flows across Monday–Thursday. Validation contains 2,485 known-label windows: 21 positive and 2,464 benign. All methods use the same 1% known-benign calibration budget.
+
+| Method | Caught | Missed | False alerts | Median ms | P95 ms |
+|---|---:|---:|---:|---:|---:|
+| Logistic regression | 0 | 21 | 24 | 1.054 | 1.608 |
+| Random forest | 11 | 10 | 18 | 23.199 | 28.827 |
+| Histogram boosting | 5 | 16 | 3 | 4.472 | 5.166 |
+| XGBoost | 4 | 17 | 5 | 1.513 | 1.949 |
+| LightGBM | 5 | 16 | 8 | 1.562 | 2.130 |
+| CatBoost | 17 | 4 | 18 | 1.274 | 2.072 |
+| Neural MLP | 0 | 21 | 50 | 1.047 | 1.533 |
+| Neural autoencoder | 9 | 12 | 1 | 1.214 | 1.751 |
+| Combined SQL rules | 11 | 10 | 9 | — | — |
+| Always benign control | 0 | 21 | 0 | — | — |
+
+CatBoost detected 17 of 21 positive windows with 18 false alerts; combined SQL rules detected 11 of 21 with 9 false alerts. The autoencoder detected 9 with 1 false alert, while the MLP detected none with 50 false alerts. These results illustrate a tradeoff between detection coverage and false-alert volume; neural models did not consistently improve detection. A common calibration budget does not guarantee the same validation false-alert rate or establish a universal winner.
+
+The revised comparison evaluates six classical models, a two-hidden-layer MLP and a three-hidden-layer autoencoder on the existing development/validation split. The six classical models reproduce their original scores exactly.
+
+Latency measures warm single-window CPU inference including preprocessing, with one requested thread, five warm-ups and 60 timed calls per model. It excludes SQL feature computation, database/HTTP access, cold starts and five-minute window waiting; SQL/control latency is not measured here.
+
+![Revised eight-model comparison: six classical models, neural MLP, neural autoencoder, combined SQL rules and always-benign control](reports/neural_comparison_v1/comparison.png)
+
+These are descriptive development/validation results from correlated windows. Unknown-label exclusions reduce attack-family coverage, sources recur across roles, and no pristine final holdout or production effectiveness is claimed.
+
+[Full results, methods and latency measurements](reports/neural_comparison_v1/README.md)
+
+<details>
+<summary>Historical Tuesday application snapshot — separate experiment</summary>
 
 <!-- RESULTS:START -->
-Loaded **445,892 accepted flows** from **445,909 input rows**; quarantined **17**.
+Loaded 445,892 accepted flows from 445,909 input rows; quarantined 17.
 
 | Method | Caught / attack windows | False alerts / benign windows |
 |---|---:|---:|
@@ -39,46 +112,20 @@ Loaded **445,892 accepted flows** from **445,909 input rows**; quarantined **17*
 | Logistic regression | 5 / 6 | 64 / 3407 |
 | Flow-count baseline | 4 / 6 | 34 / 3407 |
 
-Run `4b812462-e408-4a6c-9c2f-f5c9f02a3494`. These are sparse, correlated development windows; no independent-attack inference is supported.
+Run 4b812462-e408-4a6c-9c2f-f5c9f02a3494. These are sparse, correlated development windows; no independent-attack inference is supported.
 <!-- RESULTS:END -->
 
-The SQL rules and ML use the same eligible development windows and cutoffs calibrated only on known-benign calibration windows. Preprocessing and rule reference scales use training data only. The actual development false-alert rate can differ from the calibration target. See [generated findings](reports/prototype/findings.md), [metrics](reports/prototype/metrics.csv), and [claim evidence](reports/prototype/claim_evidence.csv) for exact populations and denominators. These numbers are preserved historical observations, not a fresh database-backed rerun.
+![Historical Tuesday development comparison](reports/prototype/figures/02_comparison.png)
 
-![Development comparison](reports/prototype/figures/02_comparison.png)
+This early prototype chart shows four selected methods and predates the eight-model comparison. CatBoost is included in the [later Tuesday benchmark](reports/research/findings.md#eight-model-development-comparison), where it caught 5/6 positive windows with 57 false alerts, and in the corrected-study chart above. The corrected study uses a different population and split; its results do not belong in this historical figure.
 
-## What SQL does
+The cutoffs use known-benign calibration windows; preprocessing and rule scales use training data only. These saved observations are not a fresh database rerun. The prototype findings document the historical evaluation.
 
-- Relational constraints and checksum-tracked plain-SQL migrations.
-- Five-minute `date_bin` aggregation, service-port counts, distinct destinations/ports, and packet/byte summaries.
-- Elapsed-time `RANGE` windows excluding the current observation.
-- Separate retrospective label construction and continuous rule scores.
-- Ranked label-free `v_triage_queue` with bounded supporting-flow evidence using `LATERAL`.
-- Eight initial investigations, with actual PostgreSQL execution plans for activity and burst queries.
+</details>
 
-Start with [feature engineering](sql/features/source_windows.sql), [rule scores](sql/detection/scores.sql), [burst analysis](sql/analytics/02_bursts.sql), and [error analysis](sql/analytics/08_error_analysis.sql). These files contain the analytical transformations; Python handles parsing, experiment orchestration, the ML baseline, and plotting.
+## Quickstart
 
-## Project architecture
-
-![CyberShield project architecture](docs/assets/architecture.svg)
-
-See [architecture and database grains](docs/architecture.md) for component responsibilities and diagram reproduction.
-
-## Run locally
-
-From the project root in PowerShell, with Docker Desktop running:
-
-```powershell
-docker compose up -d --wait
-.\.venv\Scripts\python.exe -m cybershield run --mode fixture
-.\.venv\Scripts\python.exe -m cybershield run --mode real --archive 'C:\path\to\GeneratedLabelledFlows.zip'
-.\.venv\Scripts\python.exe scripts/refresh_snapshot.py
-```
-
-Every command uses the same cross-platform Python CLI; on Linux/macOS use `.venv/bin/python`. Real mode streams only the complete Tuesday member directly from the ZIP. It does not extract or download the archive. Repeated ingestion reuses an unchanged source file; feature/experiment runs get new IDs and output directories.
-
-## Fresh installation
-
-Tested with Windows, CPython 3.12, Docker Desktop, PostgreSQL 16, and CPU-only execution. The dependency snapshot in `requirements.lock` records the tested Python 3.12 environment.
+The synthetic SQL demo requires Python 3.12 and Docker Desktop with its Linux engine running. From the cloned project root in PowerShell:
 
 ```powershell
 python -m venv .venv
@@ -87,47 +134,66 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m cybershield configure
 docker compose up -d --wait
 .\.venv\Scripts\python.exe -m cybershield run --mode fixture
+.\.venv\Scripts\python.exe -m cybershield serve
 ```
 
-`configure` creates `.env` with a random local database password and preserves an existing file. PostgreSQL binds to `127.0.0.1:55432` and stores data in a named volume. Set documented values in `.env` if a local port or connection needs changing. Normal stop is `docker compose stop`; keep the named volume for repeat runs.
+Open [the local SQL workspace](http://127.0.0.1:8765), select Synthetic fixture, and run an example query. This path needs no raw dataset or API key. Its generated traffic is explicitly marked synthetic; it does not reproduce the real-data results above. On Linux/macOS, use `.venv/bin/python`.
 
-For real data, obtain the original labeled-flow archive from the official source and pass its local path. This prototype requires the source/destination/time fields; the ML-only CSV variant is unsuitable. Source acquisition, timestamps, and redistribution limits are documented in [the dataset audit](docs/dataset_audit.md).
+The configure command creates an ignored .env file with a random local database password. PostgreSQL binds to localhost port 55432. Stop the server with Ctrl+C and pause the database with `docker compose stop`; the named volume preserves its data.
 
-## Verify
+<details>
+<summary>Setup and reproduction guides</summary>
 
-Verify the notebooks, curated prototype evidence and environment with the commands below. See [validation scope](docs/repository_validation.md) for the latest results.
+| Next step | Guide |
+|---|---|
+| Explore the SQL editor and datasets | [SQL workspace](docs/query_workspace.md) |
+| Obtain and ingest the real source data | [Dataset audit](docs/dataset_audit.md) |
+| Reproduce the corrected multi-day study | [Study commands](docs/corrected_study.md#run-commands) |
+| Rebuild the Power BI report and its data bundle | [Power BI setup](power_bi/README.md) |
+| Run the reference or live investigation agent | [Agent setup and evaluation](docs/investigation_agent.md) |
+
+</details>
+
+The reporting bundle is generated locally and excluded from Git. Power BI and the agent require that prepared bundle; the synthetic quickstart demonstrates the SQL workflow.
+
+## Inspect the implementation
+
+<details>
+<summary>Source files and component responsibilities</summary>
+
+| Component | What it demonstrates | Start here |
+|---|---|---|
+| Ingestion | Streaming validation, quarantine, row reconciliation and repeat-load idempotency | [ingest.py](src/cybershield/ingest.py) |
+| SQL features | Five-minute `date_bin` aggregation, filtered counts and prior-hour `RANGE` history | [source_windows.sql](sql/features/source_windows.sql) |
+| Explainable scoring | Continuous volume, port-diversity and service-traffic rules | [scores.sql](sql/detection/scores.sql) |
+| Investigation lineage | Run-scoped links from windows to original flow records | [supporting_flows.sql](sql/reporting/supporting_flows.sql) |
+| Natural-language SQL | Schema-grounded drafts, explicit SQL review and local result charts | [sql_assistant.py](src/cybershield/sql_assistant.py) |
+| SQL performance | Equal-result source/time index comparison with measured plans, buffers and storage | [SQL lookup experiment](docs/sql_performance.md) |
+| Evaluation | Training-only fitting, benign calibration and matched comparison | [study_benchmark.py](src/cybershield/study_benchmark.py) |
+| Agent | Bounded read-only tools, cited briefs and execution traces | [agent.py](src/cybershield/agent.py) |
+
+</details>
+
+## Research notebooks
+
+1. [Data audit and source selection](notebooks/01_data_audit_and_source_selection.ipynb): original/corrected Tuesday audits and a documentation-only UNSW-NB15 review.
+2. [Model quality and prediction latency](notebooks/02_model_quality_latency.ipynb): eight fixed CPU configurations, exact confusion counts, training cost and repeated warm-call measurements.
+3. [SQL feature ablation and alert budgets](notebooks/03_sql_feature_ablation_and_alert_budgets.ipynb): matched feature removals, budget sensitivity and error analysis.
+
+The notebooks preserve the original Tuesday analysis, saved outputs and dedicated hash manifest; the corrected-data comparison supplies the current results above. Their reproduction guide covers execution instructions, interpretation limits and supporting research.
+
+## Verification and scope
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/verify_research.py
-.\.venv\Scripts\python.exe -m pytest -q --tb=short --basetemp=.pytest_tmp
-.\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe -m cybershield verify reports/prototype
+.\.venv\Scripts\python.exe -m cybershield verify reports/neural_comparison_v1 --registration-sha256 f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c
+.\.venv\Scripts\python.exe -m pip check
+.\.venv\Scripts\python.exe -m pytest -m "not integration and not reporting_bundle" -q
 ```
 
-Tests require the dedicated local database. They create and remove only uniquely named `cs_test_*` schemas. The fixture exercises bursts, service traffic, port diversity, malformed rows, optional nonfinite rates, duplicate headers/content, and clock boundaries. Integrity verification detects altered/missing report files; it is distinct from the planned final-test seal.
+The validation workflow checks saved artifacts, portable tests, isolated PostgreSQL integration tests and the synthetic pipeline/HTTP workspace. Bundle-dependent agent tests are explicitly marked and run separately against a prepared local reporting bundle. The [validation guide](docs/repository_validation.md) records local checks, reproduction commands and the distinction between local checks and a hosted CI run.
 
-## Inspect the outputs
+Source: [Canadian Institute for Cybersecurity, CIC-IDS2017](https://www.unb.ca/cic/datasets/ids-2017.html). Cite Sharafaldin, Lashkari and Ghorbani, *Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization*, ICISSP 2018. Corrected-release attribution is documented in the study guide.
 
-Each run writes `reports/runs/<mode>_<UTC time>_<id>/` with:
-
-- Data-quality reconciliation, source hashes, warning/rejection reasons.
-- Eight query outputs, triage queue, and sample supporting flow IDs/CSV record numbers.
-- Window scores, decisions, metrics, fitted model, cutoffs, code/SQL/library provenance.
-- Three figures, findings, a claim-evidence ledger, measured execution plans, and report hashes.
-
-`reports/latest_real.json` and `latest_fixture.json` point to the latest complete local runs. Large run folders and fitted models stay out of Git. `scripts/refresh_snapshot.py` creates the curated tracked [prototype snapshot](reports/prototype/findings.md) and generates the results table above from its ledger.
-
-The triage queue includes training, calibration, development, and unscored windows with an explicit `split` column. Filter to `split='development'` when inspecting evaluation examples. The view contains no ground-truth labels; error analysis joins them separately.
-
-## Method and remaining milestones
-
-Read [methodology](docs/methodology.md), [schema/architecture](docs/architecture.md), and [corrected-data study](docs/corrected_study.md).
-
-The local Tuesday file contains ambiguous afternoon clock values. This version preserves all valid rows but uses only reported morning starts/completions before noon for temporal scoring. No AM/PM or UTC repair is invented. The small number of attack windows and one dominant source make count-based findings more useful than an accuracy headline.
-
-Later milestones include release comparison, verified full-day clock interpretation, complete coverage handling, independent attack-support gates, the final cross-day protocol and enforced test freeze, registered ablations, uncertainty analysis where supported, and measured before/after optimization. Current execution plans are baseline measurements, not speedup claims.
-
-## Dataset attribution
-
-Source: [Canadian Institute for Cybersecurity, CIC-IDS2017](https://www.unb.ca/cic/datasets/ids-2017.html). Cite Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, *Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization*, ICISSP 2018. Raw source data are excluded from this repository. Synthetic fixtures are explicitly marked and are never presented as real observations.
-
+Raw source archives, credentials, generated models and large run folders are excluded from Git. Friday records are excluded from these studies; a prior acquisition preview is disclosed, so Friday is not described as an entirely unseen final holdout.

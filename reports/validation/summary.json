@@ -1,29 +1,1292 @@
 {
-  "review_date": "2026-11-12",
-  "tracked_files": 250,
-  "tracked_bytes_excluding_this_summary": 10633283,
-  "structure_checks": {
-    "markdown": 15,
-    "json": 75,
-    "yaml": 3,
-    "notebooks": 3,
-    "images": 23,
-    "toml": 1,
-    "csv": 43,
-    "python": 40,
-    "sql": 15
+  "review_date": "2026-11-22",
+  "timezone": "America/New_York",
+  "checked_utc": "2026-11-22T19:26:31.586029+00:00",
+  "scope": "Final review fixes: saved-result verification independent of producer checkout, strict optional producer audit, CI coverage, refreshed current screenshots and concise README wording. No model refit or provider calls.",
+  "base_commit": "05a39c9f7399776306df72f60053d9b63e798925",
+  "code_hashes": {
+    ".gitattributes": "43b5a230cc2a2df2f820ee5f33098c1391a891bcbb4589d6b04319f7e032cd27",
+    ".github/workflows/validate.yml": "ff47048e478fe8376020ec9b987d9f10510b38943c6626022792c43fd9da574a",
+    ".gitignore": "1f3216c75f12f9dfa1eef9b48e5e251298c3dc3a6dbc6744808c77b30279b54a",
+    "configs/neural_comparison_v1.json": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
+    "pyproject.toml": "aeeae1dd30483c781e25d8ebcbefc7dff0fecf661d2954f954357316d6838206",
+    "requirements.lock": "7492db49ec29a8217b56a0a788d0c4ef7dc68a98af0ae7cb9a8fe30ab4058144",
+    "scripts/benchmark_sql.py": "bfd06d09ee9d8003c886729520278157318df2ea658c0758b1c803743a974085",
+    "scripts/build_architecture.py": "2b3db63b52d29f91617bbd47ac023a4be6e5851b2ace93c47c3de8216f79535d",
+    "scripts/build_power_bi_project.py": "7a1630e94c137b9809b141e53ceaac5bfe8d3e786b82db176dbd419b6b76c9f4",
+    "scripts/check_quickstart.py": "6463dde01c0da452704944dc97bfb65bb71b733b87f71f553e136e31dc98db21",
+    "scripts/open_power_bi.py": "126cad4595dcf85f6d516d115a7915f76891f7de0f705f4d19af71b13a358ddc",
+    "src/cybershield/cli.py": "8a25c77ec3e5c87d3c61593e17375cacffba96dfa8c19ff1d63372431e4aeb37",
+    "src/cybershield/neural_comparison.py": "4b71a87b93af3af8e6025730e91447442fc23ec5e40ecec29fd42a0fd688188d",
+    "src/cybershield/powerbi.py": "aecd1f32b86aee0aa3886be4527e0240030dfb1b9186580fada8e36e2425c44e",
+    "src/cybershield/sql_assistant.py": "557f0012d08bfa117392e8972b2ad960988436f54ffed8f252b4e93dee56d461",
+    "src/cybershield/web.py": "743c7d9853849c28b58d4807ccfb7e289cfbc3c5990e3b582b85b49a879fd766",
+    "src/cybershield/web_assets/index.html": "0fd5d5587d8300ae577d8c07df5ccbca08da5d5558edafe9a90b824a9870ae9e",
+    "src/cybershield/web_assets/investigate.html": "41d2f09e7c89eba55c4d497ad4737cfb1e12bac7b6521f1323ba4e550773ed52",
+    "src/cybershield/web_assets/partials/sidebar.html": "367bdbb7b6ebbdba3211fa0721c8dd932c86ad2fb7f7a62a933633a0b05ebde2",
+    "src/cybershield/web_assets/partials/topbar.html": "e09fe65c200de4833606df6be66d477f4dd019a79f3072ea82cebece85ed42aa",
+    "src/cybershield/web_assets/static/agent.js": "6fcf5453d8bd4262cc4fbf983d1a0598c710c81128b404a1e57d9339fabb575a",
+    "src/cybershield/web_assets/static/assistant.css": "3108e618a5e9560a4ad4bc345e0bf20d1f6f1a7c1b0eaa905bbbeef2189a3d1e",
+    "src/cybershield/web_assets/static/charts.js": "16a9fcafc8c2e7b9e3c0040166e6b3cf7e21c0dac0e9d3eb7f91df6bf54841c4",
+    "src/cybershield/web_assets/static/investigation.css": "fef556957df4787fba19a4ec72959e5e702ccb5dcb2c21e7c5406e9a6643d192",
+    "src/cybershield/web_assets/static/shell.css": "8a3dd5a41f1d824a8cc0f96319f1ce199879b6170c9b56ce50ff5cd73bd0e6af",
+    "src/cybershield/web_assets/static/workspace.css": "117407a6636b8e3d3a16cbe194b663a49bca754e990481589810b7056dd17a39",
+    "src/cybershield/web_assets/static/workspace.js": "a3d49b24fee4dc75291bda2ae7fdbe13c7f61bae41ad34cf70219372f4c14217",
+    "tests/test_agent.py": "9ca2dbfef09f1b83a2045410fc37492d71d29460336854b0e3733dbc3bdc735d",
+    "tests/test_charts.cjs": "6eed5668fde01914ad65ddd4fe985725fa236fa1bc51e68ed3ffa247ded0de8f",
+    "tests/test_integrity.py": "b4928d1d9000dbeb474bce8a9cba19f0db94bba4af583a57a6451df33c7042ed",
+    "tests/test_neural_comparison.py": "a966019b494e14de89a4a253aab0c8f496e1baa2be0d7eceded4ac9cc3b7af3b",
+    "tests/test_sql_assistant.py": "e9ab512bf1415df0f5367ac8863866d78de6ab0a229256fe85e93cf0b1de9600",
+    "tests/test_sql_performance.py": "ab8a845b29b9f4dacd175b96eb124bed08b71b050b1b66d05e3a495fdfca95b7",
+    "tests/test_workspace.py": "d8bf137f74d864f81c2b5eb67679727d444d868ccf76e9b73fca7617d4fadf2f",
+    "src/cybershield/web_assets/static/architecture.css": "a54b233b7814a366b17788eae4eaee293b7d605cb76bf260d6c4066e60c583ba"
   },
-  "errors": [],
-  "secret_token_findings": [],
-  "offline_tests": {
-    "passed": 91,
-    "postgresql_tests_not_rerun": 8
+  "candidate_file_hashes": {
+    ".gitattributes": "43b5a230cc2a2df2f820ee5f33098c1391a891bcbb4589d6b04319f7e032cd27",
+    ".github/workflows/validate.yml": "ff47048e478fe8376020ec9b987d9f10510b38943c6626022792c43fd9da574a",
+    ".gitignore": "1f3216c75f12f9dfa1eef9b48e5e251298c3dc3a6dbc6744808c77b30279b54a",
+    "README.md": "b948ae8e5334c8ca5f3eb2eaca08785b6243a9cfd378a988e7dea40a4abd333d",
+    "configs/neural_comparison_v1.json": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
+    "docs/alert_investigation.md": "fad29ca9411b0fe32fe0368e264acc5734f451d0e89dfd3ffb8ba0ad8b5caae3",
+    "docs/architecture.md": "89dc2b9abc9ebe5097b0bde601c8aee8b231b9f34907e04cfd7aa6c47de2f64e",
+    "docs/assets/investigation_evidence.jpg": "383a5f8c5f5e2cfa35ed1fa2f6c6b0983e198db614b1e40b150f78a778f5e581",
+    "docs/assets/investigation_workspace.jpg": "67d84f8b03eba8d253e388d6e4b08ccbcbda9e9dec328fa2ef9b8146984974b9",
+    "docs/assets/investigation_workspace.png": "152254343c6e47d2c4ac498ff079ae6c466527d3c354a96b03a33453be178168",
+    "docs/assets/sql_workspace_chart.jpg": "70dadada5f869b9fa3177676de9b5885890e879268ca1262f58f8b8176b31555",
+    "docs/assets/sql_workspace_overview.jpg": "a00a4d4b07556666ff4c2dd02861decd8dc904ebe42edf49ef0223d7287a29b8",
+    "docs/corrected_study.md": "3446dca3e9c7e1e39b5606c8908fec30d849532ce8ac1ea9da34d87d5cb95531",
+    "docs/investigation_agent.md": "3ec8f747edd73de3b36315e57e7878ab6b3adc545f806f0ad5126bdb309118aa",
+    "docs/project_walkthrough.md": "b8ca14a9957b8fa943a3764b50c2f25e7af0103daf29cd636a9e322758e990db",
+    "docs/query_workspace.md": "c42691467b96cbae267ee23223c481053c5e04d21c8876bc88fd60d1041f16cb",
+    "docs/repository_validation.md": "0ff596d00e54ed25524c17990e596aabafd700b5b307bbde3d87f645712b5fe5",
+    "docs/sql_performance.md": "84e5cd2f65a38b481cd1941cf4eda0381c76573600dce2bee3bde349846be801",
+    "power_bi/project_context.json": "8efb8da041d2eaf9e7dd10f5359d84b4f8c12a728dfda5084fef57f5e37bdf85",
+    "pyproject.toml": "aeeae1dd30483c781e25d8ebcbefc7dff0fecf661d2954f954357316d6838206",
+    "reports/neural_comparison_v1/README.md": "c7a1197ffefaea827d99cac641ee3b4c1cfa82f47294438a1d2563b3f8b48f85",
+    "reports/neural_comparison_v1/comparison.png": "d242e9d0443e73f4c2cc73db2cd73466bef0f63d3bc446cd79eb3e841960fea6",
+    "reports/neural_comparison_v1/cutoffs.csv": "db8d32f849edaf67e0a87cd2816908b00242d0de7a99c225081c67abcd697e97",
+    "reports/neural_comparison_v1/environment.json": "ea9caf7131da4c513be89b85b232d8df5963c917342eb55d6746292f15c31ba3",
+    "reports/neural_comparison_v1/fit_warnings.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "reports/neural_comparison_v1/latency.png": "8bc885c502cb030a07a131062f2b6a2d6b2677db4ebea1124dee55b1e0b1e4dc",
+    "reports/neural_comparison_v1/latency_by_batch.csv": "09fca8a6a2981df2f9d663dbcd58eaa211292be3ea3b8a320d1b969ff3100038",
+    "reports/neural_comparison_v1/metrics.csv": "9aea79bbe906e99baaec60d8c2beb95b12d1d4b41288d9863d5e8ee1ea4dde52",
+    "reports/neural_comparison_v1/model_artifact_index.json": "10c40709fbcde2e35e6f3d3dad1f2a43b62de8d599e1abc1092dd6255349dd7e",
+    "reports/neural_comparison_v1/neural_fit_state.json": "859ed2fb946962536d775ccf07ed896373123978c1afe6ce8b188a36082d8506",
+    "reports/neural_comparison_v1/protocol.json": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
+    "reports/neural_comparison_v1/quality_latency.csv": "d54d705401fd0ccd59c387bbb74d5927d1f0d1166643b0ea41d0ffa6e750582e",
+    "reports/neural_comparison_v1/raw_fit_times.csv": "1070d4a59bd4dced6c7cb46280218ac39a14f9485a4e237bcc7ff2b4733c1aa9",
+    "reports/neural_comparison_v1/raw_latency.csv": "c8208ccd34a28b8a21ab08e3c1ce05877a02b70aa2c121f49f86d52c0363f273",
+    "reports/neural_comparison_v1/registration.json": "f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c",
+    "reports/neural_comparison_v1/registration.sha256": "3dc9947b450e2173c2f1c92fa90efda2a2d99f2fde56e3031d68d07657ee4622",
+    "reports/neural_comparison_v1/result_manifest.json": "c78844fd40c84db5716b36d53816b781023e856afc4120f39e9abbedffbbf202",
+    "reports/neural_comparison_v1/retained_model_reconciliation.json": "2ce3263d94e20c95b23fb34ea5a43d116c802cb22298c4261c84777db08f97e7",
+    "reports/neural_comparison_v1/scores.csv": "6fa39c43b2103fd8f04bce7c3017c0bca476aeb63eac28566d148d46e9d088ba",
+    "reports/sql_performance/summary.json": "16f6c25a93c830436c4f43305c3079561498910568ac52bb22b58188a661e598",
+    "scripts/benchmark_sql.py": "bfd06d09ee9d8003c886729520278157318df2ea658c0758b1c803743a974085",
+    "scripts/build_power_bi_project.py": "7a1630e94c137b9809b141e53ceaac5bfe8d3e786b82db176dbd419b6b76c9f4",
+    "scripts/check_quickstart.py": "6463dde01c0da452704944dc97bfb65bb71b733b87f71f553e136e31dc98db21",
+    "scripts/open_power_bi.py": "126cad4595dcf85f6d516d115a7915f76891f7de0f705f4d19af71b13a358ddc",
+    "src/cybershield/cli.py": "8a25c77ec3e5c87d3c61593e17375cacffba96dfa8c19ff1d63372431e4aeb37",
+    "src/cybershield/neural_comparison.py": "4b71a87b93af3af8e6025730e91447442fc23ec5e40ecec29fd42a0fd688188d",
+    "src/cybershield/powerbi.py": "aecd1f32b86aee0aa3886be4527e0240030dfb1b9186580fada8e36e2425c44e",
+    "src/cybershield/sql_assistant.py": "557f0012d08bfa117392e8972b2ad960988436f54ffed8f252b4e93dee56d461",
+    "src/cybershield/web.py": "743c7d9853849c28b58d4807ccfb7e289cfbc3c5990e3b582b85b49a879fd766",
+    "src/cybershield/web_assets/index.html": "0fd5d5587d8300ae577d8c07df5ccbca08da5d5558edafe9a90b824a9870ae9e",
+    "src/cybershield/web_assets/investigate.html": "41d2f09e7c89eba55c4d497ad4737cfb1e12bac7b6521f1323ba4e550773ed52",
+    "src/cybershield/web_assets/partials/sidebar.html": "367bdbb7b6ebbdba3211fa0721c8dd932c86ad2fb7f7a62a933633a0b05ebde2",
+    "src/cybershield/web_assets/partials/topbar.html": "e09fe65c200de4833606df6be66d477f4dd019a79f3072ea82cebece85ed42aa",
+    "src/cybershield/web_assets/static/agent.js": "6fcf5453d8bd4262cc4fbf983d1a0598c710c81128b404a1e57d9339fabb575a",
+    "src/cybershield/web_assets/static/architecture.css": "a54b233b7814a366b17788eae4eaee293b7d605cb76bf260d6c4066e60c583ba",
+    "src/cybershield/web_assets/static/assistant.css": "3108e618a5e9560a4ad4bc345e0bf20d1f6f1a7c1b0eaa905bbbeef2189a3d1e",
+    "src/cybershield/web_assets/static/charts.js": "16a9fcafc8c2e7b9e3c0040166e6b3cf7e21c0dac0e9d3eb7f91df6bf54841c4",
+    "src/cybershield/web_assets/static/investigation.css": "fef556957df4787fba19a4ec72959e5e702ccb5dcb2c21e7c5406e9a6643d192",
+    "src/cybershield/web_assets/static/shell.css": "8a3dd5a41f1d824a8cc0f96319f1ce199879b6170c9b56ce50ff5cd73bd0e6af",
+    "src/cybershield/web_assets/static/workspace.css": "117407a6636b8e3d3a16cbe194b663a49bca754e990481589810b7056dd17a39",
+    "src/cybershield/web_assets/static/workspace.js": "a3d49b24fee4dc75291bda2ae7fdbe13c7f61bae41ad34cf70219372f4c14217",
+    "tests/test_agent.py": "9ca2dbfef09f1b83a2045410fc37492d71d29460336854b0e3733dbc3bdc735d",
+    "tests/test_charts.cjs": "6eed5668fde01914ad65ddd4fe985725fa236fa1bc51e68ed3ffa247ded0de8f",
+    "tests/test_integrity.py": "b4928d1d9000dbeb474bce8a9cba19f0db94bba4af583a57a6451df33c7042ed",
+    "tests/test_neural_comparison.py": "a966019b494e14de89a4a253aab0c8f496e1baa2be0d7eceded4ac9cc3b7af3b",
+    "tests/test_sql_assistant.py": "e9ab512bf1415df0f5367ac8863866d78de6ab0a229256fe85e93cf0b1de9600",
+    "tests/test_sql_performance.py": "ab8a845b29b9f4dacd175b96eb124bed08b71b050b1b66d05e3a495fdfca95b7",
+    "tests/test_workspace.py": "d8bf137f74d864f81c2b5eb67679727d444d868ccf76e9b73fca7617d4fadf2f"
   },
-  "notebook_01": "Fresh clean-kernel execution passed with complete, error-free saved outputs.",
-  "notebooks_02_03": "Recorded executions retained; code, saved outputs and interpretations unchanged.",
-  "notebook_hash_tamper_rejection": "passed",
-  "scientific_inputs_verified": 38,
+  "hash_scope": "Current working-tree candidate files; summary excludes itself to avoid a circular hash. Historical hashes below describe their dated snapshots.",
+  "checks": {
+    "windows_python": {
+      "tests": 124,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 47.181,
+      "warnings": 3120,
+      "execution_date": "2026-11-22"
+    },
+    "python_command": ".venv/Scripts/python.exe -m pytest -q --tb=no --disable-warnings",
+    "windows_portable_tests": 107,
+    "windows_postgresql_tests": 8,
+    "local_reporting_bundle_tests": 9,
+    "portable_count_verified": "107 selected and 17 deselected by marker collection; full suite executed together.",
+    "javascript_tests": {
+      "passed": 7,
+      "failed": 0,
+      "node_version": "v24.22.1",
+      "command": "node --test tests/test_charts.cjs",
+      "runtime": "Bundled Node executable"
+    },
+    "notebook_hashes_verified": 3,
+    "prototype_report_hashes_verified": 21,
+    "scientific_inputs_verified": 38,
+    "neural_manifest_files_verified": 17,
+    "documentation_local_links_checked": 102,
+    "git_diff_check": "passed",
+    "paid_provider_calls": 0,
+    "latest_scope_exclusions": [
+      "No new Linux suite, wheel build, hosted Actions run or Power BI Desktop refresh",
+      "No real-data refit or new latency measurements during these documentation fixes"
+    ],
+    "affected_ui_python": {
+      "execution_date": "2026-11-22",
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": "python -m pytest tests/test_workspace.py tests/test_agent.py tests/test_sql_assistant.py -q --tb=no --disable-warnings",
+      "seconds": 6.402
+    },
+    "saved_result_regressions": 7,
+    "dependency_check": "pip check passed"
+  },
   "benchmark_id": "benchmark_21f6c3061d69fc836ccf7620125bf2bbd4190a4c0565b7bd4eb5e23cd17c2178",
-  "prototype_report_hashes_verified": 21,
-  "scope": "Static file and content review plus offline tests; no new detector benchmark, database execution, provider calls or Desktop validation."
+  "neural_comparison": {
+    "registration_sha256": "f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c",
+    "result_manifest_sha256": "c78844fd40c84db5716b36d53816b781023e856afc4120f39e9abbedffbbf202",
+    "measurement_date": "2026-11-21",
+    "scope": "Separately registered revised roster on previously inspected corrected-data validation windows; no independent final holdout.",
+    "all_confusion_counts_and_calibration_allowances_recomputed": true,
+    "results": [
+      {
+        "method": "Logistic regression",
+        "tp": 0,
+        "fn": 21,
+        "fp": 24
+      },
+      {
+        "method": "Random forest",
+        "tp": 11,
+        "fn": 10,
+        "fp": 18
+      },
+      {
+        "method": "Histogram boosting",
+        "tp": 5,
+        "fn": 16,
+        "fp": 3
+      },
+      {
+        "method": "XGBoost",
+        "tp": 4,
+        "fn": 17,
+        "fp": 5
+      },
+      {
+        "method": "LightGBM",
+        "tp": 5,
+        "fn": 16,
+        "fp": 8
+      },
+      {
+        "method": "CatBoost",
+        "tp": 17,
+        "fn": 4,
+        "fp": 18
+      },
+      {
+        "method": "Neural MLP",
+        "tp": 0,
+        "fn": 21,
+        "fp": 50
+      },
+      {
+        "method": "Neural autoencoder",
+        "tp": 9,
+        "fn": 12,
+        "fp": 1
+      },
+      {
+        "method": "sql_combined",
+        "tp": 11,
+        "fn": 10,
+        "fp": 9
+      },
+      {
+        "method": "always_benign",
+        "tp": 0,
+        "fn": 21,
+        "fp": 0
+      }
+    ],
+    "raw_latency_calls": 2160,
+    "fit_measurements": 24,
+    "stopped_attempt_scores_identical": true,
+    "stopped_attempt_tp_fp_identical": true,
+    "scores_sha256": "6fa39c43b2103fd8f04bce7c3017c0bca476aeb63eac28566d148d46e9d088ba",
+    "stopped_attempt_note": "First attempt had written validation outputs before serialization verification stopped. Scores are byte-identical to completed run; only completed-run timings are reported.",
+    "separate_validation_receipt": "Consolidated into this file; redundant untracked neural validation.json removed. Registered results are unchanged."
+  },
+  "readme_clarity": {
+    "links_in_main_read": 8,
+    "total_links_including_expandable_references": 22,
+    "bold_spans": 1,
+    "screenshots_and_figures": 9,
+    "metrics_and_latency_match_saved_csv": true,
+    "setup_and_source_links_grouped_in_expandable_sections": true,
+    "inline_code_spans": 4
+  },
+  "ci": {
+    "workflow": ".github/workflows/validate.yml",
+    "hosted_run_performed": false,
+    "current_linux_suite_rerun": false,
+    "prior_linux_checks": "See dated November 20 and earlier snapshots below.",
+    "saved_neural_result_verification": true,
+    "saved_result_requires_original_producer": false
+  },
+  "limitations": [
+    "Existing NumPy/Pandas timedelta deprecation warnings remain visible",
+    "Previously inspected validation windows and correlated sources limit model conclusions",
+    "No paid-provider quality evaluation, new Desktop refresh or production effectiveness claim"
+  ],
+  "optional_review_items_left_unchanged": [
+    "Pre-existing absolute bundle paths in two Power BI source files",
+    "Permanent visual regression coverage remains future work; actual default pages checked in the browser at three widths."
+  ],
+  "prior_review_20261120": {
+    "review_date": "2026-11-20",
+    "timezone": "America/New_York",
+    "scope": "Post-Claude fixes; current Windows suite, clean Linux PostgreSQL/synthetic HTTP job, browser chart regression and wheel packaging",
+    "base_commit": "05a39c9f7399776306df72f60053d9b63e798925",
+    "code_hashes": {
+      ".gitattributes": "43b5a230cc2a2df2f820ee5f33098c1391a891bcbb4589d6b04319f7e032cd27",
+      ".github/workflows/validate.yml": "167089d7eb2e0d0e60be3620b50da97bca3e8bbc6c2791fa374e55f78492aee9",
+      ".gitignore": "1f3216c75f12f9dfa1eef9b48e5e251298c3dc3a6dbc6744808c77b30279b54a",
+      "pyproject.toml": "aeeae1dd30483c781e25d8ebcbefc7dff0fecf661d2954f954357316d6838206",
+      "scripts/benchmark_sql.py": "bfd06d09ee9d8003c886729520278157318df2ea658c0758b1c803743a974085",
+      "scripts/build_architecture.py": "2b3db63b52d29f91617bbd47ac023a4be6e5851b2ace93c47c3de8216f79535d",
+      "scripts/build_power_bi_project.py": "7a1630e94c137b9809b141e53ceaac5bfe8d3e786b82db176dbd419b6b76c9f4",
+      "scripts/check_quickstart.py": "6463dde01c0da452704944dc97bfb65bb71b733b87f71f553e136e31dc98db21",
+      "scripts/open_power_bi.py": "126cad4595dcf85f6d516d115a7915f76891f7de0f705f4d19af71b13a358ddc",
+      "src/cybershield/cli.py": "5344ebccb2ef882d1e2f81943ed0bd39accd838eca514e6e4c178f914a540e3c",
+      "src/cybershield/powerbi.py": "aecd1f32b86aee0aa3886be4527e0240030dfb1b9186580fada8e36e2425c44e",
+      "src/cybershield/sql_assistant.py": "557f0012d08bfa117392e8972b2ad960988436f54ffed8f252b4e93dee56d461",
+      "src/cybershield/web.py": "743c7d9853849c28b58d4807ccfb7e289cfbc3c5990e3b582b85b49a879fd766",
+      "src/cybershield/web_assets/index.html": "52fc5f8d39243115e16d7dbe16e31e6102765a97a03e74826d5099618fed1f20",
+      "src/cybershield/web_assets/investigate.html": "6edc1e64cf93299fe3e90edc1c6d307626e945556d5a2b1e61875dd5245aa048",
+      "src/cybershield/web_assets/partials/sidebar.html": "367bdbb7b6ebbdba3211fa0721c8dd932c86ad2fb7f7a62a933633a0b05ebde2",
+      "src/cybershield/web_assets/partials/topbar.html": "e09fe65c200de4833606df6be66d477f4dd019a79f3072ea82cebece85ed42aa",
+      "src/cybershield/web_assets/static/agent.js": "d01a6d4d438f5cdd82fb081eb95274102b4f256f86d274e88ec72269e6802046",
+      "src/cybershield/web_assets/static/assistant.css": "3108e618a5e9560a4ad4bc345e0bf20d1f6f1a7c1b0eaa905bbbeef2189a3d1e",
+      "src/cybershield/web_assets/static/charts.js": "16a9fcafc8c2e7b9e3c0040166e6b3cf7e21c0dac0e9d3eb7f91df6bf54841c4",
+      "src/cybershield/web_assets/static/investigation.css": "89c3d6c4b228fea65fcfd39aa8a02c9a12aee1e72c36ce393a2042e5d6ec48ed",
+      "src/cybershield/web_assets/static/shell.css": "8a3dd5a41f1d824a8cc0f96319f1ce199879b6170c9b56ce50ff5cd73bd0e6af",
+      "src/cybershield/web_assets/static/workspace.css": "117407a6636b8e3d3a16cbe194b663a49bca754e990481589810b7056dd17a39",
+      "src/cybershield/web_assets/static/workspace.js": "a3d49b24fee4dc75291bda2ae7fdbe13c7f61bae41ad34cf70219372f4c14217",
+      "tests/test_agent.py": "9ca2dbfef09f1b83a2045410fc37492d71d29460336854b0e3733dbc3bdc735d",
+      "tests/test_charts.cjs": "6eed5668fde01914ad65ddd4fe985725fa236fa1bc51e68ed3ffa247ded0de8f",
+      "tests/test_integrity.py": "6a471df5d622a2ba53a482c9adcf5b076470f97437b248833bf0510a78141b12",
+      "tests/test_sql_assistant.py": "e9ab512bf1415df0f5367ac8863866d78de6ab0a229256fe85e93cf0b1de9600",
+      "tests/test_sql_performance.py": "ab8a845b29b9f4dacd175b96eb124bed08b71b050b1b66d05e3a495fdfca95b7",
+      "tests/test_workspace.py": "d8bf137f74d864f81c2b5eb67679727d444d868ccf76e9b73fca7617d4fadf2f",
+      "requirements.lock": "7492db49ec29a8217b56a0a788d0c4ef7dc68a98af0ae7cb9a8fe30ab4058144"
+    },
+    "candidate_file_hashes": {
+      ".gitattributes": "43b5a230cc2a2df2f820ee5f33098c1391a891bcbb4589d6b04319f7e032cd27",
+      ".github/workflows/validate.yml": "167089d7eb2e0d0e60be3620b50da97bca3e8bbc6c2791fa374e55f78492aee9",
+      ".gitignore": "1f3216c75f12f9dfa1eef9b48e5e251298c3dc3a6dbc6744808c77b30279b54a",
+      "README.md": "47e5145ee83a842452409fba24de1417fa133df0f22958889e8e696ffa34dc32",
+      "docs/alert_investigation.md": "0bc3903dcf902d716ecdbb1967fb5671387354c4a90ae16d67acf830f077bfda",
+      "docs/architecture.md": "89dc2b9abc9ebe5097b0bde601c8aee8b231b9f34907e04cfd7aa6c47de2f64e",
+      "docs/assets/architecture.svg": "d933a1ea6d9a98368a630aeb5103589c5fb2884fd91958c89b4baa7839faff75",
+      "docs/assets/investigation_evidence.jpg": "849c8e779f9ff4fc49d83b8de53861bf66dd13afbb3afc77d714a0f54dc4515b",
+      "docs/assets/investigation_workspace.jpg": "9b5ae77ddf0a1090ba1c3c768098a078a7832253600885020591d6f9dbe140a4",
+      "docs/assets/sql_workspace_chart.jpg": "25a26707a11a8efc153b38523af512aaad105087a8f711a83d518980f6c3f37f",
+      "docs/investigation_agent.md": "3ec8f747edd73de3b36315e57e7878ab6b3adc545f806f0ad5126bdb309118aa",
+      "docs/project_walkthrough.md": "7bac8d7d0ae4567c765d336f016a82dda591d0452be52b4451daa583496bd821",
+      "docs/query_workspace.md": "d247a5f3001a41c78c8f4aafc0ca09526cb7e8e1d8b501b17aea888fe1c17b72",
+      "docs/repository_validation.md": "cc5f65f2c03bb88b5a414fe2f0bc6ca4ebc35ccf518f79f0ae3fd911abe70343",
+      "docs/sql_performance.md": "84e5cd2f65a38b481cd1941cf4eda0381c76573600dce2bee3bde349846be801",
+      "power_bi/project_context.json": "8efb8da041d2eaf9e7dd10f5359d84b4f8c12a728dfda5084fef57f5e37bdf85",
+      "pyproject.toml": "aeeae1dd30483c781e25d8ebcbefc7dff0fecf661d2954f954357316d6838206",
+      "reports/sql_performance/summary.json": "16f6c25a93c830436c4f43305c3079561498910568ac52bb22b58188a661e598",
+      "scripts/benchmark_sql.py": "bfd06d09ee9d8003c886729520278157318df2ea658c0758b1c803743a974085",
+      "scripts/build_architecture.py": "2b3db63b52d29f91617bbd47ac023a4be6e5851b2ace93c47c3de8216f79535d",
+      "scripts/build_power_bi_project.py": "7a1630e94c137b9809b141e53ceaac5bfe8d3e786b82db176dbd419b6b76c9f4",
+      "scripts/check_quickstart.py": "6463dde01c0da452704944dc97bfb65bb71b733b87f71f553e136e31dc98db21",
+      "scripts/open_power_bi.py": "126cad4595dcf85f6d516d115a7915f76891f7de0f705f4d19af71b13a358ddc",
+      "src/cybershield/cli.py": "5344ebccb2ef882d1e2f81943ed0bd39accd838eca514e6e4c178f914a540e3c",
+      "src/cybershield/powerbi.py": "aecd1f32b86aee0aa3886be4527e0240030dfb1b9186580fada8e36e2425c44e",
+      "src/cybershield/sql_assistant.py": "557f0012d08bfa117392e8972b2ad960988436f54ffed8f252b4e93dee56d461",
+      "src/cybershield/web.py": "743c7d9853849c28b58d4807ccfb7e289cfbc3c5990e3b582b85b49a879fd766",
+      "src/cybershield/web_assets/index.html": "52fc5f8d39243115e16d7dbe16e31e6102765a97a03e74826d5099618fed1f20",
+      "src/cybershield/web_assets/investigate.html": "6edc1e64cf93299fe3e90edc1c6d307626e945556d5a2b1e61875dd5245aa048",
+      "src/cybershield/web_assets/partials/sidebar.html": "367bdbb7b6ebbdba3211fa0721c8dd932c86ad2fb7f7a62a933633a0b05ebde2",
+      "src/cybershield/web_assets/partials/topbar.html": "e09fe65c200de4833606df6be66d477f4dd019a79f3072ea82cebece85ed42aa",
+      "src/cybershield/web_assets/static/agent.js": "d01a6d4d438f5cdd82fb081eb95274102b4f256f86d274e88ec72269e6802046",
+      "src/cybershield/web_assets/static/assistant.css": "3108e618a5e9560a4ad4bc345e0bf20d1f6f1a7c1b0eaa905bbbeef2189a3d1e",
+      "src/cybershield/web_assets/static/charts.js": "16a9fcafc8c2e7b9e3c0040166e6b3cf7e21c0dac0e9d3eb7f91df6bf54841c4",
+      "src/cybershield/web_assets/static/investigation.css": "89c3d6c4b228fea65fcfd39aa8a02c9a12aee1e72c36ce393a2042e5d6ec48ed",
+      "src/cybershield/web_assets/static/shell.css": "8a3dd5a41f1d824a8cc0f96319f1ce199879b6170c9b56ce50ff5cd73bd0e6af",
+      "src/cybershield/web_assets/static/workspace.css": "117407a6636b8e3d3a16cbe194b663a49bca754e990481589810b7056dd17a39",
+      "src/cybershield/web_assets/static/workspace.js": "a3d49b24fee4dc75291bda2ae7fdbe13c7f61bae41ad34cf70219372f4c14217",
+      "tests/test_agent.py": "9ca2dbfef09f1b83a2045410fc37492d71d29460336854b0e3733dbc3bdc735d",
+      "tests/test_charts.cjs": "6eed5668fde01914ad65ddd4fe985725fa236fa1bc51e68ed3ffa247ded0de8f",
+      "tests/test_integrity.py": "6a471df5d622a2ba53a482c9adcf5b076470f97437b248833bf0510a78141b12",
+      "tests/test_sql_assistant.py": "e9ab512bf1415df0f5367ac8863866d78de6ab0a229256fe85e93cf0b1de9600",
+      "tests/test_sql_performance.py": "ab8a845b29b9f4dacd175b96eb124bed08b71b050b1b66d05e3a495fdfca95b7",
+      "tests/test_workspace.py": "d8bf137f74d864f81c2b5eb67679727d444d868ccf76e9b73fca7617d4fadf2f"
+    },
+    "checks": {
+      "windows_python": {
+        "tests": 113,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "windows_portable_tests": 96,
+      "windows_postgresql_tests": 8,
+      "local_reporting_bundle_tests": 9,
+      "javascript_tests": 7,
+      "linux_postgresql": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "linux_synthetic_http": {
+        "status": "passed",
+        "dataset": "synthetic fixture",
+        "flows": 8802,
+        "windows": 708,
+        "http_example_queries": 6,
+        "write_rejected": true,
+        "question_and_chart_ui": true,
+        "draft_token_required": true
+      },
+      "linux_installation": "Fresh python:3.12-slim; constrained runtime/dev plus psutil; pip check passed; no research extras installed",
+      "wheel": {
+        "file": "cybershield_analytics-0.1.0-py3-none-any.whl",
+        "sha256": "907132fa207be25833a5b216f4f4443f1c89640cb76a03ed4a5b1361040d946d",
+        "web_assets_verified": 11
+      },
+      "notebook_hashes_verified": 3,
+      "prototype_report_hashes_verified": 21,
+      "scientific_inputs_verified": 38,
+      "committed_input_hashes_verified": 41,
+      "documentation_local_links_checked": 92,
+      "paid_provider_calls": 0
+    },
+    "browser_checks": {
+      "missing_line_value": "Three dots; only the two adjacent valid rows joined; original row spacing retained",
+      "omission_caption": "1 row omitted",
+      "saved_queries_accessible_label": "Saved queries",
+      "first_hour": {
+        "observed_bins": 2,
+        "flow_count": 1591,
+        "window_starts": [
+          "08:50",
+          "08:55"
+        ]
+      },
+      "subsequent_hours_observed_bins": 12,
+      "temporary_viewport_override_reset": true,
+      "sql_screenshot": "docs/assets/sql_workspace_chart.jpg",
+      "sql_screenshot_sha256": "25a26707a11a8efc153b38523af512aaad105087a8f711a83d518980f6c3f37f"
+    },
+    "benchmark_id": "benchmark_21f6c3061d69fc836ccf7620125bf2bbd4190a4c0565b7bd4eb5e23cd17c2178",
+    "sql_performance": {
+      "artifact": "reports/sql_performance/summary.json",
+      "synthetic_rows": 250000,
+      "python_optimization": "-O",
+      "equal_ordered_results": true,
+      "ordered_result_comparisons": 12,
+      "script_sha256": "bfd06d09ee9d8003c886729520278157318df2ea658c0758b1c803743a974085"
+    },
+    "ci": {
+      "workflow": ".github/workflows/validate.yml",
+      "hosted_run_performed": false,
+      "current_linux_postgres_job_reproduced": true,
+      "current_linux_portable_job_rerun": false,
+      "lock_scope": "Verified Windows snapshot; platform-only Linux dependencies are not fully pinned"
+    },
+    "deferred": {
+      "historical_evaluate_manifest_writer": "Preserved because evaluate.py is hash-bound scientific input; compatible readers accept Windows paths",
+      "linux_full_dependency_lock": "Separate platform lock remains future work; this review records an actual clean constrained runtime installation"
+    },
+    "limitations": [
+      "Existing NumPy/Pandas timedelta deprecation warnings remain visible",
+      "No new live-provider quality evaluation, real-data model fitting or Power BI Desktop refresh",
+      "No current full Linux portable-suite rerun; earlier clean Windows/Linux results remain dated snapshots"
+    ]
+  },
+  "pre_fix_review_20261119": {
+    "scope": "Pre-Claude working tree; totals recorded during that review, not hashes of the current fixes",
+    "portable_python_passed": 95,
+    "postgresql_and_bundle_deselected": 17,
+    "javascript_passed": 4,
+    "notebooks_verified": 3,
+    "prototype_files_verified": 21
+  },
+  "prior_question_chart_review": {
+    "review_date": "2026-11-14",
+    "timezone": "America/New_York",
+    "scope": "Later natural-language SQL and chart extension; current Windows environment, not another clean Linux install",
+    "code_hashes": {
+      ".github/workflows/validate.yml": "ef745c2bbead9b273f05d21b9a12a0b2fc574120d0a57428e9fc9588c7c5103b",
+      "src/cybershield/sql_assistant.py": "557f0012d08bfa117392e8972b2ad960988436f54ffed8f252b4e93dee56d461",
+      "src/cybershield/web.py": "743c7d9853849c28b58d4807ccfb7e289cfbc3c5990e3b582b85b49a879fd766",
+      "src/cybershield/web_assets/index.html": "6da50258bc532106a35c5d0411e2606725641635a8d2ec283a1ad84987ab4727",
+      "src/cybershield/web_assets/static/workspace.js": "656d1093a668a5a90faf39474a424904499814033beac3f6df6fc38fb30595f6",
+      "src/cybershield/web_assets/static/charts.js": "a454830bdd00ffb3357df04a7af48defdc3f67cd53a4cff6a2375c4f54ef4b48",
+      "src/cybershield/web_assets/static/assistant.css": "cd147dd32e013fd79862677377039c7ca1a6ae0563c104eeb88ab83be70e6905",
+      "tests/test_sql_assistant.py": "e9ab512bf1415df0f5367ac8863866d78de6ab0a229256fe85e93cf0b1de9600",
+      "tests/test_charts.cjs": "a66767a0248fbcfa37bb6c684e2bc63ef58081eacaefa0b7477e186ef2dfe4ca",
+      "scripts/check_quickstart.py": "6463dde01c0da452704944dc97bfb65bb71b733b87f71f553e136e31dc98db21"
+    },
+    "checks": {
+      "python": {
+        "tests": 112,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "portable_tests": 95,
+      "postgresql_tests": 8,
+      "reporting_bundle_tests": 9,
+      "sql_drafting_tests": 11,
+      "javascript_tests": 4,
+      "http_example_queries": 6,
+      "http_draft_token_required": true,
+      "synthetic_flows": 8802,
+      "synthetic_windows": 708,
+      "browser": {
+        "dataset": "Original Tuesday PostgreSQL application",
+        "question_mode": "Saved example, no model call",
+        "table_bar_line_views": "passed",
+        "screenshot": "docs/assets/sql_workspace_chart.jpg"
+      },
+      "provider_responses": "mocked",
+      "paid_provider_calls": 0
+    },
+    "boundaries": {
+      "draft_executes_sql": false,
+      "provider_receives_query_results": false,
+      "schema_and_question_sent_for_live_drafting": true,
+      "user_reviews_sql_before_execution": true,
+      "generated_sql_uses_existing_validator_and_reader": true
+    },
+    "notebook_hashes_verified": 3,
+    "prototype_artifact_hashes_verified": 21,
+    "scientific_inputs_verified": 38,
+    "benchmark_id": "benchmark_21f6c3061d69fc836ccf7620125bf2bbd4190a4c0565b7bd4eb5e23cd17c2178",
+    "ci": {
+      "workflow": ".github/workflows/validate.yml",
+      "hosted_run_performed": false,
+      "latest_extension_tested_on": "Windows; earlier clean Windows/Linux snapshot retained below"
+    },
+    "limitations": [
+      "Live SQL-drafting answer quality was not evaluated against the provider",
+      "Existing NumPy/Pandas timedelta deprecation warnings remain visible",
+      "No new real-data model fitting or Power BI Desktop refresh"
+    ]
+  },
+  "prior_readiness_review": {
+    "review_date": "2026-11-14",
+    "timezone": "America/New_York",
+    "base_commit": "05a39c9f7399776306df72f60053d9b63e798925",
+    "source": "Current local working-tree exports, including pending additions; not a newly published commit",
+    "code_hashes": {
+      ".github/workflows/validate.yml": "9ca7e3ba139023a7375c1ac3a18120a09e6c843cc0dd055b89a4d70ee7e30e69",
+      "pyproject.toml": "bf8b8aed85b6e2ee1b19eb17bfb2d14e8511aa8715ff566b02fe2b9a3fd73ed5",
+      "requirements.lock": "7492db49ec29a8217b56a0a788d0c4ef7dc68a98af0ae7cb9a8fe30ab4058144",
+      "src/cybershield/cli.py": "5344ebccb2ef882d1e2f81943ed0bd39accd838eca514e6e4c178f914a540e3c",
+      "src/cybershield/powerbi.py": "aecd1f32b86aee0aa3886be4527e0240030dfb1b9186580fada8e36e2425c44e",
+      "tests/test_integrity.py": "6a471df5d622a2ba53a482c9adcf5b076470f97437b248833bf0510a78141b12",
+      "tests/test_workspace.py": "d8bf137f74d864f81c2b5eb67679727d444d868ccf76e9b73fca7617d4fadf2f",
+      "tests/test_agent.py": "9ca2dbfef09f1b83a2045410fc37492d71d29460336854b0e3733dbc3bdc735d",
+      "scripts/check_quickstart.py": "901dd12cab286b72db02d262aec5aaffb408f9165003bfd759c59b7902b98f39",
+      "scripts/benchmark_sql.py": "a172bd602eed43d995c555e7b110c624a16dd8f77e76943b9e7162f1f5215acc"
+    },
+    "checks": {
+      "windows_portable": {
+        "tests": 84,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "windows_postgresql": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "linux_portable": {
+        "tests": 84,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "linux_postgresql": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "local_reporting_bundle": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "platforms": {
+      "windows": "Windows / CPython 3.12.14; fresh virtual environment",
+      "linux": "Debian slim / CPython 3.12.16; disposable container",
+      "database": "PostgreSQL 16.15; isolated container and separate fresh databases"
+    },
+    "installation": "requirements.lock plus editable install --no-deps; pip check passed on both platforms",
+    "excluded_from_source_exports": [
+      ".env",
+      "config.json",
+      ".venv",
+      "data/raw",
+      "power_bi/data",
+      "reports/runs",
+      "reports/studies"
+    ],
+    "synthetic_quickstart": {
+      "platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "input_rows": 8804,
+      "accepted_rows": 8802,
+      "quarantined_rows": 2,
+      "source_windows": 708,
+      "http_example_queries_passed": 6,
+      "write_rejected": true,
+      "actual_loopback_http_server": true,
+      "paid_provider_calls": 0
+    },
+    "notebook_hashes_verified": 3,
+    "prototype_report_hashes_verified": 21,
+    "scientific_inputs_verified": 38,
+    "committed_blob_hashes_verified": 41,
+    "benchmark_id": "benchmark_21f6c3061d69fc836ccf7620125bf2bbd4190a4c0565b7bd4eb5e23cd17c2178",
+    "legacy_windows_manifest_paths": "Verified without altering frozen artifacts",
+    "sql_performance": {
+      "artifact": "reports/sql_performance/summary.json",
+      "synthetic_rows": 250000,
+      "equal_ordered_results": true,
+      "new_real_data_benchmark": false
+    },
+    "ci": {
+      "workflow": ".github/workflows/validate.yml",
+      "commands_checked_locally": true,
+      "hosted_run_performed": false,
+      "note": "Workflow must be committed and pushed before a hosted Actions result exists"
+    },
+    "warnings": [
+      "Existing NumPy/Pandas timedelta deprecations remain visible"
+    ],
+    "scope": "Portable and database tests, fresh installs, synthetic pipeline/HTTP checks and SQL microbenchmark; no new real-data fitting, paid agent evaluation, Desktop refresh or production claim"
+  },
+  "visual_polish_review": {
+    "date": "2026-11-15",
+    "scope": "Original layouts retained; restrained palette and decorative cleanup",
+    "palette": [
+      "midnight blue",
+      "teal green",
+      "soft violet"
+    ],
+    "orange_accent": false,
+    "original_layouts_preserved": true,
+    "agent_layout_rules_match_original": true,
+    "original_workspace_and_chart_javascript_restored": true,
+    "source_hashes": {
+      "src/cybershield/web_assets/index.html": "0c70ee420b1d90e5d83bfde120888670a61d9f0776a68a40386d3c2e475648a4",
+      "src/cybershield/web_assets/investigate.html": "fcac45a87d062cd5d460cbc817507eec3cf9f33094467139e56978e9c137a680",
+      "src/cybershield/web_assets/static/workspace.css": "117407a6636b8e3d3a16cbe194b663a49bca754e990481589810b7056dd17a39",
+      "src/cybershield/web_assets/static/assistant.css": "3108e618a5e9560a4ad4bc345e0bf20d1f6f1a7c1b0eaa905bbbeef2189a3d1e",
+      "src/cybershield/web_assets/static/investigation.css": "89c3d6c4b228fea65fcfd39aa8a02c9a12aee1e72c36ce393a2042e5d6ec48ed",
+      "src/cybershield/web_assets/static/workspace.js": "656d1093a668a5a90faf39474a424904499814033beac3f6df6fc38fb30595f6",
+      "src/cybershield/web_assets/static/charts.js": "a454830bdd00ffb3357df04a7af48defdc3f67cd53a4cff6a2375c4f54ef4b48"
+    },
+    "targeted_python_tests": {
+      "tests": 32,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "chart_tests_passed": 4,
+    "css_syntax_and_unique_ids": "passed",
+    "key_text_contrast_ratios": {
+      "agent_body": 15.84,
+      "agent_secondary": 7.64,
+      "agent_teal": 9.03,
+      "agent_violet": 7.85,
+      "sql_draft_button": 5.74,
+      "sql_run_button": 4.83
+    },
+    "browser": {
+      "reference_investigation": "completed",
+      "sql_example": "4 hourly aggregate rows plotted",
+      "paid_provider_calls": 0,
+      "temporary_viewport_override_reset": true
+    },
+    "screenshots": [
+      "docs/assets/investigation_workspace.jpg",
+      "docs/assets/sql_workspace_chart.jpg"
+    ],
+    "frozen_scientific_inputs_verified": 38,
+    "benchmark_id": "benchmark_21f6c3061d69fc836ccf7620125bf2bbd4190a4c0565b7bd4eb5e23cd17c2178",
+    "limitations": "Visual polish and existing workflow checks; no new model or provider-quality benchmark",
+    "source_path_base": "repository root; historical hash values retained"
+  },
+  "navigation_consistency_review": {
+    "date": "2026-11-15",
+    "source_hashes": {
+      "src/cybershield/web_assets/index.html": "52fc5f8d39243115e16d7dbe16e31e6102765a97a03e74826d5099618fed1f20",
+      "src/cybershield/web_assets/investigate.html": "6edc1e64cf93299fe3e90edc1c6d307626e945556d5a2b1e61875dd5245aa048",
+      "src/cybershield/web_assets/partials/sidebar.html": "32ef281ae437e8875f086ebe336ba0f5c8f76c6465fd7b39d1f498241ee9a372",
+      "src/cybershield/web_assets/partials/topbar.html": "e09fe65c200de4833606df6be66d477f4dd019a79f3072ea82cebece85ed42aa",
+      "src/cybershield/web_assets/static/shell.css": "8a3dd5a41f1d824a8cc0f96319f1ce199879b6170c9b56ce50ff5cd73bd0e6af",
+      "src/cybershield/web_assets/static/agent.js": "d01a6d4d438f5cdd82fb081eb95274102b4f256f86d274e88ec72269e6802046",
+      "pyproject.toml": "aeeae1dd30483c781e25d8ebcbefc7dff0fecf661d2954f954357316d6838206"
+    },
+    "targeted_python_tests": {
+      "passed": 31,
+      "integration_deselected": 3
+    },
+    "rendered_templates": "shared tab order, correct active state, unique IDs and stylesheet response passed",
+    "browser": {
+      "desktop_1280": {
+        "sidebar_width_px": 244,
+        "navigation_height_px": 42,
+        "starter_height_px": 48
+      },
+      "compact_1000": {
+        "sidebar_width_px": 218,
+        "navigation_height_px": 42
+      },
+      "mobile_390": {
+        "navigation_width_px": 163,
+        "navigation_height_px": 40,
+        "starter_width_px": 155,
+        "starter_height_px": 42
+      },
+      "both_views_match": true,
+      "temporary_viewport_override_reset": true,
+      "paid_provider_calls": 0
+    },
+    "scope": "Shared sidebar and header only; main workspace layouts preserved."
+  },
+  "documentation_screenshot_refresh": {
+    "date": "2026-11-18",
+    "source": "Current local interface rendered in browser; desktop sidebar order and colors verified",
+    "screenshots": {
+      "docs/assets/investigation_workspace.jpg": "9b5ae77ddf0a1090ba1c3c768098a078a7832253600885020591d6f9dbe140a4",
+      "docs/assets/investigation_evidence.jpg": "849c8e779f9ff4fc49d83b8de53861bf66dd13afbb3afc77d714a0f54dc4515b",
+      "docs/assets/sql_workspace_chart.jpg": "589749df5689126e8e5f8e8744c4ade5999536e60b908d8377f23f5724968558"
+    },
+    "reference_investigation": {
+      "status": "completed",
+      "tool_calls": 5,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_cost_usd": 0
+    },
+    "sql_chart": "Saved traffic query returned 4 hourly rows; all 4 plotted",
+    "historical_evaluation_screenshots_preserved": true,
+    "readme_and_related_image_links_verified": true
+  },
+  "documentation_refresh": {
+    "checked_utc": "2026-11-22T19:26:31.588066+00:00",
+    "scope": "Subtle README roster wording, original-chart link in technical report, current screenshots, shared dark-theme description and chart-neutral wording. Existing no-holdout caveat retained."
+  },
+  "default_theme": {
+    "date": "2026-11-22",
+    "checked_utc": "2026-11-22T05:09:44.754008+00:00",
+    "default_routes": [
+      "/",
+      "/investigate"
+    ],
+    "preview_query_required": false,
+    "stylesheet": "src/cybershield/web_assets/static/architecture.css",
+    "prior_preview_stylesheet_removed": true,
+    "layout_measurements": [
+      {
+        "view": "sql",
+        "background": "rgb(8, 15, 29)",
+        "button": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "height": 35,
+          "radius": "5px",
+          "width": 93.66667175292967,
+          "x": 1841,
+          "y": 927.0833740234376
+        },
+        "overflow": false,
+        "page": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1169.541748046875,
+          "radius": "0px",
+          "width": 1720,
+          "x": 534.3333740234375,
+          "y": 66
+        },
+        "panel": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 222.6875,
+          "radius": "4px",
+          "width": 1382,
+          "x": 569.3333740234375,
+          "y": 329.72918701171875
+        },
+        "sidebar": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1000,
+          "radius": "0px",
+          "width": 244,
+          "x": 0,
+          "y": 0
+        },
+        "subtitle": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "height": 20.39583396911621,
+          "radius": "0px",
+          "width": 347.60418701171875,
+          "x": 569.3333740234375,
+          "y": 144
+        },
+        "tabs": [
+          {
+            "height": 42,
+            "href": "/",
+            "label": "\u00e2\u2013\u00a4SQL explorer",
+            "width": 203.33334350585935
+          },
+          {
+            "height": 42,
+            "href": "/investigate",
+            "label": "\u00e2\u0152\u2022Investigations",
+            "width": 203.33334350585935
+          }
+        ],
+        "theme": "app-shell sql-shell architecture-theme",
+        "title": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "30px",
+          "fontWeight": "650",
+          "height": 36,
+          "radius": "0px",
+          "width": 347.60418701171875,
+          "x": 569.3333740234375,
+          "y": 100
+        },
+        "width": 2560
+      },
+      {
+        "view": "investigation",
+        "background": "rgb(8, 15, 29)",
+        "button": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "height": 35,
+          "radius": "5px",
+          "width": 118.54167175292967,
+          "x": 2081.125,
+          "y": 408.4583435058594
+        },
+        "overflow": false,
+        "page": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 870.4479370117188,
+          "radius": "0px",
+          "width": 1720,
+          "x": 534.3333740234375,
+          "y": 66
+        },
+        "panel": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 219.98959350585935,
+          "radius": "4px",
+          "width": 1650,
+          "x": 569.3333740234375,
+          "y": 261.72918701171875
+        },
+        "sidebar": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1000,
+          "radius": "0px",
+          "width": 244,
+          "x": 0,
+          "y": 0
+        },
+        "subtitle": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "height": 20.39583396911621,
+          "radius": "0px",
+          "width": 328.53125,
+          "x": 569.3333740234375,
+          "y": 144
+        },
+        "tabs": [
+          {
+            "height": 42,
+            "href": "/",
+            "label": "\u00e2\u2013\u00a4SQL explorer",
+            "width": 203.33334350585935
+          },
+          {
+            "height": 42,
+            "href": "/investigate",
+            "label": "\u00e2\u0152\u2022Investigations",
+            "width": 203.33334350585935
+          }
+        ],
+        "theme": "app-shell agent-shell architecture-theme",
+        "title": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "30px",
+          "fontWeight": "650",
+          "height": 36,
+          "radius": "0px",
+          "width": 328.53125,
+          "x": 569.3333740234375,
+          "y": 100
+        },
+        "width": 2560
+      },
+      {
+        "view": "sql",
+        "background": "rgb(8, 15, 29)",
+        "button": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "height": 35,
+          "radius": "5px",
+          "width": 93.66667175292967,
+          "x": 851.3333740234375,
+          "y": 897.0833740234375
+        },
+        "overflow": false,
+        "page": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1139.541748046875,
+          "radius": "0px",
+          "width": 1020.6666870117188,
+          "x": 244,
+          "y": 66
+        },
+        "panel": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 222.6875,
+          "radius": "4px",
+          "width": 682.6666870117188,
+          "x": 279,
+          "y": 329.72918701171875
+        },
+        "sidebar": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1000,
+          "radius": "0px",
+          "width": 244,
+          "x": 0,
+          "y": 0
+        },
+        "subtitle": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "height": 20.39583396911621,
+          "radius": "0px",
+          "width": 347.60418701171875,
+          "x": 279,
+          "y": 144
+        },
+        "tabs": [
+          {
+            "height": 42,
+            "href": "/",
+            "label": "\u00e2\u2013\u00a4SQL explorer",
+            "width": 203.33334350585935
+          },
+          {
+            "height": 42,
+            "href": "/investigate",
+            "label": "\u00e2\u0152\u2022Investigations",
+            "width": 203.33334350585935
+          }
+        ],
+        "theme": "app-shell sql-shell architecture-theme",
+        "title": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "30px",
+          "fontWeight": "650",
+          "height": 36,
+          "radius": "0px",
+          "width": 347.60418701171875,
+          "x": 279,
+          "y": 100
+        },
+        "width": 1280
+      },
+      {
+        "view": "investigation",
+        "background": "rgb(8, 15, 29)",
+        "button": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "height": 35,
+          "radius": "5px",
+          "width": 118.54167175292967,
+          "x": 1091.4583740234375,
+          "y": 408.4583435058594
+        },
+        "overflow": false,
+        "page": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 870.4479370117188,
+          "radius": "0px",
+          "width": 1020.6666870117188,
+          "x": 244,
+          "y": 66
+        },
+        "panel": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 219.98959350585935,
+          "radius": "4px",
+          "width": 950.6666870117188,
+          "x": 279,
+          "y": 261.72918701171875
+        },
+        "sidebar": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1000,
+          "radius": "0px",
+          "width": 244,
+          "x": 0,
+          "y": 0
+        },
+        "subtitle": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "height": 20.39583396911621,
+          "radius": "0px",
+          "width": 328.53125,
+          "x": 279,
+          "y": 144
+        },
+        "tabs": [
+          {
+            "height": 42,
+            "href": "/",
+            "label": "\u00e2\u2013\u00a4SQL explorer",
+            "width": 203.33334350585935
+          },
+          {
+            "height": 42,
+            "href": "/investigate",
+            "label": "\u00e2\u0152\u2022Investigations",
+            "width": 203.33334350585935
+          }
+        ],
+        "theme": "app-shell agent-shell architecture-theme",
+        "title": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "30px",
+          "fontWeight": "650",
+          "height": 36,
+          "radius": "0px",
+          "width": 328.53125,
+          "x": 279,
+          "y": 100
+        },
+        "width": 1280
+      },
+      {
+        "view": "sql",
+        "background": "rgb(8, 15, 29)",
+        "button": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "height": 35,
+          "radius": "5px",
+          "width": 93.66667175292967,
+          "x": 248.33334350585935,
+          "y": 1295.09375
+        },
+        "overflow": false,
+        "page": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1641.4896240234375,
+          "radius": "0px",
+          "width": 374.6666870117187,
+          "x": 0,
+          "y": 284.125
+        },
+        "panel": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 309.3125,
+          "radius": "4px",
+          "width": 342.66668701171875,
+          "x": 16,
+          "y": 641.1146240234375
+        },
+        "sidebar": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 236.125,
+          "radius": "0px",
+          "width": 374.6666870117187,
+          "x": 0,
+          "y": 0
+        },
+        "subtitle": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "height": 40.79166793823242,
+          "radius": "0px",
+          "width": 342.66668701171875,
+          "x": 16,
+          "y": 348.32293701171875
+        },
+        "tabs": [
+          {
+            "height": 40,
+            "href": "/",
+            "label": "\u00e2\u2013\u00a4SQL explorer",
+            "width": 163
+          },
+          {
+            "height": 40,
+            "href": "/investigate",
+            "label": "\u00e2\u0152\u2022Investigations",
+            "width": 163
+          }
+        ],
+        "theme": "app-shell sql-shell architecture-theme",
+        "title": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "26px",
+          "fontWeight": "650",
+          "height": 31.197917938232425,
+          "radius": "0px",
+          "width": 342.66668701171875,
+          "x": 16,
+          "y": 309.125
+        },
+        "width": 390
+      },
+      {
+        "view": "investigation",
+        "background": "rgb(8, 15, 29)",
+        "button": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "height": 35,
+          "radius": "5px",
+          "width": 112.54167175292967,
+          "x": 229.45834350585935,
+          "y": 653.0104370117188
+        },
+        "overflow": false,
+        "page": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 1176.28125,
+          "radius": "0px",
+          "width": 374.6666870117187,
+          "x": 0,
+          "y": 284.125
+        },
+        "panel": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 264.97918701171875,
+          "radius": "4px",
+          "width": 342.66668701171875,
+          "x": 16,
+          "y": 481.28125
+        },
+        "sidebar": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "height": 236.125,
+          "radius": "0px",
+          "width": 374.6666870117187,
+          "x": 0,
+          "y": 0
+        },
+        "subtitle": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "height": 20.39583396911621,
+          "radius": "0px",
+          "width": 342.66668701171875,
+          "x": 16,
+          "y": 348.32293701171875
+        },
+        "tabs": [
+          {
+            "height": 40,
+            "href": "/",
+            "label": "\u00e2\u2013\u00a4SQL explorer",
+            "width": 163
+          },
+          {
+            "height": 40,
+            "href": "/investigate",
+            "label": "\u00e2\u0152\u2022Investigations",
+            "width": 163
+          }
+        ],
+        "theme": "app-shell agent-shell architecture-theme",
+        "title": {
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif",
+          "fontSize": "26px",
+          "fontWeight": "650",
+          "height": 31.197917938232425,
+          "radius": "0px",
+          "width": 342.66668701171875,
+          "x": 16,
+          "y": 309.125
+        },
+        "width": 390
+      }
+    ],
+    "aligned_title_axes_all_widths": true,
+    "horizontal_page_overflow": false,
+    "query_and_chart": {
+      "dataset": "Original Tuesday PostgreSQL",
+      "saved_query": "Traffic over time",
+      "rows": 4,
+      "plotted": 4,
+      "first_hour_flows": 1591,
+      "paid_provider_calls": 0
+    },
+    "scope": "Promoted existing README theme; common maximum width, responsive padding and scrollbar gutter; no data/bundle changes.",
+    "current_interface_screenshot_sha256": "a31b0ea308daac439322808a8ac89446c91fbc0c0604087a7015a1866c6e317e"
+  },
+  "review_followup_20261122": {
+    "saved_artifact_command": "python -m cybershield verify reports/neural_comparison_v1 --registration-sha256 f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c",
+    "strict_producer_audit": "passed with --check-producer; refit identity checks unchanged",
+    "comment_only_edit_regression": "Saved-result verification passes after an isolated producer db.py comment edit; strict audit rejects that edit.",
+    "research_protocol_and_results": "Frozen registration, producer module, metrics, scores and timing files unchanged",
+    "current_screenshot_hashes": {
+      "docs/assets/investigation_workspace.jpg": "67d84f8b03eba8d253e388d6e4b08ccbcbda9e9dec328fa2ef9b8146984974b9",
+      "docs/assets/investigation_evidence.jpg": "383a5f8c5f5e2cfa35ed1fa2f6c6b0983e198db614b1e40b150f78a778f5e581",
+      "docs/assets/sql_workspace_chart.jpg": "70dadada5f869b9fa3177676de9b5885890e879268ca1262f58f8b8176b31555"
+    },
+    "reference_capture": {
+      "mode": "reference",
+      "status": "Completed",
+      "tools": "5",
+      "tokens": "0 / 0",
+      "cost": "$0.0000"
+    },
+    "sql_capture": {
+      "rows": 4,
+      "points": 4,
+      "chart_type": "line",
+      "first_hour_flows": 1591
+    },
+    "existing_project_files_changed_only": true,
+    "paid_provider_calls": 0,
+    "previous_full_suite": {
+      "date": "2026-11-21",
+      "tests": 117
+    },
+    "original_roster_chart_link": "reports/neural_comparison_v1/README.md"
+  },
+  "landscape_screenshot_refresh": {
+    "date": "2026-11-22",
+    "checked_utc": "2026-11-22T19:35:36.440548+00:00",
+    "format": "Landscape viewport captures, not stitched full-page images",
+    "existing_images_replaced": [
+      "docs/assets/sql_workspace_chart.jpg",
+      "docs/assets/investigation_workspace.jpg",
+      "docs/assets/investigation_evidence.jpg"
+    ],
+    "dimensions": {
+      "docs/assets/sql_workspace_chart.jpg": [
+        1871,
+        940
+      ],
+      "docs/assets/investigation_workspace.jpg": [
+        1871,
+        940
+      ],
+      "docs/assets/investigation_evidence.jpg": [
+        1871,
+        940
+      ],
+      "docs/assets/investigation_workspace.png": [
+        2544,
+        1344
+      ],
+      "docs/assets/sql_workspace_overview.jpg": [
+        1871,
+        988
+      ]
+    },
+    "readme_byte_identical_to_previous_commit": true,
+    "source_code_and_results_unchanged": true,
+    "paid_provider_calls": 0
+  }
 }

@@ -317,7 +317,8 @@ table(p,'Underlying flows',[
     ('SupportingFlows','bytes'),('SupportingFlows','retrospective_label')],(24,290,1392,610))
 write(report/'definition/pages/pages.json',{'$schema':SCHEMA_ROOT+'pagesMetadata/1.0.0/schema.json',
                                          'pageOrder':pages,'activePageName':pages[0]})
-write(OUT/'project_context.json',{'report_bundle_id':manifest['report_bundle_id'],'bundle_path':str(bundle),
+write(OUT/'project_context.json',{'report_bundle_id':manifest['report_bundle_id'],
+                                'bundle_path':bundle.relative_to(ROOT).as_posix() if bundle.is_relative_to(ROOT) else str(bundle),
                                 'benchmark_id':manifest['benchmark_id'],'visible_pages':3,'hidden_drillthrough_pages':1,
                                 'desktop_validation':'pending'})
 write(OUT/'measures.dax','\n\n'.join(f"-- {table}\n{label} = {dax}" for table,items in measures.items() for label,(dax,_) in items.items()))

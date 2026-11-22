@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-21T22:45:19.065078+00:00",
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 32,
+  "physical_cpus": 24,
+  "ram_bytes": 34053414912,
+  "threads": 1,
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10",
+    "threadpoolctl": "3.7.0"
+  },
+  "scope": "Warm CPU pipeline/model-only response calls; excludes SQL, HTTP, loading, serialization and window waiting."
+}

@@ -65,11 +65,57 @@ def run(args):
         summary.update({'schema':schema,'output_directory':str(out),'synthetic':synthetic,
                         'data_quality':{k:audit[k] for k in ['input_rows','accepted_rows','rejected_rows','clock_usable_rows']}})
         (out/'summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
-    integrity={str(p.relative_to(out)):file_hash(p) for p in sorted(out.rglob('*'))
+    integrity={p.relative_to(out).as_posix():file_hash(p) for p in sorted(out.rglob('*'))
                if p.is_file() and p.name!='output_manifest.json'}
     (out/'output_manifest.json').write_text(json.dumps(integrity,indent=2),encoding='utf-8')
     (ROOT/'reports'/f'latest_{args.mode}.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
     print(json.dumps(summary,indent=2),flush=True)
+
+
+def verify_comparison(report, expected, check_producer=False):
+    """Check saved evidence independently of the current producer checkout."""
+    import pandas as pd
+    from .study_benchmark import verify_scores
+
+    if file_hash(report/'registration.json') != expected:
+        raise ValueError('Registration hash differs from the supplied expected hash')
+    registration=json.loads((report/'registration.json').read_text(encoding='utf-8'))
+    manifest=json.loads((report/'result_manifest.json').read_text(encoding='utf-8'))
+    if registration['kind']!='cybershield_neural_comparison_v1' or manifest['registration_sha256']!=expected:
+        raise ValueError('Results do not match the registered comparison')
+    required={'registration.json','registration.sha256','protocol.json','scores.csv','cutoffs.csv',
+              'metrics.csv','quality_latency.csv','raw_latency.csv','latency_by_batch.csv',
+              'raw_fit_times.csv','comparison.png','latency.png','environment.json','fit_warnings.json',
+              'neural_fit_state.json','model_artifact_index.json','retained_model_reconciliation.json'}
+    if set(manifest['files'])!=required:
+        raise ValueError('Comparison manifest is incomplete or contains unexpected files')
+    for name,digest in manifest['files'].items():
+        path=(report/name).resolve()
+        if not path.is_relative_to(report) or not path.is_file() or file_hash(path)!=digest:
+            raise ValueError(f'Result artifact missing or altered: {name}')
+    if file_hash(report/'protocol.json')!=registration['protocol_sha256']:
+        raise ValueError('Protocol differs from its registration')
+    protocol=json.loads((report/'protocol.json').read_text(encoding='utf-8'))
+    if manifest['status']!=registration['status'] or protocol['status']!=registration['status']:
+        raise ValueError('Result status differs from its registration')
+    methods=set(protocol['models']+protocol['controls'])
+    scores=pd.read_csv(report/'scores.csv',float_precision='round_trip')
+    cuts=pd.read_csv(report/'cutoffs.csv',float_precision='round_trip')
+    keys={'src_ip','window_start','role','is_attack'}
+    support=scores.groupby('role').is_attack.agg(['size','sum']).to_dict()
+    if set(scores.columns)!=keys|methods or len(scores)!=registration['windows'] or support!=registration['support']:
+        raise ValueError('Saved scoring population or model roster differs from its registration')
+    budgets={protocol['false_positive_target'],*protocol['sensitivity_targets']}
+    if (set(cuts.method)!=methods or set(cuts.target)!=budgets or
+            cuts.duplicated(['method','target']).any() or len(cuts)!=len(methods)*len(budgets)):
+        raise ValueError('Saved cutoffs do not cover every registered model and budget')
+    verify_scores(report)
+    if check_producer:
+        # Producer checks remain strict and separate from saved-data integrity.
+        from .neural_comparison import verify_registration
+        verify_registration(report,expected,check_parent=False)
+    print(f'Verified {len(required)} registered result files and all matched confusion counts. '
+          f'Producer checkout audit: {"passed" if check_producer else "not requested"}.')
 
 
 def main():
@@ -78,6 +124,8 @@ def main():
     sub.add_parser('configure',help='Create a local .env with a random password if absent')
     verify=sub.add_parser('verify',help='Verify saved report files against their output hashes')
     verify.add_argument('report',type=Path)
+    verify.add_argument('--registration-sha256',help='Expected registration hash for a saved revised comparison')
+    verify.add_argument('--check-producer',action='store_true',help='Also require the original producer source and package versions')
     workspace=sub.add_parser('serve',help='Open the local, read-only browser SQL workspace')
     workspace.add_argument('--port',type=int,default=8765)
     init=sub.add_parser('init',help='Apply checksum-verified migrations')
@@ -102,9 +150,14 @@ def main():
             print('Local .env ready; existing configuration preserved.')
         elif args.command=='verify':
             report=args.report.resolve()
+            if args.registration_sha256:
+                verify_comparison(report,args.registration_sha256,args.check_producer)
+                return
+            if args.check_producer:
+                raise ValueError('--check-producer requires --registration-sha256')
             manifest=json.loads((report/'output_manifest.json').read_text(encoding='utf-8'))
             for name,digest in manifest.items():
-                path=(report/name).resolve()
+                path=(report/name.replace('\\','/')).resolve()
                 if not path.is_relative_to(report) or not path.is_file() or file_hash(path)!=digest:
                     raise ValueError(f'Report file missing or altered: {name}')
             print(f'Verified {len(manifest)} report files. This is integrity verification, not a final-test seal.')

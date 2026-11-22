@@ -11,6 +11,7 @@ const examples = [
 function el(tag, text, cls) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (cls) n.className = cls; return n; }
 for (const [title, subtitle, question] of examples) {
   const button = el("button", title, "example"); button.append(el("span", subtitle));
+  button.title = subtitle;
   button.addEventListener("click", () => { $("question").value = question; $("question").focus(); });
   $("examples").append(button);
 }
@@ -84,9 +85,10 @@ function render(run) {
   $("run-message").className = run.status === "failed" ? "error" : "";
   $("run-message").textContent = run.error || (run.mode === "reference" ? "Reference workflow · deterministic demo, no LLM used" : run.status === "completed" ? "Completed · citation references checked · synthesis requires analyst review" : "Investigation running · retrieving bounded evidence");
   const trace = $("trace"); trace.replaceChildren();
+  const actionLabel = run.mode === "reference" ? "Reference step completed" : "Model selected its next action";
   for (const event of run.events) {
     if (event.kind === "tool_started" || event.kind === "model_started") continue;
-    const item = el("li", names[event.tool] || event.detail || (event.kind === "model_completed" ? "Model selected its next action" : event.kind));
+    const item = el("li", names[event.tool] || event.detail || (event.kind === "model_completed" ? actionLabel : event.kind));
     item.append(el("small", (event.elapsed_ms/1000).toFixed(2)+"s"+(event.duration_ms != null ? " · "+event.duration_ms.toFixed(1)+" ms" : "")+(event.evidence_id ? " · "+event.evidence_id : "")));
     trace.append(item);
   }

@@ -4,6 +4,8 @@
 
 The diagram covers ingestion, PostgreSQL feature engineering, separate SQL/ML evaluation, and the investigation interfaces. The corrected-data study remains separate from the prototype bundle used by Power BI and the agent.
 
+The SQL workspace also offers question-to-SQL drafting and local result charts. Its drafting model receives schema definitions and the question, then proposes SQL for user review. Query execution remains in the existing restricted PostgreSQL reader; the investigation agent retains its separate fixed evidence tools. See [workspace boundaries](query_workspace.md#ask-with-plain-english).
+
 Regenerate the vector figure using the existing Matplotlib dependency:
 
 ```powershell
@@ -41,5 +43,5 @@ Every schema migration is plain SQL with a recorded checksum. Fixture, Tuesday r
 
 PostgreSQL performs temporal binning (`date_bin`), distinct counts, service-port counts, byte/packet/duration aggregation, retrospective target aggregation, elapsed-time history (`RANGE`), score normalization, maximum-score combination, ranking, and evidence selection (`LATERAL`). Python fits the baseline, selects deterministic cutoffs, calculates metrics, and renders charts.
 
-Eight prototype queries cover activity, bursts, port diversity, service activity, category profiles, aggregate transitions, source concentration, and post-scoring errors. Rarity analysis and measured query-optimization studies remain later milestones.
+Eight prototype queries cover activity, bursts, port diversity, service activity, category profiles, aggregate transitions, source concentration, and post-scoring errors. A [measured synthetic evidence lookup](sql_performance.md) documents the existing source/time index, equivalent results, buffer use and storage cost. Real-data optimization and rarity analysis remain later milestones.
 

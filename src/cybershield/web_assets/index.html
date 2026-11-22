@@ -7,28 +7,19 @@
   <title>CyberShield · SQL Workspace</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e182b'/%3E%3Cpath d='M16 5l9 4v7c0 6-9 11-9 11S7 22 7 16V9z' fill='none' stroke='%2348d6ad' stroke-width='2'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="{{ url_for('static',filename='workspace.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assistant.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='shell.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='architecture.css') }}">
+  <script src="{{ url_for('static',filename='charts.js') }}" defer></script>
   <script src="{{ url_for('static',filename='workspace.js') }}" defer></script>
 </head>
-<body>
-<aside class="sidebar">
-  <a class="brand" href="/" aria-label="CyberShield workspace">
-    <span class="brand-icon"><svg viewBox="0 0 32 36" aria-hidden="true"><path d="M16 3 29 9v10c0 8-13 14-13 14S3 27 3 19V9Z"/><path d="m9 18 5 5 9-11"/></svg></span>
-    <span>CyberShield<small>ANALYTICS WORKSPACE</small></span>
-  </a>
-  <div class="side-label">WORKSPACE</div>
-  <div class="nav-current"><span aria-hidden="true">⌘</span> SQL explorer <span class="nav-dot"></span></div>
-  <a class="example-button" href="/investigate">✦ Investigation agent</a>
-  <label class="side-label dataset-label" for="dataset">DATA SOURCE</label>
-  <div class="dataset-select"><select id="dataset"><option value="real">CIC-IDS2017 · Tuesday</option><option value="fixture">Synthetic fixture</option></select></div>
-  <p class="side-description" id="source-description">Labeled network flows<br>Local PostgreSQL database</p>
-  <div class="side-label example-heading">START WITH A QUESTION</div>
-  <nav id="examples" aria-label="Example investigations"></nav>
-  <div class="sidebar-bottom"><span class="connection-dot" id="connection-dot"></span><span id="connection-text">Connecting to database…</span><small>Queries stay on this computer</small></div>
-</aside>
+<body class="app-shell sql-shell architecture-theme">
+{% set active_view = 'sql' %}
+{% include 'partials/sidebar.html' %}
 <main>
-  <header class="topbar"><span>Workspace <span class="slash">/</span> <strong>SQL explorer</strong></span><span class="readonly"><span></span> Read-only connection</span></header>
+  {% include 'partials/topbar.html' %}
   <div class="page">
-    <div class="page-heading"><div><div class="eyebrow">INVESTIGATE YOUR DATA</div><h1>From query to insight.</h1><p>Explore network activity, inspect alerts, and follow the evidence.</p></div><div class="local-pill"><span></span> LOCAL WORKSPACE</div></div>
+    <div class="page-heading"><div><h1>SQL explorer</h1><p>Query network flows and trace scored windows to source records.</p></div></div>
     <section class="metrics" aria-label="Dataset overview">
       <div class="metric"><span>ACCEPTED FLOWS</span><strong id="stat-flows">—</strong><small>Complete source file</small></div>
       <div class="metric"><span>ACTIVE SOURCE WINDOWS</span><strong id="stat-windows">—</strong><small>Latest feature run · 5 minutes</small></div>
@@ -37,6 +28,13 @@
     </section>
     <div class="workbench">
       <div class="query-column">
+        <section class="ask-panel panel" aria-labelledby="ask-heading">
+          <div class="ask-heading"><div><h2 id="ask-heading">Ask your data</h2></div><span id="assistant-status" class="assistant-status">Checking AI connection…</span></div>
+          <label class="ask-label" for="data-question">What would you like to explore?</label>
+          <div class="ask-input-row"><textarea id="data-question" rows="2" maxlength="1200" placeholder="Which sources generated the most FTP or SSH traffic?"></textarea><button id="draft-sql" class="draft-button" type="button" disabled><span id="draft-label">Draft SQL</span></button></div>
+          <div class="ask-examples" aria-label="Example questions without API calls"><span>TRY AN EXAMPLE</span><button type="button" data-question-example="traffic">Traffic over time ↗</button><button type="button" data-question-example="services">Most service traffic ↗</button><button type="button" data-question-example="labels">Flow categories ↗</button></div>
+          <p id="draft-message" class="draft-message" role="status" aria-live="polite">AI drafting sends your question and schema to OpenAI. Result rows stay local. Review the SQL, then run it.</p>
+        </section>
         <section class="editor-panel panel" aria-labelledby="editor-heading">
           <div class="panel-header"><div><span class="terminal-icon">&gt;_</span><h2 id="editor-heading">Query editor</h2><span class="language-tag">PostgreSQL</span></div><button class="text-button" id="clear-query" type="button">Clear</button></div>
           <div class="query-caption"><span id="query-title">Highest-priority windows</span><span class="shortcut">Ctrl / ⌘ + Enter to run</span></div>
@@ -44,8 +42,9 @@
           <div class="editor-footer"><span><span class="tiny-dot"></span> SELECT and WITH queries</span><div><label for="row-limit">Result limit</label><select id="row-limit"><option value="100">100 rows</option><option value="250" selected>250 rows</option><option value="500">500 rows</option></select><button class="run-button" id="run-query" type="button"><span id="run-icon">▶</span><span id="run-label">Run query</span></button></div></div>
         </section>
         <section class="results-panel panel" aria-labelledby="results-heading">
-          <div class="panel-header"><div><h2 id="results-heading">Results</h2><span id="result-count" class="count-tag">0</span></div><div><span id="query-timing"></span><button class="export-button" id="export-csv" type="button" disabled><span aria-hidden="true">↓</span> Export CSV</button></div></div>
+          <div class="panel-header results-header"><div><h2 id="results-heading">Results</h2><span id="result-count" class="count-tag">0</span></div><div><div class="result-views" role="group" aria-label="Results view"><button id="view-table" type="button" aria-pressed="true">Table</button><button id="view-chart" type="button" aria-pressed="false" disabled>Chart</button></div><span id="query-timing"></span><button class="export-button" id="export-csv" type="button" disabled><span aria-hidden="true">↓</span> Export CSV</button></div></div>
           <div id="result-message" class="result-message" role="status" aria-live="polite">Choose an example or write a query to explore your data.</div>
+          <div id="chart-panel" class="chart-panel" hidden><div class="chart-controls"><label for="chart-type">Display<select id="chart-type"><option value="bar">Bar chart</option><option value="line">Line chart</option></select></label><label for="chart-x">Labels / X<select id="chart-x"></select></label><label for="chart-y">Value / Y<select id="chart-y"></select></label></div><h3 id="chart-title">Query results</h3><div id="query-chart" class="query-chart"></div><p id="chart-note" class="chart-note"></p></div>
           <div class="table-scroll" id="table-scroll" tabindex="0" aria-label="Query results"><table id="results-table"><thead></thead><tbody></tbody></table></div>
           <div class="results-footer"><span id="result-summary">Ready when you are.</span><span>Live PostgreSQL results</span></div>
         </section>

@@ -1,0 +1,26 @@
+{
+  "Logistic regression": {
+    "exact_scores": true,
+    "maximum_absolute_difference": 0.0
+  },
+  "Random forest": {
+    "exact_scores": true,
+    "maximum_absolute_difference": 0.0
+  },
+  "Histogram boosting": {
+    "exact_scores": true,
+    "maximum_absolute_difference": 0.0
+  },
+  "XGBoost": {
+    "exact_scores": true,
+    "maximum_absolute_difference": 0.0
+  },
+  "LightGBM": {
+    "exact_scores": true,
+    "maximum_absolute_difference": 0.0
+  },
+  "CatBoost": {
+    "exact_scores": true,
+    "maximum_absolute_difference": 0.0
+  }
+}

@@ -1,0 +1,33 @@
+<aside class="shell-sidebar {{ 'sidebar' if active_view == 'sql' else 'rail' }}">
+  <a class="shell-brand" href="/" aria-label="CyberShield workspace">
+    <span class="shell-brand-icon" aria-hidden="true"><svg viewBox="0 0 32 36"><path d="M16 3 29 9v10c0 8-13 14-13 14S3 27 3 19V9Z"/><path d="m9 18 5 5 9-11"/></svg></span>
+    <span>CyberShield<small>ANALYTICS WORKSPACE</small></span>
+  </a>
+  <div class="shell-section-label">WORKSPACE</div>
+  <nav class="shell-navigation" aria-label="Workspace navigation">
+    <a class="shell-tab{{ ' is-current' if active_view == 'sql' else '' }}" href="/"{% if active_view == 'sql' %} aria-current="page"{% endif %}><span class="shell-tab-icon" aria-hidden="true">▤</span><span>SQL explorer</span><i aria-hidden="true"></i></a>
+    <a class="shell-tab{{ ' is-current' if active_view == 'investigate' else '' }}" href="/investigate"{% if active_view == 'investigate' %} aria-current="page"{% endif %}><span class="shell-tab-icon" aria-hidden="true">⌕</span><span>Investigations</span><i aria-hidden="true"></i></a>
+  </nav>
+  <div class="shell-source-block">
+    {% if active_view == 'sql' %}
+    <label class="shell-section-label shell-source-label" for="dataset">DATA SOURCE</label>
+    <div class="shell-source-field"><select id="dataset"><option value="real">CIC-IDS2017 · Tuesday</option><option value="fixture">Synthetic fixture</option></select></div>
+    <p class="shell-source-description" id="source-description">Original labeled flows · Tuesday<br>Local PostgreSQL database</p>
+    {% else %}
+    <div class="shell-section-label shell-source-label">PINNED EVIDENCE</div>
+    <div class="shell-source-field shell-fixed-source">CIC-IDS2017 · Tuesday</div>
+    <p class="shell-source-description">Read-only reporting bundle<br>Historical morning-clock data</p>
+    {% endif %}
+  </div>
+  <div class="shell-section-label shell-examples-label">{{ 'SAVED QUERIES' if active_view == 'sql' else 'INVESTIGATION STARTERS' }}</div>
+  <nav id="examples" aria-label="{{ 'Saved queries' if active_view == 'sql' else 'Investigation starters' }}"></nav>
+  <div class="shell-sidebar-bottom">
+    {% if active_view == 'sql' %}
+    <div><span class="connection-dot" id="connection-dot"></span><span id="connection-text">Connecting to database…</span></div>
+    <small>SQL runs on this computer</small>
+    {% else %}
+    <div><span class="shell-evidence-dot"></span>Pinned research evidence</div>
+    <small>Original Tuesday / morning clock</small>
+    {% endif %}
+  </div>
+</aside>

@@ -106,7 +106,7 @@ def verified_inputs(root=ROOT):
     for name,h in snapshot['files'].items():
         require(file_hash(research/'snapshot'/name)==h,f'Snapshot mismatch: {name}')
     for key,h in artifact['sql_files'].items():
-        path=root/key
+        path=root/key.replace('\\','/')
         require(file_hash(path)==h,f'Original SQL changed: {key}')
         digests[path.relative_to(root).as_posix()]=h
     benchmark_inputs={p.relative_to(root).as_posix():digests[p.relative_to(root).as_posix()]

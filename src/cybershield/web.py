@@ -9,6 +9,7 @@ import psycopg
 
 from .workspace import QueryRejected, dataset_metadata, prepare_workspace, run_query
 from .agent import AgentError, InvestigationService, MODEL, settings
+from .sql_assistant import draft_sql
 
 WEB_ROOT=Path(__file__).resolve().parent/'web_assets'
 EXAMPLES=[
@@ -131,6 +132,18 @@ def create_app():
         if not isinstance(payload,dict):
             raise QueryRejected('Send a SQL query to continue.')
         return jsonify(run_query(payload.get('sql',''),payload.get('dataset','real'),payload.get('limit',250)))
+
+    @app.get('/api/sql-assistant/status')
+    def sql_assistant_status():
+        config=settings()
+        return jsonify(configured=bool(config['key']),model=config['model'])
+
+    @app.post('/api/sql-assistant/draft')
+    def sql_draft():
+        payload=request.get_json(silent=True)
+        if not isinstance(payload,dict) or set(payload)-{'question','dataset'}:
+            raise QueryRejected('Send a question and the selected dataset.')
+        return jsonify(draft_sql(payload.get('question'),payload.get('dataset','real')))
 
     @app.errorhandler(QueryRejected)
     def rejected(exc):

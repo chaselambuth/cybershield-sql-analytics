@@ -1,6 +1,7 @@
 "use strict";
 const $ = id => document.getElementById(id);
-const state = {examples: [], result: null, busy: false, generation: 0, selection: "triage"};
+const state = {examples: [], result: null, busy: false, generation: 0, selection: "triage",
+  configured: false, drafting: false, editorVersion: 0, chartSpec: null, preferredView: "table"};
 const editor = $("sql-editor");
 const token = document.querySelector('meta[name="workspace-token"]').content;
 const number = value => new Intl.NumberFormat("en-US").format(value);
@@ -9,6 +10,7 @@ function updateLines() {
   $("line-numbers").textContent = Array.from({length: editor.value.split("\n").length}, (_, i) => i + 1).join("\n");
 }
 function chooseExample(example, focus = true) {
+  state.editorVersion++; state.chartSpec = null; state.preferredView = "table";
   editor.value = example.sql;
   state.selection = example.id;
   $("query-title").textContent = example.title;
@@ -65,22 +67,110 @@ function renderResult(result) {
   $("result-summary").textContent = result.truncated ? `Showing first ${number(result.row_count)} rows · result limit reached` : `${number(result.row_count)} ${result.row_count === 1 ? "row" : "rows"} returned`;
   $("export-csv").disabled = !result.rows.length;
   message(result.rows.length ? "" : "The query ran successfully and returned no matching rows.");
+  configureChart(result);
+}
+function draftMessage(text, kind = "") {
+  $("draft-message").textContent = text; $("draft-message").className = `draft-message ${kind}`;
+}
+function setView(view) {
+  const chart = view === "chart" && !$("view-chart").disabled;
+  $("chart-panel").hidden = !chart;
+  $("table-scroll").hidden = chart || !state.result?.rows.length;
+  $("view-table").setAttribute("aria-pressed", String(!chart));
+  $("view-chart").setAttribute("aria-pressed", String(chart));
+  if (chart) drawChart();
+}
+function configureChart(result) {
+  const numeric = CyberShieldCharts.numericColumns(result);
+  const supported = numeric.length > 0 && result.columns.length > 1 && result.rows.length > 0;
+  $("view-chart").disabled = !supported;
+  for (const id of ["chart-x", "chart-y"]) $(id).replaceChildren();
+  if (!supported) {setView("table"); return;}
+  result.columns.forEach((column, i) => {
+    const x = document.createElement("option"); x.value = i; x.textContent = column; $("chart-x").append(x);
+    if (numeric.includes(i)) {const y = x.cloneNode(true); $("chart-y").append(y);}
+  });
+  const preferred = result.chartSpec;
+  let x = preferred ? result.columns.indexOf(preferred.x) : -1;
+  if (x < 0) x = result.columns.findIndex((_, i) => !numeric.includes(i));
+  if (x < 0) x = 0;
+  let y = preferred ? result.columns.indexOf(preferred.y) : -1;
+  if (!numeric.includes(y) || y === x) y = numeric.find(i => i !== x);
+  if (y === undefined) {$("view-chart").disabled = true; setView("table"); return;}
+  $("chart-x").value = String(x); $("chart-y").value = String(y);
+  $("chart-type").value = preferred?.type === "line" ? "line" : "bar";
+  $("chart-title").textContent = result.title;
+  setView(result.preferredView);
+}
+function drawChart() {
+  if (!state.result) return;
+  const x = Number($("chart-x").value), y = Number($("chart-y").value);
+  const data = CyberShieldCharts.render($("query-chart"), state.result,
+    {x, y, type: $("chart-type").value, title: $("chart-title").textContent});
+  if (data.empty) {
+    const empty = document.createElement("p"); empty.className = "chart-empty";
+    empty.textContent = "No finite numeric values are available for these axes. Choose another value column or use the table.";
+    $("query-chart").append(empty);
+  }
+  const notes = [`${data.points.length} of ${data.total} returned rows plotted in query order.`,
+    "Display values are approximate; use the table or CSV for exact values."];
+  if (data.omitted) notes.push(`${data.omitted} ${data.omitted === 1 ? "row" : "rows"} omitted: missing, nonnumeric or outside safe numeric range.`);
+  if ($("chart-type").value === "line") notes.push("Line spacing follows query order; missing values leave gaps.");
+  if (data.hidden) notes.push(`${data.hidden} additional ${data.hidden === 1 ? "row is" : "rows are"} available in the table.`);
+  if (state.result.truncated) notes.push("The query result limit was reached; this is a partial result.");
+  if (x === y) notes.push("The same column is selected for labels and values.");
+  $("chart-note").textContent = notes.join(" ");
+}
+async function assistantStatus() {
+  try {
+    const response = await fetch("/api/sql-assistant/status"); const data = await response.json();
+    if (!response.ok) throw new Error(data.error);
+    state.configured = data.configured;
+    $("assistant-status").textContent = data.configured ? "AI drafting available" : "Examples available · AI key not configured";
+    $("draft-sql").disabled = !data.configured || state.drafting;
+  } catch (_) {$("assistant-status").textContent = "AI drafting unavailable · try an example";}
+}
+async function draftSQL() {
+  if (state.drafting || !state.configured) return;
+  const question = $("data-question").value.trim();
+  if (question.length < 5) {draftMessage("Ask a question about the selected dataset.", "error"); $("data-question").focus(); return;}
+  const generation = state.generation, version = state.editorVersion;
+  const dataset = $("dataset").value;
+  state.drafting = true; $("draft-sql").disabled = true; $("draft-label").textContent = "Drafting…";
+  draftMessage("Drafting from your question and the selected schema. No SQL is being executed.");
+  try {
+    const response = await fetch("/api/sql-assistant/draft", {method: "POST", headers: {"Content-Type": "application/json", "X-Workspace-Token": token}, body: JSON.stringify({question, dataset})});
+    const data = await response.json();
+    if (generation !== state.generation) return;
+    if (!response.ok) throw new Error(data.error || "SQL drafting was unavailable.");
+    if (version !== state.editorVersion) {draftMessage("Your editor changed during drafting. Submit again to replace it."); return;}
+    editor.value = data.sql; state.editorVersion++; state.selection = null;
+    state.chartSpec = data.chart; state.preferredView = data.chart.type === "table" ? "table" : "chart";
+    $("query-title").textContent = data.title;
+    document.querySelectorAll("#examples .example-button").forEach(b => b.classList.remove("active"));
+    updateLines(); draftMessage(`${data.explanation} Review the SQL below, then select Run query.`, "ready");
+    $("editor-heading").scrollIntoView({behavior: "smooth", block: "nearest"});
+  } catch (error) {if (generation === state.generation) draftMessage(error.message || "Could not reach the local server.", "error");}
+  finally {state.drafting = false; $("draft-sql").disabled = !state.configured; $("draft-label").textContent = "Draft SQL";}
 }
 async function runQuery() {
   if (state.busy) return;
   if (!editor.value.trim()) {message("Write a SELECT query, or choose an example to start.", "error"); editor.focus(); return;}
   const generation = state.generation;
   const dataset = $("dataset").value;
+  const sql = editor.value, title = $("query-title").textContent;
+  const chartSpec = state.chartSpec, preferredView = state.preferredView;
   state.busy = true; $("run-query").disabled = true;
   $("run-label").textContent = "Running…"; $("run-icon").textContent = "◌"; $("run-icon").className = "loading-spinner";
   $("export-csv").disabled = true;
   $("table-scroll").hidden = true; message("Running your query against PostgreSQL…", "loading");
+  $("chart-panel").hidden = true; $("view-chart").disabled = true;
   try {
-    const response = await fetch("/api/query", {method: "POST", headers: {"Content-Type": "application/json", "X-Workspace-Token": token}, body: JSON.stringify({sql: editor.value, dataset, limit: Number($("row-limit").value)})});
+    const response = await fetch("/api/query", {method: "POST", headers: {"Content-Type": "application/json", "X-Workspace-Token": token}, body: JSON.stringify({sql, dataset, limit: Number($("row-limit").value)})});
     const result = await response.json();
     if (generation !== state.generation) return;
     if (!response.ok) throw new Error(result.error || "The query could not be completed.");
-    state.result = result; renderResult(result);
+    state.result = {...result, title, chartSpec, preferredView}; renderResult(state.result);
   } catch (error) {
     if (generation !== state.generation) return;
     state.result = null; $("result-count").textContent = "0"; $("query-timing").textContent = "";
@@ -94,6 +184,8 @@ async function runQuery() {
 async function bootstrap(autoRun = false) {
   const generation = ++state.generation;
   state.result = null; $("export-csv").disabled = true;
+  state.editorVersion++; state.chartSpec = null; $("chart-panel").hidden = true; $("view-chart").disabled = true;
+  draftMessage("AI drafting sends your question and schema to OpenAI. Result rows stay local. Review the SQL, then run it.");
   $("connection-text").textContent = "Connecting to database…";
   $("connection-dot").className = "connection-dot";
   $("table-scroll").hidden = true; $("result-count").textContent = "0"; $("query-timing").textContent = "";
@@ -128,20 +220,30 @@ async function bootstrap(autoRun = false) {
   }
 }
 $("run-query").addEventListener("click", runQuery);
+$("draft-sql").addEventListener("click", draftSQL);
+$("view-table").addEventListener("click", () => setView("table"));
+$("view-chart").addEventListener("click", () => setView("chart"));
+for (const id of ["chart-type", "chart-x", "chart-y"]) $(id).addEventListener("change", drawChart);
+document.querySelectorAll("[data-question-example]").forEach(button => button.addEventListener("click", () => {
+  const example = state.examples.find(item => item.id === button.dataset.questionExample);
+  if (!example) {draftMessage("Connect to a dataset to load an example question.", "error"); return;}
+  chooseExample(example, false);
+  $("data-question").value = {traffic: "How does traffic change over time?", services: "Which sources generated the most FTP or SSH traffic?", labels: "How many flows belong to each category?"}[example.id];
+  state.chartSpec = {type: example.id === "traffic" ? "line" : "bar", x: example.id === "traffic" ? "hour" : example.id === "services" ? "source" : "label", y: example.id === "services" ? "service_flows" : "flows"};
+  state.preferredView = "chart"; draftMessage("Saved example loaded without an API call. Review the SQL, then select Run query.", "ready");
+}));
 $("dataset").addEventListener("change", () => bootstrap(false));
-$("clear-query").addEventListener("click", () => {editor.value = ""; updateLines(); $("query-title").textContent = "Untitled query"; editor.focus();});
+$("clear-query").addEventListener("click", () => {editor.value = ""; state.editorVersion++; state.chartSpec = null; state.preferredView = "table"; updateLines(); $("query-title").textContent = "Untitled query"; editor.focus();});
 editor.addEventListener("input", () => {
+  state.editorVersion++; state.chartSpec = null; state.preferredView = "table";
   updateLines();
-  const example = state.examples.find(item => item.id === state.selection);
-  if (example && editor.value !== example.sql) {
-    state.selection = null; $("query-title").textContent = "Custom query";
-    document.querySelectorAll(".example-button").forEach(button => button.classList.remove("active"));
-  }
+  state.selection = null; $("query-title").textContent = "Custom query";
+  document.querySelectorAll("#examples .example-button").forEach(button => button.classList.remove("active"));
 });
 editor.addEventListener("scroll", () => {$("line-numbers").scrollTop = editor.scrollTop;});
 editor.addEventListener("keydown", event => {
   if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {event.preventDefault(); runQuery();}
-  if (event.key === "Tab") {event.preventDefault(); const start = editor.selectionStart; const end = editor.selectionEnd; editor.setRangeText("  ", start, end, "end"); updateLines();}
+  if (event.key === "Tab") {event.preventDefault(); const start = editor.selectionStart; const end = editor.selectionEnd; editor.setRangeText("  ", start, end, "end"); editor.dispatchEvent(new Event("input"));}
 });
 $("export-csv").addEventListener("click", () => {
   if (!state.result) return;
@@ -150,5 +252,6 @@ $("export-csv").addEventListener("click", () => {
   const blob = new Blob(["\uFEFF" + rows.map(row => row.map(quote).join(",")).join("\r\n")], {type: "text/csv;charset=utf-8"});
   const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = `cybershield-${state.result.dataset}-query.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
+assistantStatus();
 bootstrap(true);
 

@@ -1,0 +1,165 @@
+/* Default architecture-inspired theme. Palette from build_architecture.py;
+   the existing layout, controls and shared-shell dimensions stay in charge. */
+:root {
+  color-scheme: dark;
+  scrollbar-gutter: stable;
+  --background: #080f1d; --bg: #080f1d; --navy: #0b1423;
+  --surface: #101c2e; --raised: #14243a; --line: #293951;
+  --ink: #eff5ff; --muted: #8e9fb9; --green: #62ddf5;
+  --amber: #b09aff; --mint: #66e2b5;
+  --shell-bg: #0b1423; --shell-line: #293951;
+  --shell-text: #c5d2e7; --shell-muted: #a2b2ca;
+  --shell-teal: #62ddf5; --shell-violet: #b09aff;
+  --architecture-cyan: #62ddf5; --architecture-violet: #b09aff;
+  --architecture-teal: #66e2b5; --architecture-body: #c5d2e7;
+}
+.architecture-theme { background: var(--bg); color: var(--ink); }
+.architecture-theme main {
+  background-color: var(--bg);
+  background-image: linear-gradient(#39506c0d 1px, transparent 1px), linear-gradient(90deg, #39506c0d 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.architecture-theme main > .topbar { background: #0b1524; border-color: var(--line); color: #a2b2ca; }
+.architecture-theme .topbar strong, .architecture-theme h1 { color: var(--ink); }
+.architecture-theme h1 {
+  font: 650 30px/1.2 "Segoe UI", Arial, sans-serif;
+  letter-spacing: -1px; margin: 0 0 8px;
+}
+.architecture-theme .page-heading p, .architecture-theme .intro p {
+  font: 400 12px/1.7 "Segoe UI", Arial, sans-serif; margin: 0;
+}
+.architecture-theme .page { width: 100%; max-width: 1720px; margin-inline: auto; padding: 34px 35px 20px; }
+.architecture-theme .intro { margin-bottom: 27px; }
+.architecture-theme .intro .eyebrow { display: none; }
+.architecture-theme .intro .provider { margin-top: 0; }
+.architecture-theme .panel-header h2, .architecture-theme .panel-heading h2 {
+  font: 650 12px/1.4 "Segoe UI", Arial, sans-serif;
+}
+.architecture-theme .ask-heading h2, .architecture-theme .ask .section-label {
+  font: 600 16px/1.4 "Segoe UI", Arial, sans-serif; letter-spacing: -.4px;
+}
+.architecture-theme .topbar .readonly > span { background: var(--architecture-teal); }
+.architecture-theme .shell-brand { color: var(--ink); }
+.architecture-theme .shell-brand small, .architecture-theme .shell-section-label { font-family: Consolas, monospace; }
+.architecture-theme .shell-brand-icon { color: var(--architecture-cyan); }
+.architecture-theme .shell-tab.is-current { background: #102b3b; border-color: #2d5b70; color: var(--ink); }
+.architecture-theme .shell-tab:hover { background: #14283d; }
+.architecture-theme .shell-tab-icon { color: #9eb1ca; }
+.architecture-theme .shell-source-field, .architecture-theme .shell-source-field select { background: var(--surface); border-color: #3d526e; }
+.architecture-theme .shell-sidebar #examples .example-button, .architecture-theme .shell-sidebar #examples .example { color: var(--architecture-body); }
+.architecture-theme .shell-sidebar #examples button:hover { background: #15283f; color: var(--ink); }
+.architecture-theme .shell-sidebar #examples .example-button.active { background: #12313d; border-color: #2f6170; color: var(--architecture-cyan); }
+
+/* The diagram's short accent strokes, without extra panels or labels. */
+.architecture-theme .panel, .architecture-theme .metric {
+  --panel-accent: var(--architecture-cyan);
+  position: relative; background: var(--surface); border-color: var(--line); border-radius: 4px; box-shadow: none;
+}
+.architecture-theme .panel::before, .architecture-theme .metric::before {
+  content: ""; position: absolute; top: 0; left: 18px; width: 48px; height: 2px;
+  background: var(--panel-accent); pointer-events: none;
+}
+.architecture-theme .ask-panel, .architecture-theme .ask, .architecture-theme .trace-panel,
+.architecture-theme .schema-panel, .architecture-theme .metric:nth-child(2) { --panel-accent: var(--architecture-violet); }
+.architecture-theme .results-panel, .architecture-theme .brief-panel,
+.architecture-theme .metric:nth-child(3) { --panel-accent: var(--architecture-teal); }
+.architecture-theme .panel-header, .architecture-theme .panel-heading { border-color: var(--line); background: #111f33; }
+.architecture-theme .panel-header h2, .architecture-theme .panel-heading h2,
+.architecture-theme .ask-heading h2, .architecture-theme .section-label { color: var(--ink); }
+.architecture-theme .page-heading p, .architecture-theme .intro p,
+.architecture-theme .metric small, .architecture-theme .schema-intro { color: #a2b2ca; }
+.architecture-theme .metric > span, .architecture-theme .eyebrow, .architecture-theme .subtle,
+.architecture-theme .run-strip span { color: #a2b2ca; font-family: Consolas, monospace; }
+.architecture-theme .metric strong { color: var(--ink); }
+.architecture-theme .eyebrow, .architecture-theme .terminal-icon { color: var(--architecture-cyan); }
+.architecture-theme .language-tag, .architecture-theme .ask-heading .language-tag,
+.architecture-theme .count-tag, .architecture-theme .schema-mark { background: #1b2942; border-color: #3a4965; color: #bfb2ef; }
+.architecture-theme .provider { background: var(--surface); border-color: var(--line); color: var(--architecture-body); }
+.architecture-theme .scope-strip strong { color: var(--ink); }
+.architecture-theme .scope-strip small, .architecture-theme .scope-strip > span:first-child { color: #a2b2ca; }
+.architecture-theme .scope-strip a { color: var(--architecture-violet); }
+
+.architecture-theme .ask-label, .architecture-theme .assistant-status,
+.architecture-theme .ask-examples > span, .architecture-theme .mode-note,
+.architecture-theme .ask-bottom label { color: #a2b2ca; }
+.architecture-theme #data-question { background: #0b1526; border-color: #3d526e; color: var(--ink); }
+.architecture-theme #data-question::placeholder, .architecture-theme textarea::placeholder { color: #94a8c5; }
+.architecture-theme #data-question:focus { outline-color: var(--architecture-cyan); }
+.architecture-theme .draft-button, .architecture-theme .ask-bottom button {
+  background: var(--architecture-violet); border-color: var(--architecture-violet); color: #080f1d; box-shadow: none;
+  border-radius: 5px; font-size: 11px; font-weight: 600; min-height: 35px;
+}
+.architecture-theme .draft-button:hover, .architecture-theme .ask-bottom button:hover { background: #c1afff; border-color: #c1afff; }
+.architecture-theme .run-button { background: var(--architecture-cyan); border-color: var(--architecture-cyan); color: #080f1d; min-height: 35px; }
+.architecture-theme .run-button:hover { background: #8ae8fa; }
+.architecture-theme .ask-examples button { color: var(--architecture-body); }
+.architecture-theme .ask-examples button:hover { background: #192b42; border-color: #3d526e; color: var(--architecture-cyan); }
+.architecture-theme .draft-message, .architecture-theme #run-message { color: #a2b2ca; }
+.architecture-theme .draft-message.ready, .architecture-theme .run-strip > div:first-child strong { color: var(--architecture-teal); }
+.architecture-theme .draft-message.error, .architecture-theme #run-message.error { color: #f0a6bd; }
+.architecture-theme .query-caption, .architecture-theme .code-editor { background: #0b1526; color: #a2b2ca; }
+.architecture-theme #sql-editor, .architecture-theme #sql-editor:focus { background: transparent; color: var(--architecture-body); }
+.architecture-theme .line-numbers { border-color: var(--line); color: #8096b4; }
+.architecture-theme .shortcut, .architecture-theme .text-button,
+.architecture-theme .editor-footer, .architecture-theme .editor-footer label { color: #a2b2ca; }
+.architecture-theme .text-button:hover { color: var(--architecture-cyan); }
+.architecture-theme .editor-footer, .architecture-theme .ask-bottom { border-color: var(--line); }
+.architecture-theme .editor-footer select, .architecture-theme .chart-controls select,
+.architecture-theme .ask-bottom select, .architecture-theme .export-button, .architecture-theme .download {
+  background: #0c1728; border-color: #3d526e; color: var(--architecture-body);
+}
+.architecture-theme .download:hover, .architecture-theme .export-button:hover { background: #1a2b42; }
+
+.architecture-theme .result-message { background: var(--surface); color: #a2b2ca; }
+.architecture-theme .result-message.error { background: #2a1828; color: #f0a6bd; border-color: #633b51; }
+.architecture-theme .result-message.loading { color: var(--architecture-cyan); }
+.architecture-theme th { background: #15253b; border-color: var(--line); color: #a9bbd4; }
+.architecture-theme td { color: var(--architecture-body); border-color: #22344c; }
+.architecture-theme td:first-child { color: var(--architecture-cyan); }
+.architecture-theme tbody tr:hover, .architecture-theme .evidence-table tr:hover td { background: #192b42; }
+.architecture-theme .null-value { color: #91a4bf; }
+.architecture-theme .results-footer, .architecture-theme .chart-controls { border-color: var(--line); color: #a2b2ca; }
+.architecture-theme .results-footer > span:first-child, .architecture-theme #query-timing,
+.architecture-theme .chart-note, .architecture-theme .chart-controls label { color: #a2b2ca; }
+.architecture-theme .result-views { background: #0b1526; border-color: #33465e; }
+.architecture-theme .result-views button { color: #a2b2ca; }
+.architecture-theme .result-views button[aria-pressed=true] { background: #163a45; color: var(--architecture-teal); box-shadow: none; }
+.architecture-theme #chart-title { color: var(--ink); }
+.architecture-theme .chart-grid { stroke: #293951; }
+.architecture-theme .chart-baseline { stroke: #8096b4; }
+.architecture-theme .chart-tick, .architecture-theme .chart-axis { fill: #a2b2ca; }
+.architecture-theme .chart-label { fill: var(--architecture-body); }
+.architecture-theme .chart-bar { fill: var(--architecture-teal); }
+.architecture-theme .chart-bar:hover, .architecture-theme .chart-bar:focus { fill: #9bf1ce; }
+.architecture-theme .chart-line { stroke: var(--architecture-cyan); }
+.architecture-theme .chart-point { fill: var(--surface); stroke: var(--architecture-cyan); }
+.architecture-theme .chart-point:hover, .architecture-theme .chart-point:focus { fill: var(--architecture-cyan); }
+.architecture-theme .schema-table { border-color: var(--line); }
+.architecture-theme .schema-table summary { color: var(--architecture-body); }
+.architecture-theme .schema-table p, .architecture-theme .column,
+.architecture-theme .column span:last-child { color: #a2b2ca; }
+.architecture-theme .schema-tip { background: #0b1526; border-color: var(--line); }
+.architecture-theme .schema-tip strong, .architecture-theme .schema-tip code,
+.architecture-theme .schema-intro code { color: #a2b2ca; }
+.architecture-theme .page-footer { color: #a2b2ca; }
+
+.architecture-theme .spark, .architecture-theme .empty-icon { color: var(--architecture-violet); }
+.architecture-theme .brief h3, .architecture-theme .empty h3 { color: var(--ink); }
+.architecture-theme .brief p, .architecture-theme .brief li,
+.architecture-theme .empty p, .architecture-theme .evidence-facts dd,
+.architecture-theme .evidence-body h4, .architecture-theme .passage p { color: var(--architecture-body); }
+.architecture-theme .evidence-facts dt, .architecture-theme .trace-caption,
+.architecture-theme .evidence-note, .architecture-theme .brief h4 { color: #a2b2ca; }
+.architecture-theme .evidence-warning { color: #c4b5f4; border-color: #72609f; }
+.architecture-theme .cite, .architecture-theme .evidence-card .cite { background: #202843; border-color: #485476; color: #c4b5f4; }
+.architecture-theme .verdict { background: #211e37; border-color: #66528f; color: #c4b5f4; }
+.architecture-theme .evidence-table th { background: #15253b; border-color: var(--line); color: #a9bbd4; }
+.architecture-theme .evidence-table td { color: var(--architecture-body); border-color: #22344c; }
+.architecture-theme .trace-event, .architecture-theme .trace-event small,
+.architecture-theme #trace li, .architecture-theme .budget { color: #a2b2ca; }
+.architecture-theme button:focus-visible, .architecture-theme a:focus-visible,
+.architecture-theme select:focus-visible, .architecture-theme summary:focus-visible,
+.architecture-theme textarea:focus-visible { outline-color: var(--architecture-cyan); }
+@media (max-width: 960px) { .architecture-theme h1 { font-size: 26px; } }
+@media (max-width: 1150px) { .architecture-theme .page { padding: 27px 24px; } }
+@media (max-width: 700px) { .architecture-theme .page { padding: 25px 16px; } }

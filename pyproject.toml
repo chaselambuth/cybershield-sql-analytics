@@ -27,9 +27,12 @@ cybershield = "cybershield.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-cybershield = ["web_assets/*.html", "web_assets/static/*.css", "web_assets/static/*.js"]
+cybershield = ["web_assets/*.html", "web_assets/partials/*.html", "web_assets/static/*.css", "web_assets/static/*.js"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-markers = ["integration: requires the dedicated local PostgreSQL database"]
+markers = [
+  "integration: requires the dedicated local PostgreSQL database",
+  "reporting_bundle: requires the locally prepared, verified Power BI/agent bundle"
+]
 

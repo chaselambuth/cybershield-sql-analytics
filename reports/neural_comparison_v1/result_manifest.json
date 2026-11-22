@@ -1,0 +1,24 @@
+{
+  "registration_sha256": "f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c",
+  "status": "revised_development_validation",
+  "local_models": "Weights are ignored; their hashes and verified score reproduction are recorded in model_artifact_index.json.",
+  "files": {
+    "comparison.png": "d242e9d0443e73f4c2cc73db2cd73466bef0f63d3bc446cd79eb3e841960fea6",
+    "cutoffs.csv": "db8d32f849edaf67e0a87cd2816908b00242d0de7a99c225081c67abcd697e97",
+    "environment.json": "ea9caf7131da4c513be89b85b232d8df5963c917342eb55d6746292f15c31ba3",
+    "fit_warnings.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "latency.png": "8bc885c502cb030a07a131062f2b6a2d6b2677db4ebea1124dee55b1e0b1e4dc",
+    "latency_by_batch.csv": "09fca8a6a2981df2f9d663dbcd58eaa211292be3ea3b8a320d1b969ff3100038",
+    "metrics.csv": "9aea79bbe906e99baaec60d8c2beb95b12d1d4b41288d9863d5e8ee1ea4dde52",
+    "model_artifact_index.json": "10c40709fbcde2e35e6f3d3dad1f2a43b62de8d599e1abc1092dd6255349dd7e",
+    "neural_fit_state.json": "859ed2fb946962536d775ccf07ed896373123978c1afe6ce8b188a36082d8506",
+    "protocol.json": "e4f5a3d0a9f09ffd4cfde8cfd967bee58a32f818e69a44705962665b7a079126",
+    "quality_latency.csv": "d54d705401fd0ccd59c387bbb74d5927d1f0d1166643b0ea41d0ffa6e750582e",
+    "raw_fit_times.csv": "1070d4a59bd4dced6c7cb46280218ac39a14f9485a4e237bcc7ff2b4733c1aa9",
+    "raw_latency.csv": "c8208ccd34a28b8a21ab08e3c1ce05877a02b70aa2c121f49f86d52c0363f273",
+    "registration.json": "f3382bd99e8d30e43fb3fc8b693d774e08e542901bcde2f1bdad552e3887a98c",
+    "registration.sha256": "3dc9947b450e2173c2f1c92fa90efda2a2d99f2fde56e3031d68d07657ee4622",
+    "retained_model_reconciliation.json": "2ce3263d94e20c95b23fb34ea5a43d116c802cb22298c4261c84777db08f97e7",
+    "scores.csv": "6fa39c43b2103fd8f04bce7c3017c0bca476aeb63eac28566d148d46e9d088ba"
+  }
+}
